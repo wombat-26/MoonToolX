@@ -2,6 +2,10 @@
 
 macOS-27-Widget und App: Entfernung Erde–Mond (Mittelpunkte), sekundengenau berechnet, mit Mondphase.
 
+![MoonToolX-Hauptfenster mit Fallblattanzeige der Entfernung, Mondbild mit Supermond-Kennzeichnung und Entfernungsverlauf über ±14 Tage](docs/MoonToolX.png)
+
+**Download:** [MoonToolX 1.0 (notarisiertes DMG)](https://github.com/wombat-26/MoonToolX/releases/latest)
+
 - **Ephemeride:** JPL DE421, geozentrischer Mond als Tschebyschow-Reihen (`Shared/moon_de421.bin`, 2020–2099).
   Rechnerische Abweichung zur DE421 unter 1 mm; UTC → TT mit 69,184 s.
 - **Sonne:** Meeus Kap. 25 (≈ 0,01°) für Phase, Beleuchtung und Phasenzeiten (Minutengenauigkeit).
