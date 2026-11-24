@@ -9,6 +9,12 @@ enum Fmt {
         Int(value.rounded()).formatted(.number.grouping(.automatic))
     }
 
+    /// Mondhöhe, z. B. „46,0° über dem Horizont“
+    static func altitude(_ degrees: Double) -> String {
+        let value = abs(degrees).formatted(.number.precision(.fractionLength(1)))
+        return degrees >= 0 ? "\(value)° über dem Horizont" : "\(value)° unter dem Horizont"
+    }
+
     static func kmMeters(_ value: Double) -> String {
         value.formatted(.number.precision(.fractionLength(3)).grouping(.automatic))
     }

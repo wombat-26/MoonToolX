@@ -47,6 +47,7 @@ struct ContentView: View {
     private let calculator = MoonCalculator()
     @State private var context: MoonContext?
     @State private var preview: PreviewSelection?
+    @State private var location = LocationModel()
 
     var body: some View {
         ZStack {
@@ -54,7 +55,7 @@ struct ContentView: View {
             if let calculator {
                 TimelineView(.everyMinute) { minute in
                     if let state = calculator.state(at: minute.date) {
-                        Dashboard(calculator: calculator, minuteState: state, context: context, preview: preview) { date in
+                        Dashboard(calculator: calculator, location: location, minuteState: state, context: context, preview: preview) { date in
                             withAnimation(.easeInOut(duration: 0.3)) {
                                 preview = PreviewSelection(date: date, until: Date().addingTimeInterval(3))
                             }
@@ -65,6 +66,7 @@ struct ContentView: View {
                                                description: Text("Die eingebaute JPL-Ephemeride deckt 2020 bis 2099 ab."))
                     }
                 }
+                .task { location.start() }
                 .task {
                     // nach einem Update laufen sonst evtl. noch Timelines der alten Widget-Erweiterung
                     WidgetCenter.shared.reloadAllTimelines()
@@ -91,6 +93,7 @@ struct ContentView: View {
 private struct Dashboard: View {
     @Environment(\.colorScheme) private var scheme
     let calculator: MoonCalculator
+    let location: LocationModel
     /// Zustand zur vollen Minute: für Bild, Phase, Diagramm und Termine
     let minuteState: MoonState
     let context: MoonContext?
@@ -135,7 +138,7 @@ private struct Dashboard: View {
             .frame(width: 300)
 
             VStack(alignment: .leading, spacing: 16) {
-                LiveDistancePanel(calculator: calculator, preview: preview)
+                LiveDistancePanel(calculator: calculator, location: location, preview: preview)
 
                 if let context {
                     VStack(alignment: .leading, spacing: 6) {
@@ -218,6 +221,7 @@ private struct DistanceBadge: View {
 private struct LiveDistancePanel: View {
     @Environment(\.colorScheme) private var scheme
     let calculator: MoonCalculator
+    let location: LocationModel
     let preview: PreviewSelection?
 
     var body: some View {
@@ -255,11 +259,28 @@ private struct LiveDistancePanel: View {
                         row("Änderung", "\(Fmt.trend(state)) mit \(Fmt.speed(state.radialVelocityKmS))", symbol: Fmt.trendSymbol(state))
                         row("Lichtlaufzeit", Fmt.seconds(state.lightTimeSeconds), symbol: "light.beacon.max")
                         row("Oberfläche – Oberfläche", "\(Fmt.km(state.surfaceDistanceKm)) km (mittlere Radien)", symbol: "ruler")
-                        row("Phasenwinkel", "\(state.phaseAngleDeg.formatted(.number.precision(.fractionLength(1))))°", symbol: "angle")
+                        observerRows(at: state.date)
                     }
                     .font(.callout)
                 }
             }
+        }
+    }
+
+    /// Entfernung vom Standort und Mondhöhe, sobald der Mac-Standort bekannt ist.
+    @ViewBuilder
+    private func observerRows(at date: Date) -> some View {
+        let title = "Entfernung von Ihrem Standort"
+        if let observer = location.observer, let topo = calculator.topocentric(at: date, observer: observer) {
+            row(title, "\(Fmt.km(topo.distanceKm)) km", symbol: "location")
+                .help("Abstand vom Mac-Standort zum Mondmittelpunkt. Je höher der Mond steht, desto kleiner ist er im Vergleich zum Abstand der Mittelpunkte, um bis zu einen Erdradius (etwa 6.400 km).")
+            row("Mondhöhe", Fmt.altitude(topo.altitudeDeg), symbol: "arrow.up.and.down")
+                .help("Höhe des Mondmittelpunkts über dem Horizont am Mac-Standort, ohne Lichtbrechung der Atmosphäre.")
+        } else if location.status == .denied {
+            row(title, "kein Zugriff auf die Ortungsdienste", symbol: "location.slash")
+                .help("Erlauben Sie MoonToolX den Zugriff in den Systemeinstellungen unter Datenschutz & Sicherheit › Ortungsdienste.")
+        } else {
+            row(title, "Standort wird ermittelt …", symbol: "location")
         }
     }
 

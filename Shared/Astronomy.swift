@@ -457,3 +457,98 @@ struct MoonCalculator: Sendable {
 
     private func wrap180(_ x: Double) -> Double { x - 360 * floor((x + 180) / 360) }
 }
+
+// MARK: - Entfernung vom Standort (topozentrisch)
+
+/// Beobachterstandort auf der Erde (WGS84).
+struct Observer: Equatable, Codable, Sendable {
+    var latitude: Double        // Grad, Nord positiv
+    var longitude: Double       // Grad, Ost positiv
+    var altitudeM: Double = 0   // Meter über dem Ellipsoid
+}
+
+/// Mond von einem Standort aus gesehen.
+struct TopocentricMoon: Sendable {
+    /// Abstand Beobachter – Mondmittelpunkt (km)
+    let distanceKm: Double
+    /// Geometrische Höhe des Mondmittelpunkts über dem Horizont (Grad, ohne Refraktion)
+    let altitudeDeg: Double
+}
+
+/// Erdorientierung für die topozentrische Rechnung: Präzession (IAU 1976), Nutation (Hauptterme nach Meeus),
+/// wahre Sternzeit. UT1 ≈ UTC und ohne Polbewegung. Abgleich mit JPL Horizons: Entfernung auf unter 0,1 km,
+/// Höhe auf unter 0,001° genau (Tools/main.swift).
+enum EarthOrientation {
+    private static let arcsec = Double.pi / 648_000
+    private static let deg = Double.pi / 180
+
+    // Drehungen des Koordinatensystems (nicht des Vektors)
+    private static func r1(_ a: Double) -> simd_double3x3 {
+        simd_double3x3(rows: [SIMD3(1, 0, 0), SIMD3(0, cos(a), sin(a)), SIMD3(0, -sin(a), cos(a))])
+    }
+    private static func r2(_ a: Double) -> simd_double3x3 {
+        simd_double3x3(rows: [SIMD3(cos(a), 0, -sin(a)), SIMD3(0, 1, 0), SIMD3(sin(a), 0, cos(a))])
+    }
+    private static func r3(_ a: Double) -> simd_double3x3 {
+        simd_double3x3(rows: [SIMD3(cos(a), sin(a), 0), SIMD3(-sin(a), cos(a), 0), SIMD3(0, 0, 1)])
+    }
+
+    /// Matrix ICRF (≈ mittleres Äquinoktium J2000) → wahres Äquinoktium des Datums, und die wahre Sternzeit (rad).
+    static func trueOfDate(date: Date) -> (matrix: simd_double3x3, gast: Double) {
+        let jdTT = AstroTime.julianDayTT(date)
+        let jdUT = date.timeIntervalSince1970 / 86_400 + AstroTime.jdUnixEpoch
+        let t = (jdTT - 2_451_545.0) / 36_525
+
+        // Präzession (Lieske 1977)
+        let zeta  = (2306.2181 * t + 0.30188 * t * t + 0.017998 * t * t * t) * arcsec
+        let z     = (2306.2181 * t + 1.09468 * t * t + 0.018203 * t * t * t) * arcsec
+        let theta = (2004.3109 * t - 0.42665 * t * t - 0.041833 * t * t * t) * arcsec
+        let p = r3(-z) * r2(theta) * r3(-zeta)
+
+        // Nutation, Hauptterme (Genauigkeit etwa 0,5″ bzw. 0,1″)
+        let omega = (125.04452 - 1934.136261 * t) * deg
+        let l = (280.4665 + 36000.7698 * t) * deg
+        let lm = (218.3165 + 481267.8813 * t) * deg
+        let dPsi = (-17.20 * sin(omega) - 1.32 * sin(2 * l) - 0.23 * sin(2 * lm) + 0.21 * sin(2 * omega)) * arcsec
+        let dEps = (9.20 * cos(omega) + 0.57 * cos(2 * l) + 0.10 * cos(2 * lm) - 0.09 * cos(2 * omega)) * arcsec
+        let eps0 = (84381.448 - 46.8150 * t - 0.00059 * t * t + 0.001813 * t * t * t) * arcsec
+        let eps = eps0 + dEps
+        let n = r1(-eps) * r3(-dPsi) * r1(eps0)
+
+        // Mittlere Sternzeit Greenwich (IAU 1982) plus Gleichung der Äquinoktien
+        let du = jdUT - 2_451_545.0
+        let tu = du / 36_525
+        var gmst = 280.46061837 + 360.98564736629 * du + 0.000387933 * tu * tu - tu * tu * tu / 38_710_000
+        gmst = gmst.truncatingRemainder(dividingBy: 360)
+        let gast = gmst * deg + dPsi * cos(eps)
+        return (n * p, gast)
+    }
+
+    /// Ortsvektor (km) und lokale Senkrechte des Beobachters im wahren Äquatorsystem des Datums.
+    static func observer(_ o: Observer, gast: Double) -> (position: SIMD3<Double>, up: SIMD3<Double>) {
+        let a = 6378.137, f = 1 / 298.257223563
+        let e2 = f * (2 - f)
+        let phi = o.latitude * deg
+        let lam = o.longitude * deg + gast
+        let h = o.altitudeM / 1000
+        let nRad = a / (1 - e2 * sin(phi) * sin(phi)).squareRoot()
+        let position = SIMD3((nRad + h) * cos(phi) * cos(lam),
+                             (nRad + h) * cos(phi) * sin(lam),
+                             (nRad * (1 - e2) + h) * sin(phi))
+        let up = SIMD3(cos(phi) * cos(lam), cos(phi) * sin(lam), sin(phi))
+        return (position, up)
+    }
+}
+
+extension MoonCalculator {
+    /// Entfernung und Höhe des Mondes vom Standort aus.
+    func topocentric(at date: Date, observer: Observer) -> TopocentricMoon? {
+        guard let (m, _) = ephemeris.state(jdTT: AstroTime.julianDayTT(date)) else { return nil }
+        let (matrix, gast) = EarthOrientation.trueOfDate(date: date)
+        let site = EarthOrientation.observer(observer, gast: gast)
+        let rho = matrix * m - site.position
+        let d = simd_length(rho)
+        let alt = asin(min(max(simd_dot(rho, site.up) / d, -1), 1)) * 180 / .pi
+        return TopocentricMoon(distanceKm: d, altitudeDeg: alt)
+    }
+}

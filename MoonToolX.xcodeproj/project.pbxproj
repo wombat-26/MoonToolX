@@ -303,6 +303,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MoonToolX;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSLocationUsageDescription = "MoonToolX berechnet damit die Entfernung zum Mond von Ihrem Standort aus. Der Standort bleibt auf Ihrem Mac.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "MoonToolX berechnet damit die Entfernung zum Mond von Ihrem Standort aus. Der Standort bleibt auf Ihrem Mac.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Matthias Eckardt";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -329,6 +331,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MoonToolX;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSLocationUsageDescription = "MoonToolX berechnet damit die Entfernung zum Mond von Ihrem Standort aus. Der Standort bleibt auf Ihrem Mac.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "MoonToolX berechnet damit die Entfernung zum Mond von Ihrem Standort aus. Der Standort bleibt auf Ihrem Mac.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Matthias Eckardt";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
