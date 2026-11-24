@@ -205,14 +205,20 @@ private struct DistanceBadge: View {
     var body: some View {
         let tint: Color = label.isSuper ? (scheme == .dark ? .orange : Color(red: 0.80, green: 0.38, blue: 0.0))
                                         : (scheme == .dark ? .cyan : Color(red: 0.0, green: 0.45, blue: 0.60))
-        Label("\(label.title) · \(Fmt.km(label.syzygy.distanceKm)) km", systemImage: label.symbolName)
-            .font(.callout.weight(.semibold))
-            .monospacedDigit()
-            .foregroundStyle(tint)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 5)
-            .background(Capsule().fill(tint.opacity(0.14)))
-            .overlay(Capsule().strokeBorder(tint.opacity(0.35)))
+        let shape = RoundedRectangle(cornerRadius: 12, style: .continuous)
+        VStack(spacing: 2) {
+            Label("\(label.title) · \(Fmt.km(label.syzygy.distanceKm)) km", systemImage: label.symbolName)
+                .font(.callout.weight(.semibold))
+            Text("\(label.syzygy.kind.title) \(Fmt.eventDate(label.syzygy.date))")
+                .font(.caption.weight(.medium))
+                .opacity(0.85)
+        }
+        .monospacedDigit()
+        .foregroundStyle(tint)
+        .padding(.horizontal, 12)
+        .padding(.vertical, 5)
+        .background(shape.fill(tint.opacity(0.14)))
+        .overlay(shape.strokeBorder(tint.opacity(0.35)))
             .help("\(label.explanation), \(Fmt.eventDate(label.syzygy.date)). Definition nach Richard Nolle.")
     }
 }

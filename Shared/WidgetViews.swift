@@ -79,6 +79,14 @@ struct SmallMoonView: View {
                         .multilineTextAlignment(.trailing)
                         .lineLimit(2)
                         .minimumScaleFactor(0.8)
+                    if let syzygy = context?.distanceLabel(for: state)?.syzygy {
+                        Text(Fmt.shortDate(syzygy.date))
+                            .font(.system(size: 9.5))
+                            .foregroundStyle(.secondary)
+                            .monospacedDigit()
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
+                    }
                 }
             }
             Spacer(minLength: 2)
@@ -110,8 +118,8 @@ struct MediumMoonView: View {
                 }
                 .font(.system(size: 12, weight: .medium))
                 .foregroundStyle(.primary)
-                if let next = context?.nextPrincipalPhase(after: state.date) {
-                    Text("\(next.kind.title): \(Fmt.eventDate(next.date))")
+                if let syzygy = context?.distanceLabel(for: state)?.syzygy ?? context?.nextPrincipalPhase(after: state.date) {
+                    Text("\(syzygy.kind.title): \(Fmt.eventDate(syzygy.date))")
                         .font(.system(size: 11))
                         .foregroundStyle(.secondary)
                         .monospacedDigit()
@@ -145,6 +153,12 @@ struct LargeMoonView: View {
                     }
                     .font(.system(size: 12, weight: .medium))
                     .foregroundStyle(.primary)
+                    if let syzygy = context?.distanceLabel(for: state)?.syzygy {
+                        Text("\(syzygy.kind.title): \(Fmt.eventDate(syzygy.date))")
+                            .font(.system(size: 10.5, weight: .medium))
+                            .foregroundStyle(.secondary)
+                            .monospacedDigit()
+                    }
                     Group {
                         if let age = context?.age(at: state.date) {
                             Text("Mondalter \(Fmt.days(age)) Tage · Licht \(Fmt.seconds(state.lightTimeSeconds))")
