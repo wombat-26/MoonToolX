@@ -59,7 +59,7 @@ struct HelpView: View {
                 }
 
                 section("Darstellung", symbol: "circle.lefthalf.filled") {
-                    Text("MoonToolX folgt dem Erscheinungsbild von macOS (hell oder dunkel). Ist in den Systemeinstellungen unter **Bedienungshilfen › Anzeige** die Option **Bewegung reduzieren** eingeschaltet, wechselt die Fallblattanzeige ohne Animation.")
+                    Text("MoonToolX folgt dem Erscheinungsbild von macOS (hell oder dunkel). Ist in den Systemeinstellungen unter **Bedienungshilfen › Bewegung** die Option **Bewegung reduzieren** eingeschaltet, wechselt die Fallblattanzeige ohne Animation.")
                 }
 
                 section("Genauigkeit und Daten", symbol: "scope") {
