@@ -281,8 +281,9 @@ private struct LiveDistancePanel: View {
             row(title, "\(Fmt.km(topo.distanceKm)) km", symbol: "location")
                 .help("Abstand vom Mac-Standort zum Mondmittelpunkt. Je höher der Mond steht, desto kleiner ist er im Vergleich zum Abstand der Mittelpunkte, um bis zu einen Erdradius (etwa 6.400 km).")
             row("Mondhöhe · Richtung",
-                "\(Fmt.altitude(topo.altitudeDeg)) · \(Fmt.compass(topo.azimuthDeg)) (\(Int(topo.azimuthDeg.rounded()) % 360)°)",
-                symbol: "safari")
+                "\(Fmt.altitude(topo.altitudeDeg)) · \(Fmt.compass(topo.azimuthDeg)) (\(Int(topo.azimuthDeg.rounded()) % 360)°)") {
+                HorizonArrow(up: topo.altitudeDeg >= 0)
+            }
                 .help("Höhe des Mondmittelpunkts über (+) oder unter (−) dem Horizont am Mac-Standort, ohne Lichtbrechung der Atmosphäre, und Himmelsrichtung mit Azimut (von Nord über Ost).")
         } else if location.status == .denied {
             row(title, "kein Zugriff auf die Ortungsdienste", symbol: "location.slash")
@@ -292,12 +293,51 @@ private struct LiveDistancePanel: View {
         }
     }
 
+    private func row<Icon: View>(_ title: String, _ value: String, @ViewBuilder icon: () -> Icon) -> some View {
+        GridRow {
+            Label { Text(title) } icon: { icon() }
+                .foregroundStyle(.secondary)
+            Text(value)
+                .monospacedDigit()
+        }
+    }
+
     private func row(_ title: String, _ value: String, symbol: String) -> some View {
         GridRow {
             Label(title, systemImage: symbol)
                 .foregroundStyle(.secondary)
             Text(value)
                 .monospacedDigit()
+        }
+    }
+}
+
+/// Pfeil vom Strich weg, Strich = Horizont: ↥ Mond über dem Horizont, ↧ darunter.
+/// Selbst gezeichnet, weil SF Symbols keine „Pfeil vom Strich weg“-Variante für oben/unten hat.
+private struct HorizonArrow: View {
+    let up: Bool
+
+    var body: some View {
+        ArrowFromBar()
+            .stroke(style: StrokeStyle(lineWidth: 1.4, lineCap: .round, lineJoin: .round))
+            .scaleEffect(x: 1, y: up ? 1 : -1)
+            .frame(width: 12, height: 13)
+            .accessibilityLabel(up ? "über dem Horizont" : "unter dem Horizont")
+    }
+
+    /// ↥: Strich unten, Pfeil nach oben
+    private struct ArrowFromBar: Shape {
+        func path(in r: CGRect) -> Path {
+            var p = Path()
+            let bar = r.maxY - r.height * 0.06, tip = r.minY + r.height * 0.08
+            p.move(to: CGPoint(x: r.minX + r.width * 0.08, y: bar))
+            p.addLine(to: CGPoint(x: r.maxX - r.width * 0.08, y: bar))
+            p.move(to: CGPoint(x: r.midX, y: bar))
+            p.addLine(to: CGPoint(x: r.midX, y: tip))
+            p.move(to: CGPoint(x: r.midX - r.width * 0.32, y: tip + r.height * 0.32))
+            p.addLine(to: CGPoint(x: r.midX, y: tip))
+            p.addLine(to: CGPoint(x: r.midX + r.width * 0.32, y: tip + r.height * 0.32))
+            return p
         }
     }
 }
