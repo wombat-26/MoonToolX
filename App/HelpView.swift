@@ -42,7 +42,7 @@ struct HelpView: View {
                     item("Lichtlaufzeit", "So lange braucht das Licht vom Mond zur Erde.")
                     item("Oberfläche – Oberfläche", "Entfernung minus mittlerer Erd- und Mondradius.")
                     item("Entfernung von Ihrem Standort", "Abstand von Ihrem Mac-Standort zum Mondmittelpunkt. Steht der Mond hoch am Himmel, ist er bis zu einen Erdradius (etwa 6.400 km) kleiner als der Abstand der Mittelpunkte; bei Mondauf- und -untergang sind beide fast gleich. Beim ersten Start fragt macOS, ob MoonToolX den Standort verwenden darf. Der Standort bleibt auf Ihrem Mac.")
-                    item("Mondhöhe", "Höhe des Mondmittelpunkts über dem Horizont an Ihrem Standort, ohne Lichtbrechung der Atmosphäre. Steht der Mond unter dem Horizont, zeigt MoonToolX, wie tief.")
+                    item("Mondhöhe · Richtung", "Höhe des Mondmittelpunkts über dem Horizont an Ihrem Standort, ohne Lichtbrechung der Atmosphäre: + über dem Horizont, − darunter. Dazu die Himmelsrichtung (N, NNO, NO … NNW) und der Azimut in Grad, von Nord über Ost gezählt (Ost = 90°, Süd = 180°). Steht der Mond unter dem Horizont, zeigt die Richtung, wo er sich unter dem Horizont befindet.")
                     item("Mondbild", "Aktuelle Phase, Norden oben, so wie der Mond von der Nordhalbkugel aus erscheint. Die Größe folgt der Entfernung: In Erdnähe erscheint der Mond größer, in Erdferne kleiner, im selben Verhältnis wie am Himmel.")
                     item("Supermond und Mikromond", "Steht der Mond bei Vollmond oder Neumond nahe dem Perigäum, zeigt MoonToolX „Supermond“ bzw. „Super-Neumond“; nahe dem Apogäum „Mikromond“ bzw. „Mikro-Neumond“. Grundlage ist die Definition von Richard Nolle: höchstens 10 % der Spanne zwischen Perigäum und Apogäum des laufenden Umlaufs. Die Kennzeichnung nennt Zeitpunkt (Ortszeit) und Entfernung des Vollmonds bzw. Neumonds, nicht die aktuelle Entfernung.")
                     item("Termine", "Nächste Hauptphasen sowie Perigäum (erdnächster Punkt) und Apogäum (erdfernster Punkt), in Ortszeit.")
@@ -66,7 +66,7 @@ struct HelpView: View {
 
                 section("Genauigkeit und Daten", symbol: "scope") {
                     item("Ephemeride", "JPL DE440 (NASA Jet Propulsion Laboratory), gültig von 2020 bis 2099. Die Berechnung ist weitaus genauer als die angezeigten Meter.")
-                    item("Standort", "Entfernung vom Standort auf unter 0,1 km und Mondhöhe auf unter 0,001° genau (Abgleich mit JPL Horizons). Erlauben oder entziehen können Sie den Zugriff in den Systemeinstellungen unter **Datenschutz & Sicherheit › Ortungsdienste**.")
+                    item("Standort", "Entfernung vom Standort auf unter 0,1 km, Mondhöhe und Himmelsrichtung auf unter 0,001° genau (Abgleich mit JPL Horizons). Erlauben oder entziehen können Sie den Zugriff in den Systemeinstellungen unter **Datenschutz & Sicherheit › Ortungsdienste**.")
                     item("Phasenzeiten", "Auf etwa eine Minute genau.")
                     item("Mondbilder", "Aus der LRO/LROC-Mondkarte (NASA Scientific Visualization Studio), in 2-Grad-Schritten. Die Libration (das leichte Taumeln des Mondes) wird nicht dargestellt.")
                     item("Zeiten", "Alle Zeiten in der Zeitzone, die in macOS eingestellt ist.")

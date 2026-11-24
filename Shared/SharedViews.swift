@@ -9,10 +9,17 @@ enum Fmt {
         Int(value.rounded()).formatted(.number.grouping(.automatic))
     }
 
-    /// Mondhöhe, z. B. „46,0° über dem Horizont“
+    /// Mondhöhe mit Vorzeichen, z. B. „+46,0°“ oder „−12,6°“ (unter dem Horizont)
     static func altitude(_ degrees: Double) -> String {
         let value = abs(degrees).formatted(.number.precision(.fractionLength(1)))
-        return degrees >= 0 ? "\(value)° über dem Horizont" : "\(value)° unter dem Horizont"
+        return degrees >= 0 ? "+\(value)°" : "−\(value)°"
+    }
+
+    /// Himmelsrichtung in 16 Stufen, z. B. „OSO“
+    static func compass(_ azimuth: Double) -> String {
+        let names = ["N", "NNO", "NO", "ONO", "O", "OSO", "SO", "SSO",
+                     "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
+        return names[Int((azimuth / 22.5).rounded()) % 16]
     }
 
     static func kmMeters(_ value: Double) -> String {

@@ -280,8 +280,10 @@ private struct LiveDistancePanel: View {
         if let observer = location.observer, let topo = calculator.topocentric(at: date, observer: observer) {
             row(title, "\(Fmt.km(topo.distanceKm)) km", symbol: "location")
                 .help("Abstand vom Mac-Standort zum Mondmittelpunkt. Je höher der Mond steht, desto kleiner ist er im Vergleich zum Abstand der Mittelpunkte, um bis zu einen Erdradius (etwa 6.400 km).")
-            row("Mondhöhe", Fmt.altitude(topo.altitudeDeg), symbol: "arrow.up.and.down")
-                .help("Höhe des Mondmittelpunkts über dem Horizont am Mac-Standort, ohne Lichtbrechung der Atmosphäre.")
+            row("Mondhöhe · Richtung",
+                "\(Fmt.altitude(topo.altitudeDeg)) · \(Fmt.compass(topo.azimuthDeg)) (\(Int(topo.azimuthDeg.rounded()) % 360)°)",
+                symbol: "safari")
+                .help("Höhe des Mondmittelpunkts über (+) oder unter (−) dem Horizont am Mac-Standort, ohne Lichtbrechung der Atmosphäre, und Himmelsrichtung mit Azimut (von Nord über Ost).")
         } else if location.status == .denied {
             row(title, "kein Zugriff auf die Ortungsdienste", symbol: "location.slash")
                 .help("Erlauben Sie MoonToolX den Zugriff in den Systemeinstellungen unter Datenschutz & Sicherheit › Ortungsdienste.")

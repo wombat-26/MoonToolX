@@ -473,11 +473,13 @@ struct TopocentricMoon: Sendable {
     let distanceKm: Double
     /// Geometrische Höhe des Mondmittelpunkts über dem Horizont (Grad, ohne Refraktion)
     let altitudeDeg: Double
+    /// Azimut (Grad, von Nord über Ost, 0–360)
+    let azimuthDeg: Double
 }
 
 /// Erdorientierung für die topozentrische Rechnung: Präzession (IAU 1976), Nutation (Hauptterme nach Meeus),
 /// wahre Sternzeit. UT1 ≈ UTC und ohne Polbewegung. Abgleich mit JPL Horizons: Entfernung auf unter 0,1 km,
-/// Höhe auf unter 0,001° genau (Tools/main.swift).
+/// Höhe und Azimut auf unter 0,001° genau (Tools/main.swift).
 enum EarthOrientation {
     private static let arcsec = Double.pi / 648_000
     private static let deg = Double.pi / 180
@@ -524,8 +526,9 @@ enum EarthOrientation {
         return (n * p, gast)
     }
 
-    /// Ortsvektor (km) und lokale Senkrechte des Beobachters im wahren Äquatorsystem des Datums.
-    static func observer(_ o: Observer, gast: Double) -> (position: SIMD3<Double>, up: SIMD3<Double>) {
+    /// Ortsvektor (km) und lokale Richtungen (oben, Osten, Norden) des Beobachters im wahren Äquatorsystem des Datums.
+    static func observer(_ o: Observer, gast: Double)
+        -> (position: SIMD3<Double>, up: SIMD3<Double>, east: SIMD3<Double>, north: SIMD3<Double>) {
         let a = 6378.137, f = 1 / 298.257223563
         let e2 = f * (2 - f)
         let phi = o.latitude * deg
@@ -536,7 +539,9 @@ enum EarthOrientation {
                              (nRad + h) * cos(phi) * sin(lam),
                              (nRad * (1 - e2) + h) * sin(phi))
         let up = SIMD3(cos(phi) * cos(lam), cos(phi) * sin(lam), sin(phi))
-        return (position, up)
+        let east = SIMD3(-sin(lam), cos(lam), 0.0)
+        let north = SIMD3(-sin(phi) * cos(lam), -sin(phi) * sin(lam), cos(phi))
+        return (position, up, east, north)
     }
 }
 
@@ -549,6 +554,8 @@ extension MoonCalculator {
         let rho = matrix * m - site.position
         let d = simd_length(rho)
         let alt = asin(min(max(simd_dot(rho, site.up) / d, -1), 1)) * 180 / .pi
-        return TopocentricMoon(distanceKm: d, altitudeDeg: alt)
+        var az = atan2(simd_dot(rho, site.east), simd_dot(rho, site.north)) * 180 / .pi
+        if az < 0 { az += 360 }
+        return TopocentricMoon(distanceKm: d, altitudeDeg: alt, azimuthDeg: az)
     }
 }
