@@ -16,10 +16,10 @@ enum AstroTime {
     }
 }
 
-// MARK: - Mond-Ephemeride (JPL DE421)
+// MARK: - Mond-Ephemeride (JPL DE440)
 
-/// Geozentrischer Mond aus JPL DE421 als Tschebyschow-Reihen (ICRF, km).
-/// Datei `moon_de421.bin`: 32 Byte Kopf, danach `setCount × 3 × coefficientCount` Doubles (little endian).
+/// Geozentrischer Mond aus JPL DE440 als Tschebyschow-Reihen (ICRF, km).
+/// Datei `moon_de440.bin`: 32 Byte Kopf, danach `setCount × 3 × coefficientCount` Doubles (little endian).
 /// Abdeckung 01.01.2020 – 01.01.2100, Intervalle zu 4 Tagen mit je 13 Koeffizienten.
 final class MoonEphemeris: Sendable {
     static let shared: MoonEphemeris? = MoonEphemeris()
@@ -33,7 +33,7 @@ final class MoonEphemeris: Sendable {
     var jdEnd: Double { jdStart + Double(setCount) * daysPerSet }
 
     convenience init?(bundle: Bundle = .main) {
-        guard let url = bundle.url(forResource: "moon_de421", withExtension: "bin") else { return nil }
+        guard let url = bundle.url(forResource: "moon_de440", withExtension: "bin") else { return nil }
         self.init(url: url)
     }
 

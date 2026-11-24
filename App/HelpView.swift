@@ -63,7 +63,7 @@ struct HelpView: View {
                 }
 
                 section("Genauigkeit und Daten", symbol: "scope") {
-                    item("Ephemeride", "JPL DE421 (NASA Jet Propulsion Laboratory), gültig von 2020 bis 2099. Die Rechnung ist weit genauer als die angezeigten Meter.")
+                    item("Ephemeride", "JPL DE440 (NASA Jet Propulsion Laboratory), gültig von 2020 bis 2099. Die Rechnung ist weit genauer als die angezeigten Meter.")
                     item("Phasenzeiten", "Auf etwa eine Minute genau.")
                     item("Mondbilder", "Aus der LRO/LROC-Mondkarte (NASA Scientific Visualization Studio), in 2-Grad-Schritten. Die Libration (das leichte Taumeln des Mondes) wird nicht dargestellt.")
                     item("Zeiten", "Alle Zeiten in der Zeitzone, die in macOS eingestellt ist.")

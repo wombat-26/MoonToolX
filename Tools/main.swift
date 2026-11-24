@@ -1,16 +1,16 @@
-// Prüft die Swift-Implementierung gegen Referenzwerte aus JPL DE421 (jplephem).
+// Prüft die Swift-Implementierung gegen Referenzwerte aus JPL DE440 (jplephem, de440s.bsp).
 // Aufruf: swiftc -O Shared/Astronomy.swift Tools/main.swift -o /tmp/moonverify && /tmp/moonverify
 import Foundation
 
-let eph = MoonEphemeris(url: URL(fileURLWithPath: "Shared/moon_de421.bin"))!
+let eph = MoonEphemeris(url: URL(fileURLWithPath: "Shared/moon_de440.bin"))!
 let calc = MoonCalculator(ephemeris: eph)!
 let iso = ISO8601DateFormatter()
 let refs: [(String, Double, Double)] = [
-    ("2026-11-24T10:00:00Z", 361259.1991, -30.093),
-    ("2026-11-24T10:00:01Z", 361259.1690, -30.093),
+    ("2026-11-24T10:00:00Z", 361259.1987, -30.093),
+    ("2026-11-24T10:00:01Z", 361259.1687, -30.093),
     ("2027-01-01T00:00:00Z", 391499.3938, 57.765),
-    ("2050-06-15T12:34:56Z", 377515.0005, 32.479),
-    ("2099-12-31T23:59:59Z", 371710.2327, -13.727),
+    ("2050-06-15T12:34:56Z", 377515.0006, 32.479),
+    ("2099-12-31T23:59:59Z", 371710.2319, -13.727),
 ]
 var worst = 0.0
 for (s, km, vr) in refs {

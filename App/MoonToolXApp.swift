@@ -82,7 +82,7 @@ struct ContentView: View {
                 }
             } else {
                 ContentUnavailableView("Ephemeride fehlt", systemImage: "exclamationmark.triangle",
-                                       description: Text("moon_de421.bin ist nicht im App-Bundle."))
+                                       description: Text("moon_de440.bin ist nicht im App-Bundle."))
             }
         }
     }
@@ -168,7 +168,7 @@ private struct Dashboard: View {
                 }
 
                 Spacer(minLength: 0)
-                Text("Ephemeride: JPL DE421 (2020–2099) · Mondbild: NASA SVS, LRO/LROC · Zeiten in Ortszeit")
+                Text("Ephemeride: JPL DE440 (2020–2099) · Mondbild: NASA SVS, LRO/LROC · Zeiten in Ortszeit")
                     .font(.caption2)
                     .foregroundStyle(.tertiary)
             }
