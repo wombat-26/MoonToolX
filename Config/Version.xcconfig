@@ -1,0 +1,5 @@
+// Version und Build-Nummer für App und Widget (gilt projektweit).
+// CURRENT_PROJECT_VERSION wird bei jedem Build über das Schema MoonToolX automatisch hochgezählt
+// (Pre-Action → Tools/bump_build.sh), auch beim Archivieren für die Weitergabe.
+MARKETING_VERSION = 1.0
+CURRENT_PROJECT_VERSION = 3

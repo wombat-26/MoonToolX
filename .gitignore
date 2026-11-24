@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+DerivedData/
+
+# Build-Ergebnisse, Archive, DMGs, Python-Umgebung für dmgbuild
+build/
+
+# Quelldaten (NASA-Texturen, Zwischenstände), per Tools/*.py reproduzierbar
+_src/
+
+# aus background.png / background@2x.png erzeugt
+Config/dmg/background.tiff
+
+# Python
+__pycache__/
