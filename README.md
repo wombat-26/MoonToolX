@@ -33,6 +33,10 @@ wenn sich ihre jeweilige Quelle ändert.
 | `Tools/make_icon.py` | wenn das Icon-Design geändert wird | selten |
 | `Tools/make_dmg_background.py` | wenn DMG-Design oder -Layout geändert werden (dann auch `Config/dmg/settings.py` prüfen) | selten |
 
+Die mitgelieferte Ephemeride (`Shared/moon_de421.bin`) gilt vom **31.12.2019 bis 04.01.2100**. Außerhalb dieses Zeitraums liefert die
+Berechnung keine Werte. Für einen anderen Zeitraum `start_jd` und `end_jd` in `Tools/make_ephem.py` anpassen und das Skript neu ausführen
+(die Quelldaten des Python-Pakets `de421` reichen von 1899 bis 2200).
+
 Automatisch laufen `Tools/bump_build.sh` (bei jedem Build, als Pre-Action im Schema) und `Tools/release.sh` (einmal pro Release).
 
 ## Version und Build-Nummer
