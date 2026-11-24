@@ -21,6 +21,20 @@ macOS-27-Widget und App: Entfernung Erde–Mond (Mittelpunkte), sekundengenau be
 - `Tools/make_icon.py` – erzeugt die Ebenen des Liquid-Glass-Icons `App/AppIcon.icon` (Icon Composer).
 - `Tools/make_dmg_background.py` – erzeugt den DMG-Hintergrund `Config/dmg/background*.png` (Layout in `Config/dmg/settings.py`).
 
+### Wann müssen die Werkzeuge laufen?
+Keines der Werkzeuge gehört zum normalen Build. Die erzeugten Dateien liegen im Repository; die Skripte laufen nur,
+wenn sich ihre jeweilige Quelle ändert.
+
+| Werkzeug | Wann | Wie oft |
+|---|---|---|
+| `Tools/main.swift` | nach jeder Änderung an `Shared/Astronomy.swift` (Ephemeride, Phasen, Supermond-Logik) und vor jedem Release als Sicherheitscheck | bei Bedarf, vor jedem Release |
+| `Tools/make_ephem.py` | wenn Zeitraum oder Genauigkeit der Ephemeridendaten geändert werden sollen; die Daten decken nur einen begrenzten Zeitraum ab und müssen danach neu erzeugt werden | praktisch einmalig, später bei Zeitraum-Ende |
+| `Tools/render_moon.py`, `Tools/make_assets.py` | wenn Mondtextur, Phasenbilder oder Rendering geändert werden | praktisch einmalig |
+| `Tools/make_icon.py` | wenn das Icon-Design geändert wird | selten |
+| `Tools/make_dmg_background.py` | wenn DMG-Design oder -Layout geändert werden (dann auch `Config/dmg/settings.py` prüfen) | selten |
+
+Automatisch laufen `Tools/bump_build.sh` (bei jedem Build, als Pre-Action im Schema) und `Tools/release.sh` (einmal pro Release).
+
 ## Version und Build-Nummer
 Version und Build stehen in `Config/Version.xcconfig`. Jeder Build über das Schema **MoonToolX** (Xcode oder
 `xcodebuild -scheme MoonToolX`) zählt `CURRENT_PROJECT_VERSION` per Pre-Action (`Tools/bump_build.sh`) um 1 hoch;
