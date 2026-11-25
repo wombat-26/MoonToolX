@@ -184,7 +184,9 @@ private struct Dashboard: View {
                 LiveDistancePanel(calculator: calculator, location: location, preview: preview)
 
                 if let context {
-                    VStack(alignment: .leading, spacing: 6) {
+                    // Box nach HIG: Titel darüber (Satzschreibung), ruhige Fläche je nach Hell/Dunkel
+                    GroupBox {
+                        VStack(alignment: .leading, spacing: 6) {
                         DistanceChart(samples: context.samples,
                                       apsides: context.apsides(in: (context.samples.first?.date ?? minuteState.date)...(context.samples.last?.date ?? minuteState.date)),
                                       now: minuteState.date,
@@ -192,10 +194,13 @@ private struct Dashboard: View {
                                       highlight: preview?.date,
                                       highlightKm: preview.flatMap { calculator.distance(at: $0.date) },
                                       onSelect: onSelect)
-                            .frame(height: 170)
-                        // Legende unter dem Diagramm
-                        Text("Verlauf ±14 Tage · Klick zeigt den Tag für 3 Sekunden")
-                            .font(.caption)
+                            .frame(height: 150)
+                        ChartLegend()
+                        }
+                        .padding(4)
+                    } label: {
+                        Text("Verlauf ±14 Tage")
+                            .font(.headline)
                             .foregroundStyle(.secondary)
                     }
 
@@ -240,6 +245,31 @@ private struct Dashboard: View {
     }
 }
 
+/// Legende des Entfernungsdiagramms mit Klick-Hilfe
+private struct ChartLegend: View {
+    @Environment(\.colorScheme) private var scheme
+
+    var body: some View {
+        HStack(spacing: 14) {
+            item("Entfernung") { Capsule().fill(Palette.line(scheme)).frame(width: 14, height: 2.5) }
+            item("Jetzt") { Circle().fill(Palette.marker(scheme)).frame(width: 7, height: 7) }
+            item("Perigäum / Apogäum") { Circle().fill(.secondary).frame(width: 5, height: 5) }
+            Spacer(minLength: 8)
+            Text("Klick zeigt den Tag für 3 Sekunden")
+        }
+        .font(.caption)
+        .foregroundStyle(.secondary)
+        .lineLimit(1)
+    }
+
+    private func item<Swatch: View>(_ title: String, @ViewBuilder swatch: () -> Swatch) -> some View {
+        HStack(spacing: 5) {
+            swatch().frame(width: 14)
+            Text(title)
+        }
+    }
+}
+
 /// Kennzeichnung Supermond / Mikromond (nur bei Vollmond oder Neumond)
 private struct DistanceBadge: View {
     @Environment(\.colorScheme) private var scheme
@@ -278,9 +308,8 @@ private struct LiveDistancePanel: View {
             if let state = calculator.state(at: preview?.date ?? timeline.date) {
                 VStack(alignment: .leading, spacing: 16) {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("ENTFERNUNG ERDE–MOND (MITTELPUNKTE)")
-                            .font(.caption.weight(.semibold))
-                            .tracking(1)
+                        Text("Entfernung Erde–Mond (Mittelpunkte)")
+                            .font(.headline)
                             .foregroundStyle(.secondary)
                         HStack(alignment: .bottom, spacing: 10) {
                             SplitFlapBoard(text: Fmt.kmMeters(state.distanceKm))
