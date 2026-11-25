@@ -2,7 +2,7 @@
 
 macOS-27-Widget und App: Entfernung Erde–Mond (Mittelpunkte), sekundengenau berechnet, mit Mondphase.
 
-![MoonToolX-Hauptfenster mit Fallblattanzeige der Entfernung, Mondbild mit Supermond-Kennzeichnung und Entfernungsverlauf über ±14 Tage](docs/MoonTool.png)
+![MoonToolX-Hauptfenster mit Fallblattanzeige der Entfernung, Mondbild mit Supermond-Kennzeichnung und Entfernungsverlauf über ±14 Tage](docs/MoonToolX.png)
 
 **Download:** [MoonToolX 1.0 (notarisiertes DMG)](https://github.com/wombat-26/MoonToolX/releases/latest)
 
