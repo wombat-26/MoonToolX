@@ -54,3 +54,5 @@ App und Widget erhalten dieselbe Nummer.
 `zsh Tools/release.sh` archiviert, signiert mit Developer ID, lässt die App von Apple notarisieren, heftet das Ticket an
 und erzeugt `build/release/MoonToolX-<Version>-<Build>.dmg` (mit Alias auf den Ordner Programme) sowie ein ZIP.
 Voraussetzung: in Xcode › Einstellungen › Accounts angemeldet. Exportoptionen: `Config/ExportOptions-DeveloperID.plist`.
+
+November 2026, Matthias Eckardt
