@@ -185,10 +185,6 @@ private struct Dashboard: View {
 
                 if let context {
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("VERLAUF ±14 TAGE · KLICK ZEIGT DEN TAG FÜR 3 SEKUNDEN")
-                            .font(.caption.weight(.semibold))
-                            .tracking(1)
-                            .foregroundStyle(.secondary)
                         DistanceChart(samples: context.samples,
                                       apsides: context.apsides(in: (context.samples.first?.date ?? minuteState.date)...(context.samples.last?.date ?? minuteState.date)),
                                       now: minuteState.date,
@@ -197,6 +193,10 @@ private struct Dashboard: View {
                                       highlightKm: preview.flatMap { calculator.distance(at: $0.date) },
                                       onSelect: onSelect)
                             .frame(height: 170)
+                        // Legende unter dem Diagramm
+                        Text("Verlauf ±14 Tage · Klick zeigt den Tag für 3 Sekunden")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
                     }
 
                     Grid(alignment: .leading, horizontalSpacing: 24, verticalSpacing: 10) {
