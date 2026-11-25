@@ -12,6 +12,8 @@ struct HelpMenuButton: View {
 
 /// Kurzanleitung für Benutzer
 struct HelpView: View {
+    static let windowSize = CGSize(width: 560, height: 640)
+
     private var version: String {
         let info = Bundle.main.infoDictionary
         let v = info?["CFBundleShortVersionString"] as? String ?? "–"
@@ -75,7 +77,7 @@ struct HelpView: View {
             .padding(28)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(width: 560, height: 640)
+        .frame(width: Self.windowSize.width, height: Self.windowSize.height)
     }
 
     private func section<Content: View>(_ title: String, symbol: String,

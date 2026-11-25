@@ -17,11 +17,54 @@ struct MoonToolXApp: App {
             HelpView()
         }
         .windowResizability(.contentSize)
+        // Hilfe nicht über dem Hauptfenster öffnen (Human Interface Guidelines), sondern daneben –
+        // bei jedem Öffnen neu, auch wenn das Hauptfenster inzwischen verschoben wurde
+        .restorationBehavior(.disabled)
+        .defaultWindowPlacement { content, context in
+            // feste Größe statt sizeThatFits: die ScrollView meldet sonst eine viel zu große Breite
+            let size = HelpView.windowSize
+            let main = MainActor.assumeIsolated { SideWindowPlacement.mainWindowFrame() }
+            return WindowPlacement(SideWindowPlacement.position(for: size, beside: main,
+                                                                 in: context.defaultDisplay.visibleRect),
+                                   size: size)
+        }
 
         Window("Widget-Vorschau", id: "widget-preview") {
             WidgetPreview()
         }
         .windowResizability(.contentSize)
+    }
+}
+
+/// Startposition für Nebenfenster (Kurzanleitung): neben dem Hauptfenster statt darüber.
+/// Rechts daneben, sonst links daneben, sonst am rechten Bildschirmrand; oben bündig mit dem Hauptfenster.
+/// Koordinaten wie bei SwiftUI-Fensterplatzierung: Ursprung oben links.
+enum SideWindowPlacement {
+    static let gap: CGFloat = 16
+
+    /// Rahmen des Hauptfensters in Bildschirmkoordinaten mit Ursprung oben links
+    @MainActor
+    static func mainWindowFrame() -> CGRect? {
+        guard let window = NSApp.windows.first(where: { $0.isVisible && $0.title == "MoonToolX" }),
+              let primary = NSScreen.screens.first else { return nil }
+        let f = window.frame
+        return CGRect(x: f.minX, y: primary.frame.maxY - f.maxY, width: f.width, height: f.height)
+    }
+
+    static func position(for size: CGSize, beside main: CGRect?, in screen: CGRect) -> CGPoint {
+        guard let main else {
+            return CGPoint(x: screen.maxX - size.width - gap, y: screen.minY + gap)
+        }
+        let x: CGFloat
+        if main.maxX + gap + size.width <= screen.maxX {
+            x = main.maxX + gap                                  // rechts daneben
+        } else if main.minX - gap - size.width >= screen.minX {
+            x = main.minX - gap - size.width                     // links daneben
+        } else {
+            x = screen.maxX - size.width                         // am rechten Rand, möglichst wenig Überdeckung
+        }
+        let y = min(max(main.minY, screen.minY), max(screen.minY, screen.maxY - size.height))
+        return CGPoint(x: x, y: y)
     }
 }
 
