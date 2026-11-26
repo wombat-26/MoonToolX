@@ -1,6 +1,7 @@
 // Prüft die Swift-Implementierung gegen Referenzwerte aus JPL DE440 (jplephem, de440s.bsp).
 // Aufruf: swiftc -O Shared/Astronomy.swift Tools/main.swift -o /tmp/moonverify && /tmp/moonverify
 import Foundation
+import simd
 
 let eph = MoonEphemeris(url: URL(fileURLWithPath: "Shared/moon_de440.bin"))!
 let calc = MoonCalculator(ephemeris: eph)!
@@ -80,3 +81,54 @@ for (_, lat, lon, alt, s, km, el, az) in topoRefs {
 }
 print(String(format: "Standort (%d Fälle, München/Sydney/Tromsø): max. Abweichung Entfernung %.3f km, Höhe %.4f°, Azimut %.4f°",
              topoRefs.count, worstD, worstH, worstA))
+
+// Ausrichtung am Himmel: Mondachse P gegen JPL Horizons (NP.ang), parallaktischer Winkel q gegen Vektorrechnung
+let axisRefs: [(String, Double, Double, Double, String, Double, Double)] = [
+    ("Muenchen", 48.13, 11.5, 530.0, "2026-11-25T13:30:00Z", 353.5866, -12.564857),
+    ("Muenchen", 48.13, 11.5, 530.0, "2026-11-26T21:00:00Z", 2.0847, 35.404731),
+    ("Muenchen", 48.13, 11.5, 530.0, "2026-11-27T03:00:00Z", 3.2840, 62.295479),
+    ("Muenchen", 48.13, 11.5, 530.0, "2027-03-01T12:00:00Z", 3.5207, -18.893197),
+    ("Muenchen", 48.13, 11.5, 530.0, "2030-07-01T20:00:00Z", 6.9803, -4.988039),
+    ("Muenchen", 48.13, 11.5, 530.0, "2050-06-15T21:00:00Z", 340.7345, -25.706320),
+    ("Muenchen", 48.13, 11.5, 530.0, "2099-12-31T00:00:00Z", 18.1185, 45.988003),
+    ("Sydney", -33.87, 151.21, 50.0, "2026-11-25T13:30:00Z", 353.5556, 25.844172),
+    ("Sydney", -33.87, 151.21, 50.0, "2026-11-26T21:00:00Z", 1.4783, -4.455848),
+    ("Sydney", -33.87, 151.21, 50.0, "2026-11-27T03:00:00Z", 3.2773, -72.336322),
+    ("Sydney", -33.87, 151.21, 50.0, "2027-03-01T12:00:00Z", 3.0265, -15.355993),
+    ("Sydney", -33.87, 151.21, 50.0, "2030-07-01T20:00:00Z", 7.4919, -19.827626),
+    ("Sydney", -33.87, 151.21, 50.0, "2050-06-15T21:00:00Z", 340.8046, 31.801244),
+    ("Sydney", -33.87, 151.21, 50.0, "2099-12-31T00:00:00Z", 17.8602, -21.468225),
+    ("Tromsoe", 69.65, 18.96, 100.0, "2026-11-25T13:30:00Z", 353.5510, 8.587542),
+    ("Tromsoe", 69.65, 18.96, 100.0, "2026-11-26T21:00:00Z", 1.9492, 35.527300),
+    ("Tromsoe", 69.65, 18.96, 100.0, "2026-11-27T03:00:00Z", 3.3154, 43.022718),
+    ("Tromsoe", 69.65, 18.96, 100.0, "2027-03-01T12:00:00Z", 3.3980, -27.974641),
+    ("Tromsoe", 69.65, 18.96, 100.0, "2030-07-01T20:00:00Z", 7.0946, 5.160824),
+    ("Tromsoe", 69.65, 18.96, 100.0, "2050-06-15T21:00:00Z", 340.7301, -4.039659),
+    ("Tromsoe", 69.65, 18.96, 100.0, "2099-12-31T00:00:00Z", 18.0640, 32.661258),
+    ("Quito", -0.18, -78.47, 2850.0, "2026-11-25T13:30:00Z", 353.0873, -21.915932),
+    ("Quito", -0.18, -78.47, 2850.0, "2026-11-26T21:00:00Z", 2.0033, -54.452792),
+    ("Quito", -0.18, -78.47, 2850.0, "2026-11-27T03:00:00Z", 3.7898, 17.909765),
+    ("Quito", -0.18, -78.47, 2850.0, "2027-03-01T12:00:00Z", 3.2376, 61.864719),
+    ("Quito", -0.18, -78.47, 2850.0, "2030-07-01T20:00:00Z", 6.9992, 54.564403),
+    ("Quito", -0.18, -78.47, 2850.0, "2050-06-15T21:00:00Z", 340.4390, -11.606946),
+    ("Quito", -0.18, -78.47, 2850.0, "2099-12-31T00:00:00Z", 18.2192, -34.589774),
+]
+var worstP = 0.0, worstQ = 0.0
+for (_, lat, lon, alt, s, np, _) in axisRefs {
+    let date = iso.date(from: s)!
+    let obs = Observer(latitude: lat, longitude: lon, altitudeM: alt)
+    let t = calc.topocentric(at: date, observer: obs)!
+    let (m, _) = eph.state(jdTT: AstroTime.julianDayTT(date))!
+    let o = EarthOrientation.trueOfDate(date: date)
+    let site = EarthOrientation.observer(obs, gast: o.gast)
+    let u = simd_normalize(o.matrix * m - site.position)
+    let k = SIMD3<Double>(0, 0, 1)
+    let n = simd_normalize(k - simd_dot(k, u) * u), e = simd_normalize(simd_cross(k, u))
+    let zp = site.up - simd_dot(site.up, u) * u
+    let qVec = atan2(simd_dot(zp, e), simd_dot(zp, n)) * 180 / .pi
+    worstP = max(worstP, abs(remainder(t.axisDeg - np, 360)))
+    worstQ = max(worstQ, abs(remainder(t.parallacticDeg - qVec, 360)))
+}
+print(String(format: "Ausrichtung (%d Fälle, München/Sydney/Tromsø/Quito): max. Abweichung Mondachse %.3f°, parallaktischer Winkel %.4f°",
+             axisRefs.count, worstP, worstQ))
+

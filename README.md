@@ -9,6 +9,9 @@ macOS-27-Widget und App: Entfernung Erde–Mond (Mittelpunkte), sekundengenau be
 - **Ephemeride:** JPL DE440 (2021, aktueller Stand der JPL-Planeten- und Mondephemeriden), geozentrischer Mond als
   Tschebyschow-Reihen (`Shared/moon_de440.bin`, 2020–2099). Rechnerische Abweichung zur DE440 unter 1 mm; UTC → TT mit 69,184 s.
   Gegenprüfung mit JPL Horizons (DE441, Vektortabelle, Erdmittelpunkt–Mondmittelpunkt): Abweichung unter 1 m.
+- **Mond wie am Himmel:** Umschalter unter dem Mondbild; dreht das Bild um P − q (Positionswinkel der Mondachse nach
+  Meeus Kap. 53 minus parallaktischer Winkel), sodass der Zenit oben liegt. Abgleich mit JPL Horizons (NP.ang, vier Orte,
+  2026–2099): P auf unter 0,05°; q gegen unabhängige Vektorrechnung geprüft.
 - **Entfernung vom Standort:** Mac-Standort (CoreLocation, nur lokal) als WGS84-Punkt, über wahre Sternzeit, Nutation
   (Hauptterme) und Präzession (IAU 1976) ins Bezugssystem der Ephemeride gedreht; dazu Mondhöhe und Himmelsrichtung (Azimut).
   Abgleich mit JPL Horizons (topozentrische Vektoren, drei Orte, 2026–2099): Entfernung unter 0,1 km, Höhe und Azimut unter 0,001°.

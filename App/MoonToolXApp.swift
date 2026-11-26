@@ -135,6 +135,9 @@ struct ContentView: View {
 
 private struct Dashboard: View {
     @Environment(\.colorScheme) private var scheme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    /// Mondbild „Norden oben“ (false) oder „Wie am Himmel“ mit Zenit oben (true)
+    @AppStorage("moonSkyView") private var skyView = false
     let calculator: MoonCalculator
     let location: LocationModel
     /// Zustand zur vollen Minute: für Bild, Phase, Diagramm und Termine
@@ -152,13 +155,37 @@ private struct Dashboard: View {
         let shown = shown
         HStack(alignment: .top, spacing: 32) {
             VStack(spacing: 14) {
+                let topo = location.observer.flatMap { calculator.topocentric(at: shown.date, observer: $0) }
+                let sky = skyView ? topo : nil
                 ZStack {
                     MoonDisc(imageName: shown.imageName, glow: 0.28, distanceKm: shown.distanceKm)
                         .id(shown.imageName)
                         .transition(.opacity)
                         .animation(.easeInOut(duration: 0.35), value: shown.distanceKm)
+                    if sky != nil {
+                        // Markierung am Mond-Nordpol, dreht mit
+                        Text("N")
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(Palette.marker(scheme))
+                            .offset(y: -(150 * CGFloat(min(1, 356_000 / shown.distanceKm)) + 4))
+                            .transition(.opacity)
+                    }
                 }
                 .frame(width: 300, height: 300)
+                .rotationEffect(.degrees(-(sky?.skyRotationDeg ?? 0)))
+                .opacity((sky?.altitudeDeg ?? 1) < 0 ? 0.5 : 1)
+                .animation(reduceMotion ? nil : .easeInOut(duration: 0.6), value: skyView)
+                .accessibilityLabel(sky.map { "Mond wie am Himmel, um \(Int(abs($0.skyRotationDeg).rounded())) Grad gedreht" } ?? "Mond, Norden oben")
+                if topo != nil {
+                    Picker("Ansicht", selection: $skyView) {
+                        Text("Norden oben").tag(false)
+                        Text("Wie am Himmel").tag(true)
+                    }
+                    .pickerStyle(.segmented)
+                    .labelsHidden()
+                    .fixedSize()            // feste Eigengröße: Segmente springen nicht bei Vorschau/Neuzeichnen
+                    .help("„Wie am Himmel“ dreht das Mondbild so, wie Sie den Mond an Ihrem Standort sehen: Zenit oben.")
+                }
                 Label(shown.phase.name, systemImage: shown.phase.symbolName)
                     .font(.title2.weight(.semibold))
                     .contentTransition(.opacity)
@@ -166,6 +193,14 @@ private struct Dashboard: View {
                     .font(.callout)
                     .foregroundStyle(.secondary)
                     .monospacedDigit()
+                if let sky {
+                    Text(skyCaption(sky))
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .monospacedDigit()
+                        .multilineTextAlignment(.center)
+                        .transition(.opacity)
+                }
                 if let label = context?.distanceLabel(for: shown) {
                     DistanceBadge(label: label)
                         .transition(.opacity)
@@ -225,6 +260,12 @@ private struct Dashboard: View {
             }
         }
         .padding(28)
+    }
+
+    private func skyCaption(_ t: TopocentricMoon) -> String {
+        let angle = Int(abs(t.skyRotationDeg).rounded())
+        let base = "Zenit oben · gegenüber „Norden oben“ um \(angle)° gedreht"
+        return t.altitudeDeg < 0 ? base + "\nMond unter dem Horizont" : base
     }
 
     private func subtitle(for state: MoonState) -> String {

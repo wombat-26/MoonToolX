@@ -475,6 +475,14 @@ struct TopocentricMoon: Sendable {
     let altitudeDeg: Double
     /// Azimut (Grad, von Nord über Ost, 0–360)
     let azimuthDeg: Double
+    /// Parallaktischer Winkel q: Positionswinkel der Zenitrichtung am Mond (Grad, von Nord über Ost)
+    let parallacticDeg: Double
+    /// Positionswinkel der Mondachse P (Grad, von Himmelsnord über Ost, Meeus Kap. 53)
+    let axisDeg: Double
+
+    /// Drehung des Mondbilds („Norden oben“) für die Ansicht mit Zenit oben,
+    /// in Grad gegen den Uhrzeigersinn (−180…180)
+    var skyRotationDeg: Double { remainder(axisDeg - parallacticDeg, 360) }
 }
 
 /// Erdorientierung für die topozentrische Rechnung: Präzession (IAU 1976), Nutation (Hauptterme nach Meeus),
@@ -496,7 +504,7 @@ enum EarthOrientation {
     }
 
     /// Matrix ICRF (≈ mittleres Äquinoktium J2000) → wahres Äquinoktium des Datums, und die wahre Sternzeit (rad).
-    static func trueOfDate(date: Date) -> (matrix: simd_double3x3, gast: Double) {
+    static func trueOfDate(date: Date) -> (matrix: simd_double3x3, gast: Double, dPsi: Double, eps: Double) {
         let jdTT = AstroTime.julianDayTT(date)
         let jdUT = date.timeIntervalSince1970 / 86_400 + AstroTime.jdUnixEpoch
         let t = (jdTT - 2_451_545.0) / 36_525
@@ -523,7 +531,7 @@ enum EarthOrientation {
         var gmst = 280.46061837 + 360.98564736629 * du + 0.000387933 * tu * tu - tu * tu * tu / 38_710_000
         gmst = gmst.truncatingRemainder(dividingBy: 360)
         let gast = gmst * deg + dPsi * cos(eps)
-        return (n * p, gast)
+        return (n * p, gast, dPsi, eps)
     }
 
     /// Ortsvektor (km) und lokale Richtungen (oben, Osten, Norden) des Beobachters im wahren Äquatorsystem des Datums.
@@ -549,13 +557,38 @@ extension MoonCalculator {
     /// Entfernung und Höhe des Mondes vom Standort aus.
     func topocentric(at date: Date, observer: Observer) -> TopocentricMoon? {
         guard let (m, _) = ephemeris.state(jdTT: AstroTime.julianDayTT(date)) else { return nil }
-        let (matrix, gast) = EarthOrientation.trueOfDate(date: date)
+        let jdTT = AstroTime.julianDayTT(date)
+        let (matrix, gast, dPsi, eps) = EarthOrientation.trueOfDate(date: date)
         let site = EarthOrientation.observer(observer, gast: gast)
         let rho = matrix * m - site.position
         let d = simd_length(rho)
         let alt = asin(min(max(simd_dot(rho, site.up) / d, -1), 1)) * 180 / .pi
         var az = atan2(simd_dot(rho, site.east), simd_dot(rho, site.north)) * 180 / .pi
         if az < 0 { az += 360 }
-        return TopocentricMoon(distanceKm: d, altitudeDeg: alt, azimuthDeg: az)
+        let deg = Double.pi / 180
+
+        // Parallaktischer Winkel aus topozentrischer Deklination und Stundenwinkel
+        let dec = asin(rho.z / d), ra = atan2(rho.y, rho.x)
+        let phi = observer.latitude * deg
+        let hourAngle = gast + observer.longitude * deg - ra
+        let q = atan2(sin(hourAngle), tan(phi) * cos(dec) - sin(dec) * cos(hourAngle))
+
+        // Positionswinkel der Mondachse (Meeus Kap. 53, ohne physische Libration, Fehler < 0,1°)
+        let t = (jdTT - 2_451_545.0) / 36_525
+        let node = (125.0445479 - 1934.1362891 * t + 0.0020754 * t * t) * deg
+        let g = matrix * m                                     // geozentrisch, wahres Äquinoktium
+        let ye = g.y * cos(eps) + g.z * sin(eps), ze = -g.y * sin(eps) + g.z * cos(eps)
+        let lambda = atan2(ye, g.x), beta = asin(ze / simd_length(g))
+        let inc = 1.54242 * deg
+        let w = lambda - dPsi - node
+        let bLib = asin(-sin(w) * cos(beta) * sin(inc) - sin(beta) * cos(inc))
+        let v = node + dPsi
+        let x = sin(inc) * sin(v)
+        let y = sin(inc) * cos(v) * cos(eps) - cos(inc) * sin(eps)
+        let omega = atan2(x, y)
+        let axis = asin(min(max((x * x + y * y).squareRoot() * cos(ra - omega) / cos(bLib), -1), 1))
+
+        return TopocentricMoon(distanceKm: d, altitudeDeg: alt, azimuthDeg: az,
+                               parallacticDeg: q / deg, axisDeg: axis / deg)
     }
 }
