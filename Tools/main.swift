@@ -198,3 +198,38 @@ for (_, lat, lon, s, flag, _, el) in rtsRefs {
 }
 print(String(format: "Auf-/Untergang (%d Ereignisse, München/Sydney/Quito): max. Abweichung %.2f min", nRTS, worstRTS))
 
+
+// Libration: Scheibenmittelpunkt, Sonnenpunkt und Positionswinkel der Achse gegen JPL Horizons
+// (Größen 14, 15, 17; geozentrisch und München 48,14° N, 11,5° O, 520 m)
+let muc = Observer(latitude: 48.14, longitude: 11.5, altitudeM: 520)
+let aspectRefs: [(String, [Double], [Double])] = [
+    ("2026-11-26T19:00:00Z", [1.748014, -4.944339, 331.174866, -1.503002, 1.2961], [2.446321, -4.267445, 331.174865, -1.503002, 1.5826]),
+    ("2026-12-03T02:30:00Z", [6.802547, 4.221331, 254.464789, -1.461170, 22.2813], [7.593473, 4.681271, 254.464788, -1.461170, 22.2970]),
+    ("2026-12-12T11:15:00Z", [357.676303, 2.834946, 140.340379, -1.405458, 349.8651], [357.907955, 3.688284, 140.340379, -1.405458, 349.7166]),
+    ("2027-03-08T05:00:00Z", [355.394407, -2.851850, 177.604089, 0.702695, 338.7328], [355.722257, -1.993620, 177.604090, 0.702695, 338.6744]),
+    ("2031-07-19T22:40:00Z", [358.499587, 6.021274, 174.438233, -1.377739, 11.6950], [358.525706, 6.826338, 174.438234, -1.377739, 11.6610]),
+]
+var worstAspect = 0.0
+for (s, geo, topo) in aspectRefs {
+    for (ref, observer) in [(geo, nil as Observer?), (topo, muc)] {
+        let a = calc.aspect(at: iso.date(from: s)!, observer: observer)!
+        let mine = [a.subObserverLonDeg, a.subObserverLatDeg, a.subSolarLonDeg, a.subSolarLatDeg, a.axisPositionAngleDeg]
+        worstAspect = max(worstAspect, zip(mine, ref).map { abs(remainder($0 - $1, 360)) }.max()!)
+    }
+}
+print(String(format: "Libration (%d Zeitpunkte, geozentrisch und München): max. Abweichung %.4f°", aspectRefs.count, worstAspect))
+
+// Helligkeit gegen JPL Horizons (Größe 9, APmag; geozentrisch und München)
+let magRefs: [(String, Double, Double)] = [
+    ("2026-11-24T14:53:00Z", -12.752, -12.776), ("2026-11-26T19:00:00Z", -12.085, -12.079),
+    ("2026-12-01T06:00:00Z", -10.195, -10.218), ("2026-12-05T12:00:00Z", -7.503, -7.530),
+    ("2026-12-07T12:00:00Z", -5.668, -5.711), ("2026-12-08T18:00:00Z", -4.423, -4.489),
+    ("2026-12-12T11:15:00Z", -7.275, -7.300), ("2026-12-17T06:00:00Z", -10.133, -10.104),
+    ("2031-07-19T22:40:00Z", -4.401, -4.456),
+]
+var worstMag = 0.0
+for (s, geo, topo) in magRefs {
+    let d = iso.date(from: s)!
+    worstMag = max(worstMag, abs(calc.apparentMagnitude(at: d)! - geo), abs(calc.apparentMagnitude(at: d, observer: muc)! - topo))
+}
+print(String(format: "Helligkeit (%d Zeitpunkte, geozentrisch und München): max. Abweichung %.3f mag", magRefs.count, worstMag))

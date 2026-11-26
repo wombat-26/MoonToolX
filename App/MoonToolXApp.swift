@@ -158,9 +158,9 @@ private struct Dashboard: View {
                 let topo = location.observer.flatMap { calculator.topocentric(at: shown.date, observer: $0) }
                 let sky = skyView ? topo : nil
                 ZStack {
-                    MoonDisc(imageName: shown.imageName, glow: 0.28, distanceKm: shown.distanceKm)
-                        .id(shown.imageName)
-                        .transition(.opacity)
+                    // Phase und Libration vom Standort aus, ohne Standort vom Erdmittelpunkt aus
+                    LiveMoonDisc(aspect: calculator.aspect(at: shown.date, observer: location.observer),
+                                 glow: 0.28, distanceKm: shown.distanceKm)
                         .animation(.easeInOut(duration: 0.35), value: shown.distanceKm)
                     if sky != nil {
                         // Markierung am Mond-Nordpol, dreht mit
@@ -209,6 +209,13 @@ private struct Dashboard: View {
                     .foregroundStyle(.secondary)
                     .monospacedDigit()
                     .help(topo != nil ? "Vom Standort aus gesehen" : "Vom Erdmittelpunkt aus gesehen")
+                if let magnitude = calculator.apparentMagnitude(at: shown.date, observer: location.observer) {
+                    Text("Helligkeit: \(Fmt.magnitude(magnitude)) mag")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .monospacedDigit()
+                        .help("Scheinbare Helligkeit in Magnituden, ohne Abschwächung durch die Atmosphäre. Je kleiner die Zahl, desto heller: Vollmond etwa −12,7 mag, Halbmond etwa −10 mag.")
+                }
                 if let label = context?.distanceLabel(for: shown) {
                     DistanceBadge(label: label)
                         .transition(.opacity)
@@ -528,6 +535,8 @@ private struct HorizonArrow: View {
 struct WidgetPreview: View {
     private let calculator = MoonCalculator()
     @State private var context: MoonContext?
+    /// Mondbild wie im Widget: vom Erdmittelpunkt aus, alle zehn Minuten neu
+    @State private var moonImage: CGImage?
 
     var body: some View {
         HStack(alignment: .top, spacing: 20) {
@@ -539,9 +548,15 @@ struct WidgetPreview: View {
         }
         .padding(24)
         .background(.background.secondary)
+        .environment(\.moonImage, moonImage)
         .task {
             while !Task.isCancelled, let calculator {
                 context = calculator.context(around: Date())
+                if let aspect = calculator.aspect(at: Date()) {
+                    moonImage = await Task.detached {
+                        MoonRenderer.shared?.image(aspect: aspect, size: MoonRenderer.widgetImageSize)
+                    }.value
+                }
                 try? await Task.sleep(for: .seconds(600))
             }
         }

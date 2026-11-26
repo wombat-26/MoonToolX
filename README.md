@@ -21,13 +21,23 @@ macOS-27-Widget und App: Entfernung Erde–Mond (Mittelpunkte), sekundengenau be
 - **Sonne:** Meeus Kap. 25 (≈ 0,01°) für Phase, Beleuchtung und Phasenzeiten (Minutengenauigkeit).
 - **Widget:** Timeline-Einträge genau zu den Sekunden, in denen die km-Anzeige umspringt, plus ein Eintrag pro Minute.
   Eine Timeline reicht 60 Minuten (24 Reloads/Tag).
-- **Mondbilder:** 180 Phasen (2°-Raster) aus der NASA-SVS-Karte LRO/LROC (CGI Moon Kit, gemeinfrei),
-  Lunar-Lambert-Photometrie, Erdschein; Norden oben, Blick von der Nordhalbkugel, mittlere Libration.
+- **Mondbilder:** zur Laufzeit berechnet (`Shared/MoonRenderer.swift`) aus der NASA-SVS-Karte LRO/LROC (CGI Moon Kit,
+  gemeinfrei), Lunar-Lambert-Photometrie, Erdschein; Mondnordpol oben, Phase stufenlos, mit Libration.
+  Die App rechnet vom Standort aus (Karte 4096 × 2048), das Widget vom Erdmittelpunkt aus (Karte 2048 × 1024,
+  ein Bild je Timeline).
+- **Helligkeit:** scheinbare visuelle Helligkeit nach Allen (V = 0,23 + 5 lg(r·Δ) + 0,026 α + 4·10⁻⁹ α⁴), vom Standort aus,
+  ohne Atmosphäre. Abgleich mit JPL Horizons (APmag, Vollmond bis Neumond): Abweichung unter 0,002 mag.
+- **Libration:** Mondorientierung nach IAU/WGCCRE 2009 einschließlich physischer Libration (`Shared/MoonAspect.swift`).
+  Abgleich mit JPL Horizons (Scheibenmittelpunkt, Sonnenpunkt, Positionswinkel der Achse; geozentrisch und München,
+  2026–2031): Abweichung unter 0,01°.
 
 ## Werkzeuge
 - `Tools/main.swift` – Gegenprüfung gegen DE440-Referenzwerte:
-  `swiftc -O Shared/Astronomy.swift Tools/main.swift -o /tmp/moonverify && /tmp/moonverify`
-- `Tools/make_ephem.py`, `Tools/render_moon.py`, `Tools/make_assets.py` – erzeugen Ephemeride, Phasenbilder und Assets neu.
+  `swiftc -O Shared/Astronomy.swift Shared/MoonAspect.swift Tools/main.swift -o /tmp/moonverify && /tmp/moonverify`
+- `Tools/make_ephem.py` – erzeugt die Ephemeride neu.
+- Mondkarten `Shared/moon_map_4k.jpg` und `Shared/moon_map_2k.jpg`: aus `lroc_color_poles_4k.tif` und
+  `lroc_color_poles_2k.tif` (NASA SVS, CGI Moon Kit) mit
+  `sips -s format jpeg -s formatOptions 88 lroc_color_poles_4k.tif --out Shared/moon_map_4k.jpg` (2k: Qualität 90).
 - `Tools/make_icon.py` – erzeugt die Ebenen des Liquid-Glass-Icons `App/AppIcon.icon` (Icon Composer).
 - `Tools/make_dmg_background.py` – erzeugt den DMG-Hintergrund `Config/dmg/background*.png` (Layout in `Config/dmg/settings.py`).
 
@@ -37,9 +47,8 @@ wenn sich ihre jeweilige Quelle ändert.
 
 | Werkzeug | Wann | Wie oft |
 |---|---|---|
-| `Tools/main.swift` | nach jeder Änderung an `Shared/Astronomy.swift` (Ephemeride, Phasen, Supermond-Logik) und vor jedem Release als Sicherheitscheck | bei Bedarf, vor jedem Release |
+| `Tools/main.swift` | nach jeder Änderung an `Shared/Astronomy.swift` oder `Shared/MoonAspect.swift` (Ephemeride, Phasen, Supermond-Logik, Libration) und vor jedem Release als Sicherheitscheck | bei Bedarf, vor jedem Release |
 | `Tools/make_ephem.py` | wenn Zeitraum oder Genauigkeit der Ephemeridendaten geändert werden sollen; die Daten decken nur einen begrenzten Zeitraum ab und müssen danach neu erzeugt werden | praktisch einmalig, später bei Zeitraum-Ende |
-| `Tools/render_moon.py`, `Tools/make_assets.py` | wenn Mondtextur, Phasenbilder oder Rendering geändert werden | praktisch einmalig |
 | `Tools/make_icon.py` | wenn das Icon-Design geändert wird | selten |
 | `Tools/make_dmg_background.py` | wenn DMG-Design oder -Layout geändert werden (dann auch `Config/dmg/settings.py` prüfen) | selten |
 

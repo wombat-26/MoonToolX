@@ -9,9 +9,10 @@ func phaseTitle(_ state: MoonState, _ context: MoonContext?) -> String {
 }
 
 struct WidgetMoon: View {
+    @Environment(\.moonImage) private var moonImage
     let state: MoonState
     var body: some View {
-        MoonDisc(imageName: state.imageName, distanceKm: state.distanceKm)
+        MoonDisc(image: moonImage, distanceKm: state.distanceKm)
     }
 }
 

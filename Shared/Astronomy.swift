@@ -202,13 +202,6 @@ struct MoonState: Hashable, Sendable {
     var phase: MoonPhase { MoonPhase(elongation: elongationDeg) }
     var lightTimeSeconds: Double { distanceKm / Self.speedOfLight }
     var surfaceDistanceKm: Double { distanceKm - Self.earthRadiusKm - Self.moonRadiusKm }
-
-    /// Name des vorgerenderten Phasenbilds (2°-Raster, ohne Libration).
-    var imageName: String {
-        let e = isWaxing ? 180 - phaseAngleDeg : 180 + phaseAngleDeg
-        let step = Int((e / 2).rounded()) % 180
-        return String(format: "moon_%03d", step * 2)
-    }
 }
 
 struct MoonEvent: Hashable, Sendable, Identifiable {

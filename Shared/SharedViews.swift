@@ -20,6 +20,12 @@ enum Fmt {
         value.formatted(.number.precision(.fractionLength(1)))
     }
 
+    /// Helligkeit in Magnituden mit einer Nachkommastelle und Vorzeichen, z. B. „−12,1“
+    static func magnitude(_ value: Double) -> String {
+        let text = abs(value).formatted(.number.precision(.fractionLength(1)))
+        return value < 0 ? "−\(text)" : "+\(text)"
+    }
+
     /// Himmelsrichtung in 16 Stufen, z. B. „OSO“
     static func compass(_ azimuth: Double) -> String {
         let names = ["N", "NNO", "NO", "ONO", "O", "OSO", "SO", "SSO",
@@ -131,10 +137,16 @@ struct SeededGenerator: RandomNumberGenerator {
 
 // MARK: - Mond
 
-/// Vorgerendertes Phasenbild (NASA LRO/LROC-Karte, Lommel-Seeliger-Photometrie, Erdschein).
+extension EnvironmentValues {
+    /// Mondbild für die Widget-Ansichten (vom Widget je Timeline, von der App für die Vorschau berechnet)
+    @Entry var moonImage: CGImage? = nil
+}
+
+/// Mondbild aus `MoonRenderer` (NASA LRO/LROC-Karte, Lunar-Lambert-Photometrie, Erdschein, Libration).
 struct MoonDisc: View {
     @Environment(\.colorScheme) private var scheme
-    let imageName: String
+    /// `nil`, solange das Bild noch berechnet wird: dunkle Scheibe
+    let image: CGImage?
     var glow: Double = 0.22
     /// Entfernung in km: Die Scheibe wird wie die scheinbare Größe skaliert (∝ 1/Entfernung).
     var distanceKm: Double? = nil
@@ -146,15 +158,57 @@ struct MoonDisc: View {
     }
 
     var body: some View {
-        Image(imageName)
-            .resizable()
-            .interpolation(.high)
-            .widgetAccentedRenderingMode(.fullColor)      // Foto bleibt auch im getönten/Glas-Modus farbig
+        Group {
+            if let image {
+                Image(decorative: image, scale: 1)
+                    .resizable()
+                    .interpolation(.high)
+                    .widgetAccentedRenderingMode(.fullColor)  // Foto bleibt auch im getönten/Glas-Modus farbig
+            } else {
+                Color.black
+            }
+        }
             .aspectRatio(1, contentMode: .fit)
             .clipShape(Circle())
             .shadow(color: scheme == .dark ? .white.opacity(glow) : .black.opacity(0.28),
                     radius: scheme == .dark ? 10 : 6)
             .scaleEffect(distanceKm.map(Self.scale(for:)) ?? 1)
+    }
+}
+
+/// Mondscheibe, die ihr Bild im Hintergrund berechnet und bei jeder sichtbaren Änderung überblendet
+/// (Phase und Libration ändern sich um etwa 0,1° in zehn Minuten).
+struct LiveMoonDisc: View {
+    let aspect: MoonAspect?
+    /// Kantenlänge des berechneten Bilds in Pixeln
+    var size = 600
+    var glow: Double = 0.22
+    var distanceKm: Double? = nil
+    @State private var rendered: RenderedMoon?
+
+    struct RenderedMoon {
+        let key: String
+        let image: CGImage
+    }
+
+    var body: some View {
+        ZStack {
+            MoonDisc(image: rendered?.image, glow: glow, distanceKm: distanceKm)
+                .id(rendered?.key)
+                .transition(.opacity)
+        }
+        .task(id: aspect?.imageKey) {
+            guard let aspect else { return }
+            let size = size
+            let image = await Task.detached(priority: .userInitiated) {
+                MoonRenderer.shared?.image(aspect: aspect, size: size)
+            }.value
+            guard !Task.isCancelled, let image else { return }
+            let first = rendered == nil
+            withAnimation(first ? nil : .easeInOut(duration: 0.35)) {
+                rendered = RenderedMoon(key: aspect.imageKey, image: image)
+            }
+        }
     }
 }
 
