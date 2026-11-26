@@ -272,8 +272,8 @@ private struct Dashboard: View {
 
     private func skyCaption(_ t: TopocentricMoon) -> String {
         let angle = Int(abs(t.skyRotationDeg).rounded())
-        let base = "Zenit oben · gegenüber „Norden oben“ um \(angle)° gedreht"
-        return t.altitudeDeg < 0 ? base + "\nMond unter dem Horizont" : base
+        // „unter dem Horizont“ steht bereits in der Sichtbarkeitszeile
+        return "Zenit oben · gegenüber „Norden oben“ um \(angle)° gedreht"
     }
 
     private func subtitle(for state: MoonState) -> String {
