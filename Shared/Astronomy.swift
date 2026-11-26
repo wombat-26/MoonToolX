@@ -479,6 +479,8 @@ struct TopocentricMoon: Sendable {
     let parallacticDeg: Double
     /// Positionswinkel der Mondachse P (Grad, von Himmelsnord über Ost, Meeus Kap. 53)
     let axisDeg: Double
+    /// Ortsstundenwinkel (Grad, −180…180; 0 = Meridiandurchgang)
+    let hourAngleDeg: Double
 
     /// Drehung des Mondbilds („Norden oben“) für die Ansicht mit Zenit oben,
     /// in Grad gegen den Uhrzeigersinn (−180…180)
@@ -589,6 +591,120 @@ extension MoonCalculator {
         let axis = asin(min(max((x * x + y * y).squareRoot() * cos(ra - omega) / cos(bLib), -1), 1))
 
         return TopocentricMoon(distanceKm: d, altitudeDeg: alt, azimuthDeg: az,
-                               parallacticDeg: q / deg, axisDeg: axis / deg)
+                               parallacticDeg: q / deg, axisDeg: axis / deg,
+                               hourAngleDeg: remainder(hourAngle / deg, 360))
+    }
+}
+
+// MARK: - Auf- und Untergang am Standort
+
+/// Ein Mondlauf über dem Horizont: Aufgang, höchster Stand, Untergang (soweit innerhalb von ±30 Stunden).
+struct MoonPass: Sendable {
+    let isUp: Bool
+    let rise: Date?
+    let riseAzimuthDeg: Double?
+    let transit: Date?
+    let transitAltitudeDeg: Double?
+    let transitAzimuthDeg: Double?
+    let set: Date?
+    let setAzimuthDeg: Double?
+    /// Weder Auf- noch Untergang im Suchfenster: Mond bleibt über (isUp) bzw. unter dem Horizont
+    var noRiseOrSet: Bool { rise == nil && set == nil }
+}
+
+extension MoonCalculator {
+    /// Mondradius (km, IAU)
+    static let moonRadiusKm = 1737.4
+
+    /// Scheinbarer Durchmesser in Bogenminuten bei gegebener Entfernung
+    static func apparentDiameterArcmin(distanceKm: Double) -> Double {
+        2 * asin(moonRadiusKm / distanceKm) * 180 / .pi * 60
+    }
+
+    /// Höhe des Mondmittelpunkts über dem Auf-/Untergangskriterium: oberer Rand am Horizont,
+    /// mit 34′ Standardrefraktion (wie Almanache und JPL Horizons)
+    private func riseFunction(_ date: Date, _ observer: Observer) -> Double? {
+        guard let t = topocentric(at: date, observer: observer) else { return nil }
+        let semidiameter = asin(Self.moonRadiusKm / t.distanceKm) * 180 / .pi
+        return t.altitudeDeg + 34.0 / 60 + semidiameter
+    }
+
+    /// Zeitpunkt des Vorzeichenwechsels zwischen a und b (Bisektion auf 1 s)
+    private func crossing(_ a: Date, _ b: Date, _ observer: Observer) -> Date {
+        var lo = a, hi = b
+        let fLo = riseFunction(lo, observer) ?? 0
+        while hi.timeIntervalSince(lo) > 1 {
+            let mid = lo.addingTimeInterval(hi.timeIntervalSince(lo) / 2)
+            let f = riseFunction(mid, observer) ?? 0
+            if (f > 0) == (fLo > 0) { lo = mid } else { hi = mid }
+        }
+        return lo.addingTimeInterval(hi.timeIntervalSince(lo) / 2)
+    }
+
+    /// Erster Wechsel ab `start` in Richtung `step` (Sekunden, positiv oder negativ), aufwärts (rising) oder abwärts
+    private func findCrossing(from start: Date, step: TimeInterval, limit: TimeInterval,
+                              rising: Bool, _ observer: Observer) -> Date? {
+        var t = start
+        guard var f = riseFunction(t, observer) else { return nil }
+        var travelled = 0.0
+        while travelled < limit {
+            let next = t.addingTimeInterval(step)
+            guard let g = riseFunction(next, observer) else { return nil }
+            // zeitlich geordnet: früher (a) → später (b)
+            let (a, fa, b, fb) = step > 0 ? (t, f, next, g) : (next, g, t, f)
+            if rising ? (fa <= 0 && fb > 0) : (fa > 0 && fb <= 0) {
+                return crossing(a, b, observer)
+            }
+            t = next; f = g; travelled += abs(step)
+        }
+        return nil
+    }
+
+    /// Höchster Stand zwischen a und b: oberer Meridiandurchgang (Stundenwinkel 0), wie in Almanachen und JPL Horizons
+    private func culmination(_ a: Date, _ b: Date, _ observer: Observer) -> (Date, TopocentricMoon)? {
+        func h(_ t: Date) -> Double? { topocentric(at: t, observer: observer)?.hourAngleDeg }
+        var t = a
+        guard var ht = h(t) else { return nil }
+        while t < b {
+            let next = min(b, t.addingTimeInterval(600))
+            guard let hn = h(next) else { return nil }
+            if ht < 0 && hn >= 0 {                       // Vorzeichenwechsel −→+ bei kleinem |H|
+                var lo = t, hi = next
+                while hi.timeIntervalSince(lo) > 1 {
+                    let mid = lo.addingTimeInterval(hi.timeIntervalSince(lo) / 2)
+                    if (h(mid) ?? 0) < 0 { lo = mid } else { hi = mid }
+                }
+                let tm = lo.addingTimeInterval(hi.timeIntervalSince(lo) / 2)
+                return topocentric(at: tm, observer: observer).map { (tm, $0) }
+            }
+            t = next; ht = hn
+        }
+        return nil
+    }
+
+    /// Aktueller Mondlauf (Mond über dem Horizont) oder der nächste (Mond darunter)
+    func moonPass(at date: Date, observer: Observer) -> MoonPass? {
+        guard let f0 = riseFunction(date, observer) else { return nil }
+        let isUp = f0 > 0
+        let window: TimeInterval = 30 * 3600, step: TimeInterval = 600
+        let rise: Date?, set: Date?
+        if isUp {
+            rise = findCrossing(from: date, step: -step, limit: window, rising: true, observer)
+            set = findCrossing(from: date, step: step, limit: window, rising: false, observer)
+        } else {
+            rise = findCrossing(from: date, step: step, limit: window, rising: true, observer)
+            set = rise.flatMap { findCrossing(from: $0.addingTimeInterval(60), step: step, limit: window, rising: false, observer) }
+        }
+        var transit: (Date, TopocentricMoon)?
+        if let r = rise, let s = set {
+            transit = culmination(r, s, observer)
+        } else if isUp {
+            transit = culmination(rise ?? date.addingTimeInterval(-12.5 * 3600),
+                                  set ?? date.addingTimeInterval(12.5 * 3600), observer)
+        }
+        return MoonPass(isUp: isUp,
+                        rise: rise, riseAzimuthDeg: rise.flatMap { topocentric(at: $0, observer: observer)?.azimuthDeg },
+                        transit: transit?.0, transitAltitudeDeg: transit?.1.altitudeDeg, transitAzimuthDeg: transit?.1.azimuthDeg,
+                        set: set, setAzimuthDeg: set.flatMap { topocentric(at: $0, observer: observer)?.azimuthDeg })
     }
 }

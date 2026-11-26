@@ -12,6 +12,9 @@ macOS-27-Widget und App: Entfernung Erde–Mond (Mittelpunkte), sekundengenau be
 - **Mond wie am Himmel:** Umschalter unter dem Mondbild; dreht das Bild um P − q (Positionswinkel der Mondachse nach
   Meeus Kap. 53 minus parallaktischer Winkel), sodass der Zenit oben liegt. Abgleich mit JPL Horizons (NP.ang, vier Orte,
   2026–2099): P auf unter 0,05°; q gegen unabhängige Vektorrechnung geprüft.
+- **Auf- und Untergang:** oberer Rand mit 34′ Refraktion, höchster Stand als Meridiandurchgang; Suche in 10-Minuten-Schritten,
+  Bisektion auf 1 s. Abgleich mit JPL Horizons (R_T_S, drei Orte, 2026 und 2035, 53 Ereignisse): höchstens 1 Minute.
+  Dazu Sichtbarkeit („Sichtbar, noch …“ / „Aufgang in …“) und scheinbarer Durchmesser in Bogenminuten.
 - **Entfernung vom Standort:** Mac-Standort (CoreLocation, nur lokal) als WGS84-Punkt, über wahre Sternzeit, Nutation
   (Hauptterme) und Präzession (IAU 1976) ins Bezugssystem der Ephemeride gedreht; dazu Mondhöhe und Himmelsrichtung (Azimut).
   Abgleich mit JPL Horizons (topozentrische Vektoren, drei Orte, 2026–2099): Entfernung unter 0,1 km, Höhe und Azimut unter 0,001°.

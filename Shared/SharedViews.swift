@@ -15,6 +15,11 @@ enum Fmt {
         return degrees >= 0 ? "+\(value)°" : "−\(value)°"
     }
 
+    /// Bogenminuten mit einer Nachkommastelle, z. B. „33,2“
+    static func arcmin(_ value: Double) -> String {
+        value.formatted(.number.precision(.fractionLength(1)))
+    }
+
     /// Himmelsrichtung in 16 Stufen, z. B. „OSO“
     static func compass(_ azimuth: Double) -> String {
         let names = ["N", "NNO", "NO", "ONO", "O", "OSO", "SO", "SSO",
@@ -31,7 +36,7 @@ enum Fmt {
     }
 
     static func speed(_ kmS: Double) -> String {
-        "\((abs(kmS) * 1000).formatted(.number.precision(.fractionLength(0)))) m/s"
+        "\((abs(kmS) * 1000).formatted(.number.precision(.fractionLength(1)))) m/s"
     }
 
     static func days(_ d: Double) -> String {

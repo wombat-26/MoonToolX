@@ -201,6 +201,14 @@ private struct Dashboard: View {
                         .multilineTextAlignment(.center)
                         .transition(.opacity)
                 }
+                if let observer = location.observer, let pass = calculator.moonPass(at: shown.date, observer: observer) {
+                    MoonPassView(pass: pass, now: shown.date)
+                }
+                Text("Scheinbarer Durchmesser: \(Fmt.arcmin(MoonCalculator.apparentDiameterArcmin(distanceKm: topo?.distanceKm ?? shown.distanceKm))) Bogenminuten")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .monospacedDigit()
+                    .help(topo != nil ? "Vom Standort aus gesehen" : "Vom Erdmittelpunkt aus gesehen")
                 if let label = context?.distanceLabel(for: shown) {
                     DistanceBadge(label: label)
                         .transition(.opacity)
@@ -283,6 +291,66 @@ private struct Dashboard: View {
         } else {
             Text("–")
         }
+    }
+}
+
+/// Auf- und Untergang am Standort, höchster Stand und Sichtbarkeit
+private struct MoonPassView: View {
+    let pass: MoonPass
+    let now: Date
+
+    var body: some View {
+        VStack(spacing: 6) {
+            Text(visibility)
+                .font(.callout.weight(.medium))
+                .monospacedDigit()
+            if !(pass.noRiseOrSet && !pass.isUp) {
+                Grid(horizontalSpacing: 18, verticalSpacing: 1) {
+                    GridRow {
+                        Text("Aufgang"); Text("Höchster Stand"); Text("Untergang")
+                    }
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    GridRow {
+                        Text(time(pass.rise)); Text(time(pass.transit)); Text(time(pass.set))
+                    }
+                    .font(.callout)
+                    GridRow {
+                        Text(direction(pass.riseAzimuthDeg))
+                        Text(pass.transitAltitudeDeg.map { "\(Fmt.altitude($0)) · \(direction(pass.transitAzimuthDeg))" } ?? "–")
+                        Text(direction(pass.setAzimuthDeg))
+                    }
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                }
+                .monospacedDigit()
+            }
+        }
+    }
+
+    private var visibility: String {
+        if pass.isUp {
+            if let set = pass.set { return "Sichtbar, noch \(duration(set.timeIntervalSince(now)))" }
+            return "Sichtbar, geht vorerst nicht unter"
+        }
+        if let rise = pass.rise { return "Unter dem Horizont, Aufgang in \(duration(rise.timeIntervalSince(now)))" }
+        return "Bleibt vorerst unter dem Horizont"
+    }
+
+    private func duration(_ seconds: TimeInterval) -> String {
+        let minutes = max(0, Int((seconds / 60).rounded()))
+        return minutes >= 60 ? "\(minutes / 60) Std. \(minutes % 60) Min." : "\(minutes) Min."
+    }
+
+    private func time(_ date: Date?) -> String {
+        guard let date else { return "–" }
+        return Calendar.current.isDate(date, inSameDayAs: now)
+            ? date.formatted(.dateTime.hour().minute())
+            : date.formatted(.dateTime.weekday(.abbreviated).hour().minute())
+    }
+
+    private func direction(_ azimuth: Double?) -> String {
+        azimuth.map { Fmt.compass($0) } ?? "–"
     }
 }
 
@@ -406,22 +474,21 @@ private struct LiveDistancePanel: View {
         }
     }
 
+    /// Icon in fester Breite, damit alle Beschriftungen bündig dahinter beginnen
     private func row<Icon: View>(_ title: String, _ value: String, @ViewBuilder icon: () -> Icon) -> some View {
         GridRow {
-            Label { Text(title) } icon: { icon() }
-                .foregroundStyle(.secondary)
+            HStack(spacing: 6) {
+                icon().frame(width: 18, alignment: .center)
+                Text(title)
+            }
+            .foregroundStyle(.secondary)
             Text(value)
                 .monospacedDigit()
         }
     }
 
     private func row(_ title: String, _ value: String, symbol: String) -> some View {
-        GridRow {
-            Label(title, systemImage: symbol)
-                .foregroundStyle(.secondary)
-            Text(value)
-                .monospacedDigit()
-        }
+        row(title, value) { Image(systemName: symbol) }
     }
 }
 
