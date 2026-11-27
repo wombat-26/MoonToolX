@@ -55,5 +55,17 @@ $VENV/bin/dmgbuild -s Config/dmg/settings.py \
   "MoonToolX $VERSION" "$DMG"
 ditto -c -k --keepParent "$APP" "$OUT/$NAME.zip"
 
+# DMG selbst notarisieren und heften (optional): braucht ein notarytool-Profil im Schlüsselbund,
+# einmalig einrichten mit:  xcrun notarytool store-credentials MoonToolX-notary --apple-id <Apple-ID> --team-id 76X3T92345
+PROFILE=${NOTARY_PROFILE:-MoonToolX-notary}
+if xcrun notarytool history --keychain-profile "$PROFILE" >/dev/null 2>&1; then
+  echo "▸ DMG notarisieren (Profil $PROFILE)"
+  xcrun notarytool submit "$DMG" --keychain-profile "$PROFILE" --wait
+  xcrun stapler staple "$DMG"
+  xcrun stapler validate "$DMG"
+else
+  echo "  Hinweis: DMG nicht notarisiert, kein notarytool-Profil „$PROFILE“ (App darin ist notarisiert und geheftet)."
+fi
+
 echo "✓ Fertig:"
 ls -lh "$DMG" "$OUT/$NAME.zip"

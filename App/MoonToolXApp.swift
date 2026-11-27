@@ -6,7 +6,7 @@ struct MoonToolXApp: App {
     var body: some Scene {
         WindowGroup("MoonToolX") {
             ContentView()
-                .frame(width: 920, height: 640)     // feste Fenstergröße
+                .frame(width: 920, height: 720)     // feste Fenstergröße, Platz für Vorschau mit Supermond-Plakette
         }
         .windowResizability(.contentSize)
         .commands {
@@ -244,7 +244,7 @@ private struct Dashboard: View {
                                       highlight: preview?.date,
                                       highlightKm: preview.flatMap { calculator.distance(at: $0.date) },
                                       onSelect: onSelect)
-                            .frame(height: 150)
+                            .frame(height: 220)
                         ChartLegend()
                         }
                         .padding(4)

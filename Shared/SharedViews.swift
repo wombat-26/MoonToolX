@@ -245,7 +245,8 @@ struct DistanceChart: View {
                 PointMark(x: .value("Zeit", a.date), y: .value("Entfernung", a.distanceKm / 1000))
                     .symbolSize(compact ? 14 : 24)
                     .foregroundStyle(.secondary)
-                    .annotation(position: a.kind == .perigee ? .bottom : .top, spacing: 2) {
+                    .annotation(position: a.kind == .perigee ? .bottom : .top, spacing: 2,
+                                overflowResolution: .init(x: .fit(to: .chart), y: .disabled)) {
                         Text(Fmt.km(a.distanceKm))
                             .font(.system(size: compact ? 8 : 10, weight: .medium).monospacedDigit())
                             .foregroundStyle(.secondary)
