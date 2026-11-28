@@ -1,0 +1,6197 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "%@ %@": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@"
+          }
+        }
+      }
+    },
+    "%@ %@ · back to now in %lld s": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@ · zurück zu jetzt in %lld s"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@ · vuelve al momento actual en %lld s"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@ · retour à maintenant dans %lld s"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@ · torna a ora tra %lld s"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@ · %lld 秒後に現在へ戻る"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@ · terug naar nu over %lld s"
+          }
+        }
+      }
+    },
+    "%@ at %@": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ mit %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ a %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ à %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ a %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%2$@で%1$@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ met %@"
+          }
+        }
+      }
+    },
+    "%@ illuminated": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ beleuchtet"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ iluminada"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ éclairée"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ illuminata"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "輝面率 %@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ verlicht"
+          }
+        }
+      }
+    },
+    "%@ km (mean radii)": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ km (mittlere Radien)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ km (radios medios)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ km (rayons moyens)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ km (raggi medi)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ km（平均半径）"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ km (gemiddelde stralen)"
+          }
+        }
+      }
+    },
+    "%@ · %@": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@"
+          }
+        }
+      }
+    },
+    "%@ · %@ km": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@ km"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@ km"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@ km"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@ km"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@ km"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@ km"
+          }
+        }
+      }
+    },
+    "%@, %@. Definition by Richard Nolle.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, %@. Definition nach Richard Nolle."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, %@. Definición de Richard Nolle."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, %@. Définition de Richard Nolle."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, %@. Definizione di Richard Nolle."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@、%@。Richard Nolle による定義。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, %@. Definitie volgens Richard Nolle."
+          }
+        }
+      }
+    },
+    "%@: %@": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ : %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@：%@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: %@"
+          }
+        }
+      }
+    },
+    "%lld hr %lld min": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Std. %lld Min."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld h %lld min"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld h %lld min"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld h %lld min"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld時間%lld分"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld u %lld min"
+          }
+        }
+      }
+    },
+    "%lld k": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Tsd."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld mil"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld k"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld mila"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld千"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld k"
+          }
+        }
+      }
+    },
+    "%lld min": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Min."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld分"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        }
+      }
+    },
+    "%lld.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld."
+          }
+        }
+      }
+    },
+    "Accuracy and data": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Genauigkeit und Daten"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Precisión y datos"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Précision et données"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Precisione e dati"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "精度とデータ"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nauwkeurigheid en gegevens"
+          }
+        }
+      }
+    },
+    "Accurate to about one minute.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auf etwa eine Minute genau."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Precisión de aproximadamente un minuto."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Précises à environ une minute."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Precisione di circa un minuto."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "約1分の精度です。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nauwkeurig tot op ongeveer een minuut."
+          }
+        }
+      }
+    },
+    "Add the widget": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget hinzufügen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir el widget"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter le widget"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungere il widget"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ウィジェットを追加する"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget toevoegen"
+          }
+        }
+      }
+    },
+    "All times use the time zone set in macOS.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Zeiten in der Zeitzone, die in macOS eingestellt ist."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas las horas usan la zona horaria configurada en macOS."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toutes les heures utilisent le fuseau horaire défini dans macOS."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tutti gli orari usano il fuso orario impostato in macOS."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべての時刻は macOS で設定されたタイムゾーンで表示されます。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle tijden gebruiken de tijdzone die in macOS is ingesteld."
+          }
+        }
+      }
+    },
+    "Allow MoonToolX access in System Settings under Privacy & Security › Location Services.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erlauben Sie MoonToolX den Zugriff in den Systemeinstellungen unter Datenschutz & Sicherheit › Ortungsdienste."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permite el acceso de MoonToolX en Ajustes del Sistema, en Privacidad y seguridad › Localización."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autorisez l’accès de MoonToolX dans Réglages Système, sous Confidentialité et sécurité › Service de localisation."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consenti l’accesso a MoonToolX in Impostazioni di Sistema, in Privacy e sicurezza › Localizzazione."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "システム設定の「プライバシーとセキュリティ › 位置情報サービス」で MoonToolX へのアクセスを許可してください。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geef MoonToolX toegang in Systeeminstellingen bij Privacy en beveiliging › Locatievoorzieningen."
+          }
+        }
+      }
+    },
+    "Altitude of the Moon’s center above (+) or below (−) the horizon at your Mac’s location, without atmospheric refraction, and compass direction with azimuth (from north through east).": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Höhe des Mondmittelpunkts über (+) oder unter (−) dem Horizont am Mac-Standort, ohne Lichtbrechung der Atmosphäre, und Himmelsrichtung mit Azimut (von Nord über Ost)."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Altura del centro de la Luna sobre (+) o bajo (−) el horizonte en la ubicación de tu Mac, sin refracción atmosférica, y dirección con el acimut (de norte a este)."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hauteur du centre de la Lune au-dessus (+) ou au-dessous (−) de l’horizon à la position de votre Mac, sans réfraction atmosphérique, et direction avec l’azimut (du nord vers l’est)."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Altezza del centro della Luna sopra (+) o sotto (−) l’orizzonte nella posizione del tuo Mac, senza rifrazione atmosferica, e direzione con l’azimut (da nord verso est)."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac の位置における月の中心の地平線からの高度（上が＋、下が−、大気差なし）と、方角および方位角（北から東回り）。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoogte van het middelpunt van de maan boven (+) of onder (−) de horizon op de locatie van je Mac, zonder atmosferische refractie, en windrichting met azimut (van noord via oost)."
+          }
+        }
+      }
+    },
+    "Altitude of the Moon’s center above the horizon at your location, without atmospheric refraction: + above the horizon, − below it. Also the compass direction (N, NNE, NE … NNW) and the azimuth in degrees, counted from north through east (east = 90°, south = 180°). When the Moon is below the horizon, the direction shows where it is below the horizon.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Höhe des Mondmittelpunkts über dem Horizont an Ihrem Standort, ohne Lichtbrechung der Atmosphäre: + über dem Horizont, − darunter. Dazu die Himmelsrichtung (N, NNO, NO … NNW) und der Azimut in Grad, von Nord über Ost gezählt (Ost = 90°, Süd = 180°). Steht der Mond unter dem Horizont, zeigt die Richtung, wo er sich unter dem Horizont befindet."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Altura del centro de la Luna sobre el horizonte en tu ubicación, sin refracción atmosférica: + sobre el horizonte, − por debajo. Además, la dirección (N, NNE, NE … NNO) y el acimut en grados, contado de norte a este (este = 90°, sur = 180°). Cuando la Luna está bajo el horizonte, la dirección indica dónde se encuentra bajo el horizonte."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hauteur du centre de la Lune au-dessus de l’horizon à votre position, sans réfraction atmosphérique : + au-dessus de l’horizon, − au-dessous. Également la direction (N, NNE, NE … NNO) et l’azimut en degrés, compté du nord vers l’est (est = 90°, sud = 180°). Lorsque la Lune est sous l’horizon, la direction indique où elle se trouve sous l’horizon."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Altezza del centro della Luna sopra l’orizzonte nella tua posizione, senza rifrazione atmosferica: + sopra l’orizzonte, − sotto. Inoltre la direzione (N, NNE, NE … NNO) e l’azimut in gradi, contato da nord verso est (est = 90°, sud = 180°). Quando la Luna è sotto l’orizzonte, la direzione indica dove si trova sotto l’orizzonte."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在地における月の中心の地平線からの高度（大気差なし）：地平線より上は＋、下は−。あわせて方角（北、北北東、北東 … 北北西）と、北から東回りに数えた方位角（度、東 = 90°、南 = 180°）を表示します。月が地平線より下にあるときは、地平線の下のどの方向にあるかを示します。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoogte van het middelpunt van de maan boven de horizon op je locatie, zonder atmosferische refractie: + boven de horizon, − eronder. Daarnaast de windrichting (N, NNO, NO … NNW) en het azimut in graden, gerekend van noord via oost (oost = 90°, zuid = 180°). Staat de maan onder de horizon, dan geeft de richting aan waar hij zich onder de horizon bevindt."
+          }
+        }
+      }
+    },
+    "Altitude · direction": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mondhöhe · Richtung"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Altura · dirección"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hauteur · direction"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Altezza · direzione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高度 · 方角"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoogte · richting"
+          }
+        }
+      }
+    },
+    "Apogee": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apogäum"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apogeo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apogée"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apogeo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "遠地点"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apogeum"
+          }
+        }
+      }
+    },
+    "Apparent brightness in magnitudes (mag), seen from your location and without dimming by the atmosphere. The smaller the number, the brighter: full moon about −12.7 mag, half moon about −10 mag. Near new moon, the value is only approximate.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scheinbare Helligkeit in Magnituden (mag), von Ihrem Standort aus gesehen und ohne Abschwächung durch die Atmosphäre. Je kleiner die Zahl, desto heller: Vollmond etwa −12,7 mag, Halbmond etwa −10 mag. Nahe Neumond ist der Wert nur ein Richtwert."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brillo aparente en magnitudes (mag), visto desde tu ubicación y sin atenuación atmosférica. Cuanto menor es el número, más brillante: luna llena unos −12,7 mag, cuarto unos −10 mag. Cerca de la luna nueva, el valor es solo aproximado."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luminosité apparente en magnitudes (mag), vue de votre position et sans atténuation par l’atmosphère. Plus le nombre est petit, plus la Lune est brillante : pleine lune environ −12,7 mag, quartier environ −10 mag. Près de la nouvelle lune, la valeur n’est qu’indicative."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luminosità apparente in magnitudini (mag), vista dalla tua posizione e senza attenuazione atmosferica. Più il numero è piccolo, più la Luna è luminosa: luna piena circa −12,7 mag, quarto circa −10 mag. Vicino alla luna nuova il valore è solo indicativo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在地から見た見かけの明るさ（等級、mag）。大気による減光は含みません。数値が小さいほど明るく、満月は約 −12.7 等、半月は約 −10 等です。新月付近では目安の値です。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schijnbare helderheid in magnitudes (mag), gezien vanaf je locatie en zonder verzwakking door de atmosfeer. Hoe kleiner het getal, hoe helderder: volle maan ongeveer −12,7 mag, halve maan ongeveer −10 mag. Rond nieuwe maan is de waarde slechts een benadering."
+          }
+        }
+      }
+    },
+    "Apparent brightness in magnitudes, without dimming by the atmosphere. The smaller the number, the brighter: full moon about −12.7 mag, half moon about −10 mag.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scheinbare Helligkeit in Magnituden, ohne Abschwächung durch die Atmosphäre. Je kleiner die Zahl, desto heller: Vollmond etwa −12,7 mag, Halbmond etwa −10 mag."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brillo aparente en magnitudes, sin atenuación atmosférica. Cuanto menor es el número, más brillante: luna llena unos −12,7 mag, cuarto unos −10 mag."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luminosité apparente en magnitudes, sans atténuation par l’atmosphère. Plus le nombre est petit, plus la Lune est brillante : pleine lune environ −12,7 mag, quartier environ −10 mag."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luminosità apparente in magnitudini, senza attenuazione atmosferica. Più il numero è piccolo, più la Luna è luminosa: luna piena circa −12,7 mag, quarto circa −10 mag."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "見かけの明るさ（等級）。大気による減光は含みません。数値が小さいほど明るく、満月は約 −12.7 等、半月は約 −10 等です。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schijnbare helderheid in magnitudes, zonder verzwakking door de atmosfeer. Hoe kleiner het getal, hoe helderder: volle maan ongeveer −12,7 mag, halve maan ongeveer −10 mag."
+          }
+        }
+      }
+    },
+    "Apparent diameter": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scheinbarer Durchmesser"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diámetro aparente"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diamètre apparent"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diametro apparente"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "視直径"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schijnbare diameter"
+          }
+        }
+      }
+    },
+    "Apparent diameter: %@ arcminutes": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scheinbarer Durchmesser: %@ Bogenminuten"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diámetro aparente: %@ minutos de arco"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diamètre apparent : %@ minutes d’arc"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diametro apparente: %@ minuti d’arco"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "視直径：%@ 分角"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schijnbare diameter: %@ boogminuten"
+          }
+        }
+      }
+    },
+    "Appearance": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Darstellung"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apariencia"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apparence"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aspetto"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外観"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weergave"
+          }
+        }
+      }
+    },
+    "As in the Sky": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wie am Himmel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Como en el cielo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comme dans le ciel"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Come in cielo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "空での見え方"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zoals aan de hemel"
+          }
+        }
+      }
+    },
+    "As of %@ · rounded %@ km": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stand %@ · gerundet %@ km"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A las %@ · redondeado %@ km"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À %@ · arrondi %@ km"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle %@ · arrotondato %@ km"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 時点 · 概算 %@ km"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Om %@ · afgerond %@ km"
+          }
+        }
+      }
+    },
+    "Base": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Basis"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Base"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Base"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Base"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "基準"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Basis"
+          }
+        }
+      }
+    },
+    "Below the horizon, rises in %@": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unter dem Horizont, Aufgang in %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bajo el horizonte, sale en %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sous l’horizon, lever dans %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sotto l’orizzonte, sorge tra %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地平線の下、%@後に月の出"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Onder de horizon, komt op over %@"
+          }
+        }
+      }
+    },
+    "Below the moon image: whether the Moon is visible now and for how long, or when it rises; plus moonrise, highest point (meridian transit with altitude), and moonset at your location, with compass direction. Rise and set times refer to the Moon’s upper limb with atmospheric refraction, as is usual in calendars, and are accurate to about one minute.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unter dem Mondbild: ob der Mond gerade sichtbar ist und wie lange noch, bzw. wann er aufgeht; dazu Aufgang, höchster Stand (Meridiandurchgang mit Höhe) und Untergang an Ihrem Standort, mit Himmelsrichtung. Auf- und Untergang gelten für den oberen Mondrand mit Lichtbrechung der Atmosphäre, wie in Kalendern üblich, auf etwa eine Minute genau."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debajo de la imagen de la Luna: si la Luna es visible ahora y durante cuánto tiempo, o cuándo sale; además, la salida, el punto más alto (tránsito meridiano con altura) y la puesta en tu ubicación, con la dirección. Las horas de salida y puesta se refieren al borde superior de la Luna con refracción atmosférica, como es habitual en los calendarios, con una precisión de aproximadamente un minuto."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sous l’image de la Lune : si la Lune est visible maintenant et pour combien de temps, ou quand elle se lève ; ainsi que le lever, le point le plus haut (passage au méridien avec hauteur) et le coucher à votre position, avec la direction. Les heures de lever et de coucher concernent le bord supérieur de la Lune avec réfraction atmosphérique, comme dans les calendriers, à environ une minute près."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sotto l’immagine della Luna: se la Luna è visibile ora e per quanto tempo, oppure quando sorge; inoltre il sorgere, il punto più alto (transito al meridiano con altezza) e il tramonto nella tua posizione, con la direzione. Gli orari di sorgere e tramonto si riferiscono al bordo superiore della Luna con rifrazione atmosferica, come nei calendari, con una precisione di circa un minuto."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月の画像の下に、月が現在見えるかとあとどれくらい見えるか、または月の出までの時間を表示します。あわせて、現在地での月の出、南中（高度付き）、月の入の時刻と方角も表示します。月の出・月の入は、暦と同様に月の上縁と大気差を考慮した時刻で、精度は約1分です。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Onder de maanafbeelding: of de maan nu zichtbaar is en hoe lang nog, of wanneer hij opkomt; daarnaast maanopkomst, hoogste stand (meridiaandoorgang met hoogte) en maanondergang op je locatie, met windrichting. Op- en ondergang gelden voor de bovenrand van de maan met atmosferische refractie, zoals gebruikelijk in kalenders, tot op ongeveer een minuut nauwkeurig."
+          }
+        }
+      }
+    },
+    "Brightness": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Helligkeit"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brillo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luminosité"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luminosità"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "明るさ"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Helderheid"
+          }
+        }
+      }
+    },
+    "Brightness: %@ mag": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Helligkeit: %@ mag"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brillo: %@ mag"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luminosité : %@ mag"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luminosità: %@ mag"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "明るさ：%@ 等"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Helderheid: %@ mag"
+          }
+        }
+      }
+    },
+    "Calculated for each moment from the LRO/LROC lunar map (NASA Scientific Visualization Studio). They also show libration, the Moon’s slight wobble: in the main window as seen from your location, in the widget as seen from the center of the Earth.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus der LRO/LROC-Mondkarte (NASA Scientific Visualization Studio), für den jeweiligen Zeitpunkt berechnet. Dargestellt ist auch die Libration, das leichte Taumeln des Mondes: im Hauptfenster vom Standort aus gesehen, im Widget vom Erdmittelpunkt aus."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calculadas para cada momento a partir del mapa lunar LRO/LROC (NASA Scientific Visualization Studio). También muestran la libración, el ligero bamboleo de la Luna: en la ventana principal vista desde tu ubicación, en el widget vista desde el centro de la Tierra."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calculées pour chaque instant à partir de la carte lunaire LRO/LROC (NASA Scientific Visualization Studio). Elles montrent aussi la libration, le léger balancement de la Lune : dans la fenêtre principale vue de votre position, dans le widget vue du centre de la Terre."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calcolate per ogni istante dalla mappa lunare LRO/LROC (NASA Scientific Visualization Studio). Mostrano anche la librazione, la leggera oscillazione della Luna: nella finestra principale vista dalla tua posizione, nel widget vista dal centro della Terra."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LRO/LROC の月面地図（NASA Scientific Visualization Studio）から、時刻ごとに計算しています。月のわずかな揺れである秤動も表示します。メインウインドウでは現在地から、ウィジェットでは地球の中心から見た状態です。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voor elk moment berekend uit de maankaart LRO/LROC (NASA Scientific Visualization Studio). Ze tonen ook de libratie, het lichte schommelen van de maan: in het hoofdvenster gezien vanaf je locatie, in de widget gezien vanuit het middelpunt van de aarde."
+          }
+        }
+      }
+    },
+    "Change": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Änderung"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Variación"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Variation"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Variazione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "変化"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verandering"
+          }
+        }
+      }
+    },
+    "Click to show that moment for 3 seconds": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klick zeigt den Tag für 3 Sekunden"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haz clic para ver ese momento durante 3 segundos"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cliquez pour afficher ce moment pendant 3 secondes"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fai clic per vedere quel momento per 3 secondi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリックするとその時点を3秒間表示"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klik om dat moment 3 seconden te tonen"
+          }
+        }
+      }
+    },
+    "Control-click the desktop, then choose **Edit Widgets…**.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klicken Sie mit der rechten Maustaste auf den Schreibtisch und wählen Sie **Widgets bearbeiten …** aus."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haz clic con la tecla Control pulsada en el escritorio y selecciona **Editar widgets…**."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cliquez sur le bureau tout en maintenant la touche Contrôle enfoncée, puis choisissez **Modifier les widgets…**."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fai clic sulla scrivania tenendo premuto il tasto Ctrl, quindi scegli **Modifica widget…**."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デスクトップを Control キーを押しながらクリックし、「**ウィジェットを編集…**」を選択します。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klik met de Control-toets ingedrukt op het bureaublad en kies **Wijzig widgets…**."
+          }
+        }
+      }
+    },
+    "Current phase, north up, as the Moon appears from the Northern Hemisphere. With **As in the Sky** below the image, MoonToolX rotates the Moon the way you see it from your location: zenith up, and the orange N marks the Moon’s north pole. Depending on latitude and time of day, the Moon is tilted or, in the Southern Hemisphere, nearly upside down. When it is below the horizon, it appears faded. The size follows the distance: near perigee the Moon appears larger, near apogee smaller, in the same ratio as in the sky.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktuelle Phase, Norden oben, so wie der Mond von der Nordhalbkugel aus erscheint. Mit **Wie am Himmel** unter dem Bild dreht MoonToolX den Mond so, wie Sie ihn an Ihrem Standort sehen: Zenit oben, das orange N markiert den Mond-Nordpol. Je nach Breitengrad und Tageszeit liegt der Mond schräg oder steht auf der Südhalbkugel fast kopf. Steht er unter dem Horizont, erscheint er blass. Die Größe folgt der Entfernung: In Erdnähe erscheint der Mond größer, in Erdferne kleiner, im selben Verhältnis wie am Himmel."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fase actual, con el norte arriba, tal como se ve la Luna desde el hemisferio norte. Con **Como en el cielo**, debajo de la imagen, MoonToolX gira la Luna tal como la ves desde tu ubicación: el cenit arriba, y la N naranja marca el polo norte de la Luna. Según la latitud y la hora, la Luna aparece inclinada o, en el hemisferio sur, casi invertida. Cuando está bajo el horizonte, aparece atenuada. El tamaño sigue la distancia: cerca del perigeo la Luna se ve más grande, cerca del apogeo más pequeña, en la misma proporción que en el cielo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Phase actuelle, nord en haut, telle que la Lune apparaît depuis l’hémisphère Nord. Avec **Comme dans le ciel**, sous l’image, MoonToolX fait pivoter la Lune telle que vous la voyez depuis votre position : zénith en haut, et le N orange marque le pôle Nord de la Lune. Selon la latitude et l’heure, la Lune est inclinée ou, dans l’hémisphère Sud, presque à l’envers. Lorsqu’elle est sous l’horizon, elle apparaît estompée. La taille suit la distance : près du périgée la Lune paraît plus grande, près de l’apogée plus petite, dans la même proportion que dans le ciel."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fase attuale, con il nord in alto, come appare la Luna dall’emisfero boreale. Con **Come in cielo**, sotto l’immagine, MoonToolX ruota la Luna come la vedi dalla tua posizione: zenit in alto, e la N arancione indica il polo nord della Luna. A seconda della latitudine e dell’ora, la Luna appare inclinata o, nell’emisfero australe, quasi capovolta. Quando è sotto l’orizzonte, appare sbiadita. Le dimensioni seguono la distanza: vicino al perigeo la Luna appare più grande, vicino all’apogeo più piccola, nella stessa proporzione che in cielo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在の月相を北を上にして表示します（北半球から見た向き）。画像の下の「**空での見え方**」を選ぶと、現在地から見える向きに月を回転させます。天頂が上になり、オレンジの「北」が月の北極を示します。緯度や時刻によって月は傾き、南半球ではほぼ逆さまになります。地平線より下にあるときは淡く表示されます。大きさは距離に応じて変わり、近地点付近では大きく、遠地点付近では小さく、空での見え方と同じ比率です。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Huidige fase, met het noorden boven, zoals de maan vanaf het noordelijk halfrond verschijnt. Met **Zoals aan de hemel** onder de afbeelding draait MoonToolX de maan zoals je hem vanaf je locatie ziet: zenit boven, en de oranje N markeert de noordpool van de maan. Afhankelijk van breedtegraad en tijdstip staat de maan schuin of, op het zuidelijk halfrond, bijna ondersteboven. Staat hij onder de horizon, dan verschijnt hij vaag. De grootte volgt de afstand: bij het perigeum lijkt de maan groter, bij het apogeum kleiner, in dezelfde verhouding als aan de hemel."
+          }
+        }
+      }
+    },
+    "Dates": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Termine"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fechas"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dates"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "日時"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data"
+          }
+        }
+      }
+    },
+    "Determining location…": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standort wird ermittelt …"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Determinando la ubicación…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Localisation en cours…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Determinazione della posizione…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在地を取得中…"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Locatie bepalen…"
+          }
+        }
+      }
+    },
+    "Distance": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernung"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distancia"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanza"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "距離"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afstand"
+          }
+        }
+      }
+    },
+    "Distance from your Mac’s location to the center of the Moon. The higher the Moon, the smaller it is compared with the distance between the centers, by up to one Earth radius (about 6,400 km).": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abstand vom Mac-Standort zum Mondmittelpunkt. Je höher der Mond steht, desto kleiner ist er im Vergleich zum Abstand der Mittelpunkte, um bis zu einen Erdradius (etwa 6.400 km)."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distancia desde la ubicación de tu Mac hasta el centro de la Luna. Cuanto más alta está la Luna, menor es en comparación con la distancia entre los centros, hasta un radio terrestre (unos 6.400 km)."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance entre la position de votre Mac et le centre de la Lune. Plus la Lune est haute, plus elle est petite par rapport à la distance entre les centres, jusqu’à un rayon terrestre (environ 6 400 km)."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanza dalla posizione del tuo Mac al centro della Luna. Più la Luna è alta, più è minore rispetto alla distanza tra i centri, fino a un raggio terrestre (circa 6.400 km)."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac の位置から月の中心までの距離。月が高いほど、中心間の距離より短くなり、その差は最大で地球半径1つ分（約 6,400 km）です。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afstand van de locatie van je Mac tot het middelpunt van de maan. Hoe hoger de maan staat, hoe kleiner deze is vergeleken met de afstand tussen de middelpunten, tot maximaal één aardstraal (ongeveer 6.400 km)."
+          }
+        }
+      }
+    },
+    "Distance from your Mac’s location to the center of the Moon. When the Moon is high in the sky, it is up to one Earth radius (about 6,400 km) less than the distance between the centers; at moonrise and moonset, both are almost the same. The first time you open MoonToolX, macOS asks whether it may use your location. Your location stays on your Mac.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abstand von Ihrem Mac-Standort zum Mondmittelpunkt. Steht der Mond hoch am Himmel, ist er bis zu einen Erdradius (etwa 6.400 km) kleiner als der Abstand der Mittelpunkte; bei Mondauf- und -untergang sind beide fast gleich. Beim ersten Start fragt macOS, ob MoonToolX den Standort verwenden darf. Der Standort bleibt auf Ihrem Mac."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distancia desde la ubicación de tu Mac hasta el centro de la Luna. Cuando la Luna está alta en el cielo, es hasta un radio terrestre (unos 6.400 km) menor que la distancia entre los centros; en la salida y la puesta de la Luna, ambas son casi iguales. La primera vez que abres MoonToolX, macOS pregunta si puede usar tu ubicación. Tu ubicación permanece en tu Mac."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance entre la position de votre Mac et le centre de la Lune. Lorsque la Lune est haute dans le ciel, elle est inférieure jusqu’à un rayon terrestre (environ 6 400 km) à la distance entre les centres ; au lever et au coucher de la Lune, les deux sont presque égales. À la première ouverture de MoonToolX, macOS demande s’il peut utiliser votre position. Votre position reste sur votre Mac."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanza dalla posizione del tuo Mac al centro della Luna. Quando la Luna è alta nel cielo, è inferiore fino a un raggio terrestre (circa 6.400 km) rispetto alla distanza tra i centri; al sorgere e al tramonto della Luna le due sono quasi uguali. La prima volta che apri MoonToolX, macOS chiede se può usare la tua posizione. La tua posizione resta sul tuo Mac."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac の位置から月の中心までの距離です。月が空高くにあるときは、中心間の距離より最大で地球半径1つ分（約 6,400 km）短くなります。月の出・月の入のころは、両者はほぼ同じです。MoonToolX を初めて開くと、macOS が位置情報の使用を許可するかどうかを尋ねます。位置情報は Mac の外には送信されません。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afstand van de locatie van je Mac tot het middelpunt van de maan. Staat de maan hoog aan de hemel, dan is deze tot één aardstraal (ongeveer 6.400 km) kleiner dan de afstand tussen de middelpunten; bij maanopkomst en -ondergang zijn beide bijna gelijk. De eerste keer dat je MoonToolX opent, vraagt macOS of je locatie mag worden gebruikt. Je locatie blijft op je Mac."
+          }
+        }
+      }
+    },
+    "Distance from your location": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernung von Ihrem Standort"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distancia desde tu ubicación"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance depuis votre position"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanza dalla tua posizione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在地からの距離"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afstand vanaf je locatie"
+          }
+        }
+      }
+    },
+    "Distance from your location is accurate to better than 0.1 km, altitude and direction to better than 0.001° (checked against JPL Horizons). You can allow or revoke access in System Settings under **Privacy & Security › Location Services**.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernung vom Standort auf unter 0,1 km, Mondhöhe und Himmelsrichtung auf unter 0,001° genau (Abgleich mit JPL Horizons). Erlauben oder entziehen können Sie den Zugriff in den Systemeinstellungen unter **Datenschutz & Sicherheit › Ortungsdienste**."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La distancia desde tu ubicación tiene una precisión mejor que 0,1 km; la altura y la dirección, mejor que 0,001° (comprobado con JPL Horizons). Puedes permitir o revocar el acceso en Ajustes del Sistema, en **Privacidad y seguridad › Localización**."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La distance depuis votre position est précise à moins de 0,1 km, la hauteur et la direction à moins de 0,001° (vérifié avec JPL Horizons). Vous pouvez autoriser ou révoquer l’accès dans Réglages Système, sous **Confidentialité et sécurité › Service de localisation**."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La distanza dalla tua posizione ha una precisione migliore di 0,1 km, altezza e direzione migliore di 0,001° (verificato con JPL Horizons). Puoi consentire o revocare l’accesso in Impostazioni di Sistema, in **Privacy e sicurezza › Localizzazione**."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在地からの距離は 0.1 km 未満、高度と方角は 0.001° 未満の精度です（JPL Horizons と照合済み）。アクセスの許可や取り消しは、システム設定の「**プライバシーとセキュリティ › 位置情報サービス**」で行えます。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De afstand vanaf je locatie is nauwkeurig tot beter dan 0,1 km, hoogte en richting tot beter dan 0,001° (gecontroleerd met JPL Horizons). Je kunt de toegang toestaan of intrekken in Systeeminstellingen bij **Privacy en beveiliging › Locatievoorzieningen**."
+          }
+        }
+      }
+    },
+    "Distance in kilometers with meters, recalculated every second.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernung in Kilometern mit Metern, jede Sekunde neu berechnet."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distancia en kilómetros con metros, recalculada cada segundo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance en kilomètres avec les mètres, recalculée chaque seconde."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanza in chilometri con i metri, ricalcolata ogni secondo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "距離をメートル単位まで km で表示し、毎秒再計算します。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afstand in kilometers met meters, elke seconde opnieuw berekend."
+          }
+        }
+      }
+    },
+    "Distance minus the mean radii of the Earth and the Moon.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernung minus mittlerer Erd- und Mondradius."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distancia menos los radios medios de la Tierra y la Luna."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance moins les rayons moyens de la Terre et de la Lune."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanza meno i raggi medi della Terra e della Luna."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "距離から地球と月の平均半径を引いた値です。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afstand min de gemiddelde stralen van de aarde en de maan."
+          }
+        }
+      }
+    },
+    "Distance, ±14 days": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verlauf ±14 Tage"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distancia, ±14 días"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance, ±14 jours"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanza, ±14 giorni"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "距離（±14日）"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afstand, ±14 dagen"
+          }
+        }
+      }
+    },
+    "Drag MoonToolX to the **Applications** folder and open the app once.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ziehen Sie MoonToolX in den Ordner **Programme** und starten Sie die App einmal."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arrastra MoonToolX a la carpeta **Aplicaciones** y abre la app una vez."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Faites glisser MoonToolX dans le dossier **Applications** et ouvrez l’app une fois."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trascina MoonToolX nella cartella **Applicazioni** e apri l’app una volta."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX を「**アプリケーション**」フォルダにドラッグし、一度起動します。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sleep MoonToolX naar de map **Apps** en open de app één keer."
+          }
+        }
+      }
+    },
+    "E": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "E"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "E"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "E"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "東"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O"
+          }
+        }
+      }
+    },
+    "ENE": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ONO"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ENE"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ENE"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ENE"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "東北東"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ONO"
+          }
+        }
+      }
+    },
+    "ESE": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OSO"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ESE"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ESE"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ESE"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "東南東"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OZO"
+          }
+        }
+      }
+    },
+    "Earth–Moon distance": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernung Erde–Mond"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distancia Tierra–Luna"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance Terre–Lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanza Terra–Luna"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地球と月の距離"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afstand aarde–maan"
+          }
+        }
+      }
+    },
+    "Earth–Moon distance (centers)": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernung Erde–Mond (Mittelpunkte)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distancia Tierra–Luna (centros)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance Terre–Lune (centres)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanza Terra–Luna (centri)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地球と月の距離（中心間）"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afstand aarde–maan (middelpunten)"
+          }
+        }
+      }
+    },
+    "Earth–Moon distance, calculated to the second, with the current moon phase.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernung Erde–Mond, sekundengenau berechnet, mit aktueller Mondphase."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distancia Tierra–Luna calculada al segundo, con la fase lunar actual."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance Terre–Lune calculée à la seconde, avec la phase lunaire actuelle."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanza Terra–Luna calcolata al secondo, con la fase lunare attuale."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地球と月の距離を秒単位で計算し、現在の月相とともに表示します。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afstand aarde–maan, tot op de seconde berekend, met de huidige maanfase."
+          }
+        }
+      }
+    },
+    "Ephemeris": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ephemeride"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Efemérides"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Éphémérides"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Effemeridi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暦表"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Efemeride"
+          }
+        }
+      }
+    },
+    "Ephemeris missing": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ephemeride fehlt"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Faltan las efemérides"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Éphémérides manquantes"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Effemeridi mancanti"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暦表がありません"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Efemeride ontbreekt"
+          }
+        }
+      }
+    },
+    "Ephemeris not available (valid 2020–2099)": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ephemeride nicht verfügbar (gültig 2020–2099)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Efemérides no disponibles (válidas 2020–2099)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Éphémérides non disponibles (valables 2020–2099)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Effemeridi non disponibili (valide 2020–2099)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暦表を利用できません（有効期間 2020–2099）"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Efemeride niet beschikbaar (geldig 2020–2099)"
+          }
+        }
+      }
+    },
+    "Ephemeris: JPL DE440 (2020–2099) · Moon image: NASA SVS, LRO/LROC · Times in local time": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ephemeride: JPL DE440 (2020–2099) · Mondbild: NASA SVS, LRO/LROC · Zeiten in Ortszeit"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Efemérides: JPL DE440 (2020–2099) · Imagen lunar: NASA SVS, LRO/LROC · Horas en hora local"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Éphémérides : JPL DE440 (2020–2099) · Image de la Lune : NASA SVS, LRO/LROC · Heures locales"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Effemeridi: JPL DE440 (2020–2099) · Immagine lunare: NASA SVS, LRO/LROC · Orari in ora locale"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暦表：JPL DE440（2020–2099）· 月の画像：NASA SVS, LRO/LROC · 時刻は現地時間"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Efemeride: JPL DE440 (2020–2099) · Maanbeeld: NASA SVS, LRO/LROC · Tijden in lokale tijd"
+          }
+        }
+      }
+    },
+    "First Quarter": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erstes Viertel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna en cuarto creciente"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Premier quartier de lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna al primo quarto"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上弦の月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eerste kwartier"
+          }
+        }
+      }
+    },
+    "Full Moon": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vollmond"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna llena"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pleine lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna piena"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "満月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volle maan"
+          }
+        }
+      }
+    },
+    "Full moon near apogee (farthest point from Earth)": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vollmond nahe dem Apogäum (erdfernster Punkt)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna llena cerca del apogeo (punto más lejano de la Tierra)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pleine lune près de l’apogée (point le plus éloigné de la Terre)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna piena vicino all’apogeo (punto più lontano dalla Terra)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "遠地点（地球から最も遠い点）付近の満月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volle maan nabij het apogeum (verste punt van de aarde)"
+          }
+        }
+      }
+    },
+    "Full moon near perigee (closest point to Earth)": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vollmond nahe dem Perigäum (erdnächster Punkt)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna llena cerca del perigeo (punto más cercano a la Tierra)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pleine lune près du périgée (point le plus proche de la Terre)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna piena vicino al perigeo (punto più vicino alla Terra)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "近地点（地球に最も近い点）付近の満月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volle maan nabij het perigeum (dichtstbijzijnde punt bij de aarde)"
+          }
+        }
+      }
+    },
+    "Highest": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Höchster Stand"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punto más alto"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plus haut"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punto più alto"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "南中"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoogste stand"
+          }
+        }
+      }
+    },
+    "How large the Moon appears in the sky, in arcminutes (60 arcminutes = 1 degree), seen from your location.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "So groß erscheint der Mond am Himmel, in Bogenminuten (60 Bogenminuten = 1 Grad), von Ihrem Standort aus gesehen."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tamaño con el que se ve la Luna en el cielo, en minutos de arco (60 minutos de arco = 1 grado), vista desde tu ubicación."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Taille apparente de la Lune dans le ciel, en minutes d’arc (60 minutes d’arc = 1 degré), vue de votre position."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quanto appare grande la Luna in cielo, in minuti d’arco (60 minuti d’arco = 1 grado), vista dalla tua posizione."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在地から見た空での月の大きさ（分角、60 分角 = 1 度）。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoe groot de maan aan de hemel lijkt, in boogminuten (60 boogminuten = 1 graad), gezien vanaf je locatie."
+          }
+        }
+      }
+    },
+    "How long light takes to travel from the Moon to the Earth.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "So lange braucht das Licht vom Mond zur Erde."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El tiempo que tarda la luz en llegar de la Luna a la Tierra."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le temps que met la lumière pour aller de la Lune à la Terre."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il tempo che impiega la luce per andare dalla Luna alla Terra."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "光が月から地球に届くまでの時間です。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoe lang het licht erover doet om van de maan naar de aarde te reizen."
+          }
+        }
+      }
+    },
+    "JPL DE440 (NASA Jet Propulsion Laboratory), valid from 2020 to 2099. The calculation is far more precise than the meters displayed.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "JPL DE440 (NASA Jet Propulsion Laboratory), gültig von 2020 bis 2099. Die Berechnung ist weitaus genauer als die angezeigten Meter."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "JPL DE440 (NASA Jet Propulsion Laboratory), válidas de 2020 a 2099. El cálculo es mucho más preciso que los metros mostrados."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "JPL DE440 (NASA Jet Propulsion Laboratory), valables de 2020 à 2099. Le calcul est bien plus précis que les mètres affichés."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "JPL DE440 (NASA Jet Propulsion Laboratory), valide dal 2020 al 2099. Il calcolo è molto più preciso dei metri visualizzati."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "JPL DE440（NASA ジェット推進研究所）、2020年から2099年まで有効。計算は表示されるメートル単位よりはるかに高精度です。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "JPL DE440 (NASA Jet Propulsion Laboratory), geldig van 2020 tot 2099. De berekening is veel nauwkeuriger dan de getoonde meters."
+          }
+        }
+      }
+    },
+    "Last Quarter": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Letztes Viertel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna en cuarto menguante"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Troisième quartier de lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna al terzo quarto"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下弦の月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laatste kwartier"
+          }
+        }
+      }
+    },
+    "Light travel time": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lichtlaufzeit"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiempo de luz"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temps-lumière"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tempo luce"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "光の到達時間"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lichtreistijd"
+          }
+        }
+      }
+    },
+    "Light travel time %@": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lichtlaufzeit %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiempo de luz %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temps-lumière %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tempo luce %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "光の到達時間 %@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lichtreistijd %@"
+          }
+        }
+      }
+    },
+    "Location": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standort"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ubicación"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Position"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Posizione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "位置情報"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Locatie"
+          }
+        }
+      }
+    },
+    "Look Back": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rückblick"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retrospectiva"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rétrospective"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retrospettiva"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "振り返り"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terugblik"
+          }
+        }
+      }
+    },
+    "Look back and preview in the chart": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rückblick und Vorschau im Diagramm"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retrospectiva y vista previa en el gráfico"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rétrospective et aperçu dans le graphique"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retrospettiva e anteprima nel grafico"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "グラフでの振り返りとプレビュー"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terugblik en voorvertoning in de grafiek"
+          }
+        }
+      }
+    },
+    "Micro New Moon": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mikro-Neumond"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Microluna nueva"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Micro nouvelle lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Microluna nuova"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マイクロ新月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Micro-nieuwemaan"
+          }
+        }
+      }
+    },
+    "Micromoon": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mikromond"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Microluna"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Micro-lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Microluna"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マイクロムーン"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimaan"
+          }
+        }
+      }
+    },
+    "Moon age %@ days": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mondalter %@ Tage"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edad lunar %@ días"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Âge de la Lune %@ jours"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Età lunare %@ giorni"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月齢 %@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maanleeftijd %@ dagen"
+          }
+        }
+      }
+    },
+    "Moon age %@ days · light %@": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mondalter %@ Tage · Licht %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edad lunar %@ días · luz %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Âge %@ jours · lumière %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Età lunare %@ giorni · luce %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月齢 %@ · 光 %@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maanleeftijd %@ dagen · licht %@"
+          }
+        }
+      }
+    },
+    "Moon as in the sky, rotated %lld degrees": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mond wie am Himmel, um %lld Grad gedreht"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna como en el cielo, girada %lld grados"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lune comme dans le ciel, pivotée de %lld degrés"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna come in cielo, ruotata di %lld gradi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "空での見え方の月、%lld 度回転"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maan zoals aan de hemel, %lld graden gedraaid"
+          }
+        }
+      }
+    },
+    "Moon image": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mondbild"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagen de la Luna"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Image de la Lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Immagine della Luna"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月の画像"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maanafbeelding"
+          }
+        }
+      }
+    },
+    "Moon images": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mondbilder"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imágenes de la Luna"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Images de la Lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Immagini della Luna"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月の画像"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maanafbeeldingen"
+          }
+        }
+      }
+    },
+    "Moon, north up": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mond, Norden oben"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna, norte arriba"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lune, nord en haut"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna, nord in alto"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月、北が上"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maan, noorden boven"
+          }
+        }
+      }
+    },
+    "MoonToolX": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX"
+          }
+        }
+      }
+    },
+    "MoonToolX Quick Guide": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX-Kurzanleitung"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guía rápida de MoonToolX"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guide rapide de MoonToolX"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guida rapida di MoonToolX"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX クイックガイド"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX-snelgids"
+          }
+        }
+      }
+    },
+    "MoonToolX calculates the current distance between the center of the Earth and the center of the Moon to the second and shows the moon phase.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX berechnet die aktuelle Entfernung zwischen Erdmittelpunkt und Mondmittelpunkt sekundengenau und zeigt dazu die Mondphase."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX calcula al segundo la distancia actual entre el centro de la Tierra y el centro de la Luna, y muestra la fase lunar."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX calcule à la seconde près la distance actuelle entre le centre de la Terre et le centre de la Lune, et affiche la phase lunaire."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX calcola al secondo la distanza attuale tra il centro della Terra e il centro della Luna e mostra la fase lunare."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX は、地球の中心から月の中心までの現在の距離を秒単位で計算し、月相とともに表示します。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX berekent tot op de seconde de huidige afstand tussen het middelpunt van de aarde en het middelpunt van de maan, en toont de maanfase."
+          }
+        }
+      }
+    },
+    "MoonToolX follows the macOS appearance (light or dark). If **Reduce motion** is turned on in System Settings under **Accessibility › Motion**, the split-flap display changes without animation.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX folgt dem Erscheinungsbild von macOS (hell oder dunkel). Ist in den Systemeinstellungen unter **Bedienungshilfen › Bewegung** die Option **Bewegung reduzieren** eingeschaltet, wechselt die Fallblattanzeige ohne Animation."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX sigue la apariencia de macOS (clara u oscura). Si **Reducir movimiento** está activado en Ajustes del Sistema, en **Accesibilidad › Movimiento**, el panel de paletas cambia sin animación."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX suit l’apparence de macOS (claire ou sombre). Si **Réduire les animations** est activé dans Réglages Système, sous **Accessibilité › Animations**, l’afficheur à palettes change sans animation."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX segue l’aspetto di macOS (chiaro o scuro). Se **Riduci movimento** è attivo in Impostazioni di Sistema, in **Accessibilità › Movimento**, il display a palette cambia senza animazione."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX は macOS の外観（ライトまたはダーク）に従います。システム設定の「**アクセシビリティ › 視差効果**」で「**視差効果を減らす**」がオンの場合、パタパタ表示はアニメーションなしで切り替わります。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX volgt de weergave van macOS (licht of donker). Als **Verminder beweging** is ingeschakeld in Systeeminstellingen bij **Toegankelijkheid › Beweging**, verandert het klapbord zonder animatie."
+          }
+        }
+      }
+    },
+    "Moonrise": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aufgang"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salida de la luna"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lever"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sorgere"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月の出"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maan op"
+          }
+        }
+      }
+    },
+    "Moonrise and moonset": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auf- und Untergang"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salida y puesta de la Luna"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lever et coucher de la Lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sorgere e tramonto della Luna"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月の出と月の入"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maanopkomst en -ondergang"
+          }
+        }
+      }
+    },
+    "Moonset": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Untergang"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puesta de la luna"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coucher"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tramonto"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月の入"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maan onder"
+          }
+        }
+      }
+    },
+    "N": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "N"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "N"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "N"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "N"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "北"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "N"
+          }
+        }
+      }
+    },
+    "NE": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NO"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NE"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NE"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NE"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "北東"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NO"
+          }
+        }
+      }
+    },
+    "NNE": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NNO"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NNE"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NNE"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NNE"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "北北東"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NNO"
+          }
+        }
+      }
+    },
+    "NNW": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NNW"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NNO"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NNO"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NNO"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "北北西"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NNW"
+          }
+        }
+      }
+    },
+    "NW": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NW"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NO"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NO"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NO"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "北西"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NW"
+          }
+        }
+      }
+    },
+    "New Moon": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neumond"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna nueva"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nouvelle lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna nuova"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nieuwe maan"
+          }
+        }
+      }
+    },
+    "New moon near apogee (farthest point from Earth)": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neumond nahe dem Apogäum (erdfernster Punkt)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna nueva cerca del apogeo (punto más lejano de la Tierra)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nouvelle lune près de l’apogée (point le plus éloigné de la Terre)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna nuova vicino all’apogeo (punto più lontano dalla Terra)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "遠地点（地球から最も遠い点）付近の新月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nieuwe maan nabij het apogeum (verste punt van de aarde)"
+          }
+        }
+      }
+    },
+    "New moon near perigee (closest point to Earth)": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neumond nahe dem Perigäum (erdnächster Punkt)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna nueva cerca del perigeo (punto más cercano a la Tierra)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nouvelle lune près du périgée (point le plus proche de la Terre)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna nuova vicino al perigeo (punto più vicino alla Terra)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "近地点（地球に最も近い点）付近の新月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nieuwe maan nabij het perigeum (dichtstbijzijnde punt bij de aarde)"
+          }
+        }
+      }
+    },
+    "Next principal phases plus perigee (closest point to Earth) and apogee (farthest point from Earth), in local time.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nächste Hauptphasen sowie Perigäum (erdnächster Punkt) und Apogäum (erdfernster Punkt), in Ortszeit."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Próximas fases principales, además del perigeo (punto más cercano a la Tierra) y el apogeo (punto más lejano), en hora local."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prochaines phases principales ainsi que le périgée (point le plus proche de la Terre) et l’apogée (point le plus éloigné), en heure locale."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prossime fasi principali, oltre al perigeo (punto più vicino alla Terra) e all’apogeo (punto più lontano), in ora locale."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "次の主な月相と、近地点（地球に最も近い点）・遠地点（最も遠い点）を現地時間で表示します。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volgende hoofdfasen plus perigeum (dichtstbijzijnde punt bij de aarde) en apogeum (verste punt), in lokale tijd."
+          }
+        }
+      }
+    },
+    "No access to Location Services": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "kein Zugriff auf die Ortungsdienste"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin acceso a Localización"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun accès au Service de localisation"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessun accesso a Localizzazione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "位置情報サービスへのアクセスなし"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geen toegang tot Locatievoorzieningen"
+          }
+        }
+      }
+    },
+    "North Up": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Norden oben"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Norte arriba"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nord en haut"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nord in alto"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "北が上"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noorden boven"
+          }
+        }
+      }
+    },
+    "Now": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jetzt"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ahora"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maintenant"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ora"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nu"
+          }
+        }
+      }
+    },
+    "Outside the ephemeris range": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Außerhalb der Ephemeride"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fuera del rango de las efemérides"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hors de la plage des éphémérides"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fuori dall’intervallo delle effemeridi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暦表の範囲外"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buiten het bereik van de efemeride"
+          }
+        }
+      }
+    },
+    "Perigee": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perigäum"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perigeo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Périgée"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perigeo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "近地点"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perigeum"
+          }
+        }
+      }
+    },
+    "Perigee / apogee": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perigäum / Apogäum"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perigeo / apogeo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Périgée / apogée"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perigeo / apogeo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "近地点 / 遠地点"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perigeum / apogeum"
+          }
+        }
+      }
+    },
+    "Phase times": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Phasenzeiten"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Horas de las fases"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heures des phases"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orari delle fasi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月相の時刻"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tijden van de fasen"
+          }
+        }
+      }
+    },
+    "Preview": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vorschau"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vista previa"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aperçu"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anteprima"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "プレビュー"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voorvertoning"
+          }
+        }
+      }
+    },
+    "Quick Guide · %@": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kurzanleitung · %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guía rápida · %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guide rapide · %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guida rapida · %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クイックガイド · %@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Snelgids · %@"
+          }
+        }
+      }
+    },
+    "S": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "S"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "S"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "S"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "S"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "南"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Z"
+          }
+        }
+      }
+    },
+    "SE": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SO"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SE"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SE"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SE"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "南東"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ZO"
+          }
+        }
+      }
+    },
+    "SSE": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSO"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSE"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSE"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSE"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "南南東"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ZZO"
+          }
+        }
+      }
+    },
+    "SSW": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSW"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSO"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSO"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SSO"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "南南西"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ZZW"
+          }
+        }
+      }
+    },
+    "SW": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SW"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SO"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SO"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SO"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "南西"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ZW"
+          }
+        }
+      }
+    },
+    "Search for **MoonToolX**, choose a size (small, medium, or large), and drag the widget to where you want it.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suchen Sie nach **MoonToolX**, wählen Sie die Größe (klein, mittel oder groß) und ziehen Sie das Widget an die gewünschte Stelle."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Busca **MoonToolX**, elige un tamaño (pequeño, mediano o grande) y arrastra el widget a la posición deseada."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recherchez **MoonToolX**, choisissez une taille (petite, moyenne ou grande) et faites glisser le widget à l’emplacement souhaité."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerca **MoonToolX**, scegli una dimensione (piccola, media o grande) e trascina il widget nella posizione desiderata."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「**MoonToolX**」を検索し、サイズ（小・中・大）を選んで、ウィジェットを好きな場所にドラッグします。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zoek naar **MoonToolX**, kies een formaat (klein, middelgroot of groot) en sleep de widget naar de gewenste plek."
+          }
+        }
+      }
+    },
+    "Seen from Earth’s center": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vom Erdmittelpunkt aus gesehen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visto desde el centro de la Tierra"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vu du centre de la Terre"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visto dal centro della Terra"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地球の中心から見た値"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gezien vanuit het middelpunt van de aarde"
+          }
+        }
+      }
+    },
+    "Seen from your location": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vom Standort aus gesehen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visto desde tu ubicación"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vu de votre position"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visto dalla tua posizione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在地から見た値"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gezien vanaf je locatie"
+          }
+        }
+      }
+    },
+    "Split-flap display": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fallblattanzeige"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Panel de paletas"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficheur à palettes"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display a palette"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パタパタ表示"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klapbord"
+          }
+        }
+      }
+    },
+    "Stays below the horizon for now": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bleibt vorerst unter dem Horizont"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permanece bajo el horizonte por ahora"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reste sous l’horizon pour le moment"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resta sotto l’orizzonte per ora"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当面は地平線の下"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blijft voorlopig onder de horizon"
+          }
+        }
+      }
+    },
+    "Super New Moon": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Super-Neumond"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Superluna nueva"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Super nouvelle lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Superluna nuova"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スーパー新月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Super-nieuwemaan"
+          }
+        }
+      }
+    },
+    "Supermoon": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supermond"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Superluna"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Super lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Superluna"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スーパームーン"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supermaan"
+          }
+        }
+      }
+    },
+    "Supermoon and micromoon": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supermond und Mikromond"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Superluna y microluna"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Super lune et micro-lune"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Superluna e microluna"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スーパームーンとマイクロムーン"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supermaan en minimaan"
+          }
+        }
+      }
+    },
+    "Surface to surface": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oberfläche – Oberfläche"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Superficie a superficie"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Surface à surface"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Superficie a superficie"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表面間"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oppervlak tot oppervlak"
+          }
+        }
+      }
+    },
+    "The built-in JPL ephemeris covers 2020 to 2099.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die eingebaute JPL-Ephemeride deckt 2020 bis 2099 ab."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las efemérides JPL integradas abarcan de 2020 a 2099."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les éphémérides JPL intégrées couvrent 2020 à 2099."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le effemeridi JPL integrate coprono dal 2020 al 2099."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内蔵の JPL 暦表は 2020年から2099年までに対応しています。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De ingebouwde JPL-efemeride beslaat 2020 tot 2099."
+          }
+        }
+      }
+    },
+    "The chart shows the distance 14 days back and 14 days ahead. Click a point in the chart: MoonToolX shows the moon image, phase, and distance for that moment for 3 seconds, then returns to the current view. Left of the dashed line (now) this is a **Look Back**, right of it a **Preview**. Another click restarts the 3 seconds.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Diagramm zeigt die Entfernung 14 Tage zurück und 14 Tage voraus. Klicken Sie auf eine Stelle im Diagramm: MoonToolX zeigt für 3 Sekunden Mondbild, Phase und Entfernung zu diesem Zeitpunkt und kehrt dann zur aktuellen Anzeige zurück. Links von der gestrichelten Linie (jetzt) heißt das **Rückblick**, rechts davon **Vorschau**. Ein weiterer Klick startet die 3 Sekunden neu."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El gráfico muestra la distancia 14 días hacia atrás y 14 días hacia adelante. Haz clic en un punto del gráfico: MoonToolX muestra durante 3 segundos la imagen de la Luna, la fase y la distancia en ese momento y luego vuelve a la vista actual. A la izquierda de la línea discontinua (ahora) es una **Retrospectiva**; a la derecha, una **Vista previa**. Otro clic reinicia los 3 segundos."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le graphique montre la distance 14 jours en arrière et 14 jours en avant. Cliquez sur un point du graphique : MoonToolX affiche pendant 3 secondes l’image de la Lune, la phase et la distance à ce moment, puis revient à l’affichage actuel. À gauche de la ligne pointillée (maintenant), il s’agit d’une **Rétrospective** ; à droite, d’un **Aperçu**. Un nouveau clic relance les 3 secondes."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il grafico mostra la distanza 14 giorni indietro e 14 giorni avanti. Fai clic su un punto del grafico: MoonToolX mostra per 3 secondi l’immagine della Luna, la fase e la distanza in quel momento, poi torna alla vista attuale. A sinistra della linea tratteggiata (ora) è una **Retrospettiva**, a destra un’**Anteprima**. Un altro clic fa ripartire i 3 secondi."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "グラフには、14日前から14日後までの距離が表示されます。グラフの任意の位置をクリックすると、MoonToolX はその時点の月の画像、月相、距離を3秒間表示し、その後現在の表示に戻ります。破線（現在）より左は「**振り返り**」、右は「**プレビュー**」です。もう一度クリックすると3秒がやり直しになります。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De grafiek toont de afstand 14 dagen terug en 14 dagen vooruit. Klik op een punt in de grafiek: MoonToolX toont 3 seconden lang de maanafbeelding, fase en afstand op dat moment en keert dan terug naar de huidige weergave. Links van de stippellijn (nu) is dat een **Terugblik**, rechts ervan een **Voorvertoning**. Een nieuwe klik start de 3 seconden opnieuw."
+          }
+        }
+      }
+    },
+    "The main window": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Hauptfenster"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La ventana principal"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La fenêtre principale"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La finestra principale"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メインウインドウ"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Het hoofdvenster"
+          }
+        }
+      }
+    },
+    "The widget updates exactly when the displayed number of kilometers changes, at least every minute. To see what the three sizes look like, choose **Window › Widget Preview**.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Widget aktualisiert sich genau dann, wenn sich die angezeigte Kilometerzahl ändert, spätestens jede Minute. Wie die drei Größen aussehen, zeigt **Fenster › Widget-Vorschau**."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El widget se actualiza exactamente cuando cambia el número de kilómetros mostrado, como mínimo cada minuto. Para ver los tres tamaños, elige **Ventana › Vista previa del widget**."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le widget se met à jour exactement lorsque le nombre de kilomètres affiché change, au moins toutes les minutes. Pour voir les trois tailles, choisissez **Fenêtre › Aperçu du widget**."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il widget si aggiorna esattamente quando cambia il numero di chilometri visualizzato, almeno ogni minuto. Per vedere le tre dimensioni, scegli **Finestra › Anteprima widget**."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ウィジェットは表示されるキロメートル数が変わるたびに更新され、少なくとも毎分更新されます。3つのサイズの見た目は「**ウインドウ › ウィジェットプレビュー**」で確認できます。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De widget wordt precies bijgewerkt wanneer het getoonde aantal kilometers verandert, minstens elke minuut. Kies **Venster › Widgetvoorvertoning** om de drie formaten te zien."
+          }
+        }
+      }
+    },
+    "Time": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeit"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hora"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heure"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ora"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "時刻"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tijd"
+          }
+        }
+      }
+    },
+    "Times": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeiten"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Horas"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heures"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orari"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "時刻"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tijden"
+          }
+        }
+      }
+    },
+    "View": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ansicht"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vista"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vue"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vista"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weergave"
+          }
+        }
+      }
+    },
+    "Visible, %@ left": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sichtbar, noch %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visible, quedan %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visible encore %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visibile, ancora %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "見えています（残り %@）"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zichtbaar, nog %@"
+          }
+        }
+      }
+    },
+    "Visible, won’t set for now": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sichtbar, geht vorerst nicht unter"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visible, no se pone por ahora"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visible, ne se couche pas pour le moment"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visibile, per ora non tramonta"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "見えています（当面沈みません）"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zichtbaar, gaat voorlopig niet onder"
+          }
+        }
+      }
+    },
+    "W": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "W"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "西"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "W"
+          }
+        }
+      }
+    },
+    "WNW": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WNW"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ONO"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ONO"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ONO"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "西北西"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WNW"
+          }
+        }
+      }
+    },
+    "WSW": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WSW"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OSO"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OSO"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OSO"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "西南西"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WZW"
+          }
+        }
+      }
+    },
+    "Waning Crescent": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abnehmende Sichel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menguante"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dernier croissant"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna calante"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有明月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Asgrauwe maan"
+          }
+        }
+      }
+    },
+    "Waning Gibbous": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abnehmender Mond"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gibosa menguante"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gibbeuse décroissante"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna gobba a levante"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "寝待月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afnemende maan"
+          }
+        }
+      }
+    },
+    "Waxing Crescent": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zunehmende Sichel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Creciente"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Premier croissant"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna crescente"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "三日月"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jonge maan"
+          }
+        }
+      }
+    },
+    "Waxing Gibbous": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zunehmender Mond"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gibosa creciente"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gibbeuse croissante"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luna gobba a ponente"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "十日夜"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wassende maan"
+          }
+        }
+      }
+    },
+    "What MoonToolX shows": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Was MoonToolX zeigt"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Qué muestra MoonToolX"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ce qu’affiche MoonToolX"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cosa mostra MoonToolX"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX で表示される内容"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wat MoonToolX toont"
+          }
+        }
+      }
+    },
+    "When a full or new moon occurs near perigee, MoonToolX shows “Supermoon” or “Super New Moon”; near apogee, “Micromoon” or “Micro New Moon”. It uses Richard Nolle’s definition: within 10% of the range between perigee and apogee of the current orbit. The badge shows the time (local time) and distance of that full or new moon, not the current distance.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Steht der Mond bei Vollmond oder Neumond nahe dem Perigäum, zeigt MoonToolX „Supermond“ bzw. „Super-Neumond“; nahe dem Apogäum „Mikromond“ bzw. „Mikro-Neumond“. Grundlage ist die Definition von Richard Nolle: höchstens 10 % der Spanne zwischen Perigäum und Apogäum des laufenden Umlaufs. Die Kennzeichnung nennt Zeitpunkt (Ortszeit) und Entfernung des Vollmonds bzw. Neumonds, nicht die aktuelle Entfernung."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuando una luna llena o nueva se produce cerca del perigeo, MoonToolX muestra «Superluna» o «Superluna nueva»; cerca del apogeo, «Microluna» o «Microluna nueva». Se basa en la definición de Richard Nolle: dentro del 10 % del intervalo entre el perigeo y el apogeo de la órbita actual. La etiqueta indica la hora (hora local) y la distancia de esa luna llena o nueva, no la distancia actual."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lorsqu’une pleine lune ou une nouvelle lune se produit près du périgée, MoonToolX affiche « Super lune » ou « Super nouvelle lune » ; près de l’apogée, « Micro-lune » ou « Micro nouvelle lune ». La définition est celle de Richard Nolle : à moins de 10 % de l’écart entre le périgée et l’apogée de l’orbite en cours. L’étiquette indique l’heure (locale) et la distance de cette pleine ou nouvelle lune, et non la distance actuelle."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quando una luna piena o nuova si verifica vicino al perigeo, MoonToolX mostra «Superluna» o «Superluna nuova»; vicino all’apogeo, «Microluna» o «Microluna nuova». Si basa sulla definizione di Richard Nolle: entro il 10% dell’intervallo tra perigeo e apogeo dell’orbita corrente. L’etichetta indica l’ora (ora locale) e la distanza di quella luna piena o nuova, non la distanza attuale."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "満月または新月が近地点付近で起こると、MoonToolX は「スーパームーン」または「スーパー新月」を、遠地点付近では「マイクロムーン」または「マイクロ新月」を表示します。定義は Richard Nolle によるもので、現在の公転における近地点と遠地点の差の10％以内です。ラベルには、現在の距離ではなく、その満月または新月の時刻（現地時間）と距離が表示されます。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Valt een volle of nieuwe maan samen met het perigeum, dan toont MoonToolX ‘Supermaan’ of ‘Super-nieuwemaan’; bij het apogeum ‘Minimaan’ of ‘Micro-nieuwemaan’. Dit volgt de definitie van Richard Nolle: binnen 10% van het verschil tussen perigeum en apogeum van de huidige omloop. Het label toont het tijdstip (lokale tijd) en de afstand van die volle of nieuwe maan, niet de huidige afstand."
+          }
+        }
+      }
+    },
+    "Whether the Moon is currently approaching or receding, and how fast, in meters per second with one decimal place.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ob sich der Mond gerade nähert oder entfernt und wie schnell, in Metern pro Sekunde mit einer Nachkommastelle."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si la Luna se está acercando o alejando y a qué velocidad, en metros por segundo con un decimal."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indique si la Lune se rapproche ou s’éloigne, et à quelle vitesse, en mètres par seconde avec une décimale."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se la Luna si sta avvicinando o allontanando e a quale velocità, in metri al secondo con un decimale."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "月が近づいているか遠ざかっているかと、その速さ（毎秒メートル、小数点以下1桁）。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Of de maan op dit moment nadert of zich verwijdert, en hoe snel, in meter per seconde met één decimaal."
+          }
+        }
+      }
+    },
+    "Widget Preview": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget-Vorschau"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vista previa del widget"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aperçu du widget"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anteprima widget"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ウィジェットプレビュー"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widgetvoorvertoning"
+          }
+        }
+      }
+    },
+    "Zenith up · rotated %lld° from “North Up”": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zenit oben · gegenüber „Norden oben“ um %lld° gedreht"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cénit arriba · girada %lld° respecto a «Norte arriba»"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zénith en haut · pivotée de %lld° par rapport à « Nord en haut »"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zenit in alto · ruotata di %lld° rispetto a «Nord in alto»"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "天頂が上 · 「北が上」から %lld° 回転"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zenit boven · %lld° gedraaid ten opzichte van ‘Noorden boven’"
+          }
+        }
+      }
+    },
+    "above the horizon": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "über dem Horizont"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sobre el horizonte"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "au-dessus de l’horizon"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sopra l’orizzonte"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地平線より上"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "boven de horizon"
+          }
+        }
+      }
+    },
+    "approaching": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "nähert sich"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "se acerca"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "se rapproche"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "si avvicina"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "近づく"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "nadert"
+          }
+        }
+      }
+    },
+    "below the horizon": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "unter dem Horizont"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "bajo el horizonte"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sous l’horizon"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sotto l’orizzonte"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地平線より下"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "onder de horizon"
+          }
+        }
+      }
+    },
+    "km": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "km"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "km"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "km"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "km"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "km"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "km"
+          }
+        }
+      }
+    },
+    "moon_de440.bin is not in the app bundle.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "moon_de440.bin ist nicht im App-Bundle."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "moon_de440.bin no está en el paquete de la app."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "moon_de440.bin ne figure pas dans le paquet de l’app."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "moon_de440.bin non è presente nel pacchetto dell’app."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "moon_de440.bin がアプリバンドルにありません。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "moon_de440.bin staat niet in de appbundel."
+          }
+        }
+      }
+    },
+    "receding": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "entfernt sich"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "se aleja"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "s’éloigne"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "si allontana"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "遠ざかる"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "verwijdert zich"
+          }
+        }
+      }
+    },
+    "±14 days": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verlauf ±14 Tage"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "±14 días"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "±14 jours"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "±14 giorni"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "±14日"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "±14 dagen"
+          }
+        }
+      }
+    },
+    "–": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "–"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "–"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "–"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "–"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "–"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "–"
+          }
+        }
+      }
+    },
+    "“As in the Sky” rotates the moon image the way you see the Moon from your location: zenith up.": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "„Wie am Himmel“ dreht das Mondbild so, wie Sie den Mond an Ihrem Standort sehen: Zenit oben."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "«Como en el cielo» gira la imagen de la Luna tal como ves la Luna desde tu ubicación: el cenit arriba."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "« Comme dans le ciel » fait pivoter l’image de la Lune telle que vous voyez la Lune depuis votre position : zénith en haut."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "«Come in cielo» ruota l’immagine della Luna come vedi la Luna dalla tua posizione: zenit in alto."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「空での見え方」では、現在地から見える向きに月の画像を回転させます（天頂が上）。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "‘Zoals aan de hemel’ draait de maanafbeelding zoals je de maan vanaf je locatie ziet: zenit boven."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

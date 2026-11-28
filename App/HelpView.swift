@@ -5,7 +5,7 @@ struct HelpMenuButton: View {
     @Environment(\.openWindow) private var openWindow
 
     var body: some View {
-        Button("MoonToolX-Kurzanleitung") { openWindow(id: "help") }
+        Button("MoonToolX Quick Guide") { openWindow(id: "help") }
             .keyboardShortcut("?", modifiers: .command)
     }
 }
@@ -30,51 +30,51 @@ struct HelpView: View {
                         .frame(width: 64, height: 64)
                     VStack(alignment: .leading, spacing: 2) {
                         Text("MoonToolX").font(.title.weight(.semibold))
-                        Text("Kurzanleitung · \(version)").foregroundStyle(.secondary)
+                        Text("Quick Guide · \(version)").foregroundStyle(.secondary)
                     }
                 }
 
-                section("Was MoonToolX zeigt", symbol: "moon.stars") {
-                    Text("MoonToolX berechnet die aktuelle Entfernung zwischen Erdmittelpunkt und Mondmittelpunkt sekundengenau und zeigt dazu die Mondphase.")
+                section("What MoonToolX shows", symbol: "moon.stars") {
+                    Text("MoonToolX calculates the current distance between the center of the Earth and the center of the Moon to the second and shows the moon phase.")
                 }
 
-                section("Das Hauptfenster", symbol: "macwindow") {
-                    item("Fallblattanzeige", "Entfernung in Kilometern mit Metern, jede Sekunde neu berechnet.")
-                    item("Änderung", "Ob sich der Mond gerade nähert oder entfernt und wie schnell, in Metern pro Sekunde mit einer Nachkommastelle.")
-                    item("Lichtlaufzeit", "So lange braucht das Licht vom Mond zur Erde.")
-                    item("Oberfläche – Oberfläche", "Entfernung minus mittlerer Erd- und Mondradius.")
-                    item("Entfernung von Ihrem Standort", "Abstand von Ihrem Mac-Standort zum Mondmittelpunkt. Steht der Mond hoch am Himmel, ist er bis zu einen Erdradius (etwa 6.400 km) kleiner als der Abstand der Mittelpunkte; bei Mondauf- und -untergang sind beide fast gleich. Beim ersten Start fragt macOS, ob MoonToolX den Standort verwenden darf. Der Standort bleibt auf Ihrem Mac.")
-                    item("Mondhöhe · Richtung", "Höhe des Mondmittelpunkts über dem Horizont an Ihrem Standort, ohne Lichtbrechung der Atmosphäre: + über dem Horizont, − darunter. Dazu die Himmelsrichtung (N, NNO, NO … NNW) und der Azimut in Grad, von Nord über Ost gezählt (Ost = 90°, Süd = 180°). Steht der Mond unter dem Horizont, zeigt die Richtung, wo er sich unter dem Horizont befindet.")
-                    item("Mondbild", "Aktuelle Phase, Norden oben, so wie der Mond von der Nordhalbkugel aus erscheint. Mit **Wie am Himmel** unter dem Bild dreht MoonToolX den Mond so, wie Sie ihn an Ihrem Standort sehen: Zenit oben, das orange N markiert den Mond-Nordpol. Je nach Breitengrad und Tageszeit liegt der Mond schräg oder steht auf der Südhalbkugel fast kopf. Steht er unter dem Horizont, erscheint er blass. Die Größe folgt der Entfernung: In Erdnähe erscheint der Mond größer, in Erdferne kleiner, im selben Verhältnis wie am Himmel.")
-                    item("Auf- und Untergang", "Unter dem Mondbild: ob der Mond gerade sichtbar ist und wie lange noch, bzw. wann er aufgeht; dazu Aufgang, höchster Stand (Meridiandurchgang mit Höhe) und Untergang an Ihrem Standort, mit Himmelsrichtung. Auf- und Untergang gelten für den oberen Mondrand mit Lichtbrechung der Atmosphäre, wie in Kalendern üblich, auf etwa eine Minute genau.")
-                    item("Scheinbarer Durchmesser", "So groß erscheint der Mond am Himmel, in Bogenminuten (60 Bogenminuten = 1 Grad), von Ihrem Standort aus gesehen.")
-                    item("Helligkeit", "Scheinbare Helligkeit in Magnituden (mag), von Ihrem Standort aus gesehen und ohne Abschwächung durch die Atmosphäre. Je kleiner die Zahl, desto heller: Vollmond etwa −12,7 mag, Halbmond etwa −10 mag. Nahe Neumond ist der Wert nur ein Richtwert.")
-                    item("Supermond und Mikromond", "Steht der Mond bei Vollmond oder Neumond nahe dem Perigäum, zeigt MoonToolX „Supermond“ bzw. „Super-Neumond“; nahe dem Apogäum „Mikromond“ bzw. „Mikro-Neumond“. Grundlage ist die Definition von Richard Nolle: höchstens 10 % der Spanne zwischen Perigäum und Apogäum des laufenden Umlaufs. Die Kennzeichnung nennt Zeitpunkt (Ortszeit) und Entfernung des Vollmonds bzw. Neumonds, nicht die aktuelle Entfernung.")
-                    item("Termine", "Nächste Hauptphasen sowie Perigäum (erdnächster Punkt) und Apogäum (erdfernster Punkt), in Ortszeit.")
+                section("The main window", symbol: "macwindow") {
+                    item("Split-flap display", "Distance in kilometers with meters, recalculated every second.")
+                    item("Change", "Whether the Moon is currently approaching or receding, and how fast, in meters per second with one decimal place.")
+                    item("Light travel time", "How long light takes to travel from the Moon to the Earth.")
+                    item("Surface to surface", "Distance minus the mean radii of the Earth and the Moon.")
+                    item("Distance from your location", "Distance from your Mac’s location to the center of the Moon. When the Moon is high in the sky, it is up to one Earth radius (about 6,400 km) less than the distance between the centers; at moonrise and moonset, both are almost the same. The first time you open MoonToolX, macOS asks whether it may use your location. Your location stays on your Mac.")
+                    item("Altitude · direction", "Altitude of the Moon’s center above the horizon at your location, without atmospheric refraction: + above the horizon, − below it. Also the compass direction (N, NNE, NE … NNW) and the azimuth in degrees, counted from north through east (east = 90°, south = 180°). When the Moon is below the horizon, the direction shows where it is below the horizon.")
+                    item("Moon image", "Current phase, north up, as the Moon appears from the Northern Hemisphere. With **As in the Sky** below the image, MoonToolX rotates the Moon the way you see it from your location: zenith up, and the orange N marks the Moon’s north pole. Depending on latitude and time of day, the Moon is tilted or, in the Southern Hemisphere, nearly upside down. When it is below the horizon, it appears faded. The size follows the distance: near perigee the Moon appears larger, near apogee smaller, in the same ratio as in the sky.")
+                    item("Moonrise and moonset", "Below the moon image: whether the Moon is visible now and for how long, or when it rises; plus moonrise, highest point (meridian transit with altitude), and moonset at your location, with compass direction. Rise and set times refer to the Moon’s upper limb with atmospheric refraction, as is usual in calendars, and are accurate to about one minute.")
+                    item("Apparent diameter", "How large the Moon appears in the sky, in arcminutes (60 arcminutes = 1 degree), seen from your location.")
+                    item("Brightness", "Apparent brightness in magnitudes (mag), seen from your location and without dimming by the atmosphere. The smaller the number, the brighter: full moon about −12.7 mag, half moon about −10 mag. Near new moon, the value is only approximate.")
+                    item("Supermoon and micromoon", "When a full or new moon occurs near perigee, MoonToolX shows “Supermoon” or “Super New Moon”; near apogee, “Micromoon” or “Micro New Moon”. It uses Richard Nolle’s definition: within 10% of the range between perigee and apogee of the current orbit. The badge shows the time (local time) and distance of that full or new moon, not the current distance.")
+                    item("Dates", "Next principal phases plus perigee (closest point to Earth) and apogee (farthest point from Earth), in local time.")
                 }
 
-                section("Rückblick und Vorschau im Diagramm", symbol: "cursorarrow.click") {
-                    Text("Das Diagramm zeigt die Entfernung 14 Tage zurück und 14 Tage voraus. Klicken Sie auf eine Stelle im Diagramm: MoonToolX zeigt für 3 Sekunden Mondbild, Phase und Entfernung zu diesem Zeitpunkt und kehrt dann zur aktuellen Anzeige zurück. Links von der gestrichelten Linie (jetzt) heißt das **Rückblick**, rechts davon **Vorschau**. Ein weiterer Klick startet die 3 Sekunden neu.")
+                section("Look back and preview in the chart", symbol: "cursorarrow.click") {
+                    Text("The chart shows the distance 14 days back and 14 days ahead. Click a point in the chart: MoonToolX shows the moon image, phase, and distance for that moment for 3 seconds, then returns to the current view. Left of the dashed line (now) this is a **Look Back**, right of it a **Preview**. Another click restarts the 3 seconds.")
                 }
 
-                section("Widget hinzufügen", symbol: "square.grid.2x2") {
-                    step(1, "Ziehen Sie MoonToolX in den Ordner **Programme** und starten Sie die App einmal.")
-                    step(2, "Klicken Sie mit der rechten Maustaste auf den Schreibtisch und wählen Sie **Widgets bearbeiten …** aus.")
-                    step(3, "Suchen Sie nach **MoonToolX**, wählen Sie die Größe (klein, mittel oder groß) und ziehen Sie das Widget an die gewünschte Stelle.")
-                    Text("Das Widget aktualisiert sich genau dann, wenn sich die angezeigte Kilometerzahl ändert, spätestens jede Minute. Wie die drei Größen aussehen, zeigt **Fenster › Widget-Vorschau**.")
+                section("Add the widget", symbol: "square.grid.2x2") {
+                    step(1, "Drag MoonToolX to the **Applications** folder and open the app once.")
+                    step(2, "Control-click the desktop, then choose **Edit Widgets…**.")
+                    step(3, "Search for **MoonToolX**, choose a size (small, medium, or large), and drag the widget to where you want it.")
+                    Text("The widget updates exactly when the displayed number of kilometers changes, at least every minute. To see what the three sizes look like, choose **Window › Widget Preview**.")
                         .foregroundStyle(.secondary)
                 }
 
-                section("Darstellung", symbol: "circle.lefthalf.filled") {
-                    Text("MoonToolX folgt dem Erscheinungsbild von macOS (hell oder dunkel). Ist in den Systemeinstellungen unter **Bedienungshilfen › Bewegung** die Option **Bewegung reduzieren** eingeschaltet, wechselt die Fallblattanzeige ohne Animation.")
+                section("Appearance", symbol: "circle.lefthalf.filled") {
+                    Text("MoonToolX follows the macOS appearance (light or dark). If **Reduce motion** is turned on in System Settings under **Accessibility › Motion**, the split-flap display changes without animation.")
                 }
 
-                section("Genauigkeit und Daten", symbol: "scope") {
-                    item("Ephemeride", "JPL DE440 (NASA Jet Propulsion Laboratory), gültig von 2020 bis 2099. Die Berechnung ist weitaus genauer als die angezeigten Meter.")
-                    item("Standort", "Entfernung vom Standort auf unter 0,1 km, Mondhöhe und Himmelsrichtung auf unter 0,001° genau (Abgleich mit JPL Horizons). Erlauben oder entziehen können Sie den Zugriff in den Systemeinstellungen unter **Datenschutz & Sicherheit › Ortungsdienste**.")
-                    item("Phasenzeiten", "Auf etwa eine Minute genau.")
-                    item("Mondbilder", "Aus der LRO/LROC-Mondkarte (NASA Scientific Visualization Studio), für den jeweiligen Zeitpunkt berechnet. Dargestellt ist auch die Libration, das leichte Taumeln des Mondes: im Hauptfenster vom Standort aus gesehen, im Widget vom Erdmittelpunkt aus.")
-                    item("Zeiten", "Alle Zeiten in der Zeitzone, die in macOS eingestellt ist.")
+                section("Accuracy and data", symbol: "scope") {
+                    item("Ephemeris", "JPL DE440 (NASA Jet Propulsion Laboratory), valid from 2020 to 2099. The calculation is far more precise than the meters displayed.")
+                    item("Location", "Distance from your location is accurate to better than 0.1 km, altitude and direction to better than 0.001° (checked against JPL Horizons). You can allow or revoke access in System Settings under **Privacy & Security › Location Services**.")
+                    item("Phase times", "Accurate to about one minute.")
+                    item("Moon images", "Calculated for each moment from the LRO/LROC lunar map (NASA Scientific Visualization Studio). They also show libration, the Moon’s slight wobble: in the main window as seen from your location, in the widget as seen from the center of the Earth.")
+                    item("Times", "All times use the time zone set in macOS.")
                 }
             }
             .padding(28)
@@ -83,7 +83,7 @@ struct HelpView: View {
         .frame(width: Self.windowSize.width, height: Self.windowSize.height)
     }
 
-    private func section<Content: View>(_ title: String, symbol: String,
+    private func section<Content: View>(_ title: LocalizedStringKey, symbol: String,
                                         @ViewBuilder content: () -> Content) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Label(title, systemImage: symbol)
@@ -93,8 +93,8 @@ struct HelpView: View {
         }
     }
 
-    private func item(_ title: String, _ text: String) -> some View {
-        Text("\(Text(title).bold()): \(text)")
+    private func item(_ title: LocalizedStringKey, _ text: LocalizedStringKey) -> some View {
+        Text("\(Text(title).bold()): \(Text(text))")
             .fixedSize(horizontal: false, vertical: true)
     }
 

@@ -170,10 +170,16 @@
 				};
 			};
 			buildConfigurationList = 0B0000000000000000000060 /* Build configuration list for PBXProject "MoonToolX" */;
-			developmentRegion = de;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				de,
+				es,
+				fr,
+				it,
+				nl,
+				ja,
 				Base,
 			);
 			mainGroup = 0B0000000000000000000002;
@@ -303,8 +309,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MoonToolX;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_NSLocationUsageDescription = "MoonToolX berechnet damit die Entfernung zum Mond von Ihrem Standort aus. Der Standort bleibt auf Ihrem Mac.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "MoonToolX berechnet damit die Entfernung zum Mond von Ihrem Standort aus. Der Standort bleibt auf Ihrem Mac.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "MoonToolX uses your location to calculate the distance to the Moon from where you are. Your location stays on your Mac.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "MoonToolX uses your location to calculate the distance to the Moon from where you are. Your location stays on your Mac.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Matthias Eckardt";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,8 +337,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MoonToolX;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_NSLocationUsageDescription = "MoonToolX berechnet damit die Entfernung zum Mond von Ihrem Standort aus. Der Standort bleibt auf Ihrem Mac.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "MoonToolX berechnet damit die Entfernung zum Mond von Ihrem Standort aus. Der Standort bleibt auf Ihrem Mac.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "MoonToolX uses your location to calculate the distance to the Moon from where you are. Your location stays on your Mac.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "MoonToolX uses your location to calculate the distance to the Moon from where you are. Your location stays on your Mac.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Matthias Eckardt";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

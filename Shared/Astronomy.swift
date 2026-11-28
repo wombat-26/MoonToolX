@@ -157,14 +157,14 @@ enum MoonPhase: Int, Sendable, CaseIterable {
 
     var name: String {
         switch self {
-        case .newMoon: "Neumond"
-        case .waxingCrescent: "Zunehmende Sichel"
-        case .firstQuarter: "Erstes Viertel"
-        case .waxingGibbous: "Zunehmender Mond"
-        case .fullMoon: "Vollmond"
-        case .waningGibbous: "Abnehmender Mond"
-        case .lastQuarter: "Letztes Viertel"
-        case .waningCrescent: "Abnehmende Sichel"
+        case .newMoon: String(localized: "New Moon")
+        case .waxingCrescent: String(localized: "Waxing Crescent")
+        case .firstQuarter: String(localized: "First Quarter")
+        case .waxingGibbous: String(localized: "Waxing Gibbous")
+        case .fullMoon: String(localized: "Full Moon")
+        case .waningGibbous: String(localized: "Waning Gibbous")
+        case .lastQuarter: String(localized: "Last Quarter")
+        case .waningCrescent: String(localized: "Waning Crescent")
         }
     }
 
@@ -210,12 +210,12 @@ struct MoonEvent: Hashable, Sendable, Identifiable {
 
         var title: String {
             switch self {
-            case .newMoon: "Neumond"
-            case .firstQuarter: "Erstes Viertel"
-            case .fullMoon: "Vollmond"
-            case .lastQuarter: "Letztes Viertel"
-            case .perigee: "Perigäum"
-            case .apogee: "Apogäum"
+            case .newMoon: String(localized: "New Moon")
+            case .firstQuarter: String(localized: "First Quarter")
+            case .fullMoon: String(localized: "Full Moon")
+            case .lastQuarter: String(localized: "Last Quarter")
+            case .perigee: String(localized: "Perigee")
+            case .apogee: String(localized: "Apogee")
             }
         }
 
@@ -311,16 +311,20 @@ struct DistanceLabel: Hashable, Sendable {
 
     var title: String {
         switch (isSuper, isFullMoon) {
-        case (true, true): "Supermond"
-        case (false, true): "Mikromond"
-        case (true, false): "Super-Neumond"
-        case (false, false): "Mikro-Neumond"
+        case (true, true): String(localized: "Supermoon")
+        case (false, true): String(localized: "Micromoon")
+        case (true, false): String(localized: "Super New Moon")
+        case (false, false): String(localized: "Micro New Moon")
         }
     }
 
     var explanation: String {
-        let phase = isFullMoon ? "Vollmond" : "Neumond"
-        return isSuper ? "\(phase) nahe dem Perigäum (erdnächster Punkt)" : "\(phase) nahe dem Apogäum (erdfernster Punkt)"
+        switch (isSuper, isFullMoon) {
+        case (true, true): String(localized: "Full moon near perigee (closest point to Earth)")
+        case (false, true): String(localized: "Full moon near apogee (farthest point from Earth)")
+        case (true, false): String(localized: "New moon near perigee (closest point to Earth)")
+        case (false, false): String(localized: "New moon near apogee (farthest point from Earth)")
+        }
     }
 
     var symbolName: String {

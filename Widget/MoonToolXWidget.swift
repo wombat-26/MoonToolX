@@ -17,7 +17,7 @@ struct MoonDistanceWidget: Widget {
                 .containerBackground(for: .widget) { SkyBackground() }
         }
         .configurationDisplayName("MoonToolX")
-        .description("Entfernung Erde–Mond, sekundengenau berechnet, mit aktueller Mondphase.")
+        .description("Earth–Moon distance, calculated to the second, with the current moon phase.")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
         .containerBackgroundRemovable(false)
     }
@@ -122,7 +122,7 @@ struct MoonWidgetView: View {
             VStack(spacing: 6) {
                 Image(systemName: "moon.zzz")
                     .font(.title)
-                Text("Ephemeride nicht verfügbar (gültig 2020–2099)")
+                Text("Ephemeris not available (valid 2020–2099)")
                     .font(.caption)
                     .multilineTextAlignment(.center)
             }
@@ -131,19 +131,19 @@ struct MoonWidgetView: View {
     }
 }
 
-#Preview("Klein", as: .systemSmall) {
+#Preview("Small", as: .systemSmall) {
     MoonDistanceWidget()
 } timeline: {
     MoonProvider.previewEntry()
 }
 
-#Preview("Mittel", as: .systemMedium) {
+#Preview("Medium", as: .systemMedium) {
     MoonDistanceWidget()
 } timeline: {
     MoonProvider.previewEntry()
 }
 
-#Preview("Groß", as: .systemLarge) {
+#Preview("Large", as: .systemLarge) {
     MoonDistanceWidget()
 } timeline: {
     MoonProvider.previewEntry()

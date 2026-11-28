@@ -91,7 +91,7 @@ struct SmallMoonView: View {
                 }
             }
             Spacer(minLength: 2)
-            SectionLabel(text: "Entfernung")
+            SectionLabel(text: String(localized: "Distance"))
             DistanceText(state: state, size: 25)
             TrendText(state: state)
                 .font(.system(size: 9.5))
@@ -108,7 +108,7 @@ struct MediumMoonView: View {
             WidgetMoon(state: state)
                 .frame(width: 118, height: 118)
             VStack(alignment: .leading, spacing: 3) {
-                SectionLabel(text: "Entfernung Erde–Mond")
+                SectionLabel(text: String(localized: "Earth–Moon distance"))
                 DistanceText(state: state, size: 32)
                 TrendText(state: state)
                     .font(.system(size: 11))
@@ -143,7 +143,7 @@ struct LargeMoonView: View {
                 WidgetMoon(state: state)
                     .frame(width: 124, height: 124)
                 VStack(alignment: .leading, spacing: 3) {
-                    SectionLabel(text: "Entfernung Erde–Mond")
+                    SectionLabel(text: String(localized: "Earth–Moon distance"))
                     DistanceText(state: state, size: 34)
                     TrendText(state: state)
                         .font(.system(size: 11))
@@ -162,9 +162,9 @@ struct LargeMoonView: View {
                     }
                     Group {
                         if let age = context?.age(at: state.date) {
-                            Text("Mondalter \(Fmt.days(age)) Tage · Licht \(Fmt.seconds(state.lightTimeSeconds))")
+                            Text("Moon age \(Fmt.days(age)) days · light \(Fmt.seconds(state.lightTimeSeconds))")
                         } else {
-                            Text("Lichtlaufzeit \(Fmt.seconds(state.lightTimeSeconds))")
+                            Text("Light travel time \(Fmt.seconds(state.lightTimeSeconds))")
                         }
                     }
                     .font(.system(size: 10.5))
@@ -177,7 +177,7 @@ struct LargeMoonView: View {
 
             if let context {
                 VStack(alignment: .leading, spacing: 4) {
-                    SectionLabel(text: "Verlauf ±14 Tage")
+                    SectionLabel(text: String(localized: "±14 days"))
                     DistanceSparkline(samples: context.samples,
                                       apsides: context.apsides(in: (context.samples.first?.date ?? state.date)...(context.samples.last?.date ?? state.date)),
                                       now: state.date,

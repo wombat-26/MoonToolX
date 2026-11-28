@@ -28,8 +28,14 @@ enum Fmt {
 
     /// Himmelsrichtung in 16 Stufen, z. B. „OSO“
     static func compass(_ azimuth: Double) -> String {
-        let names = ["N", "NNO", "NO", "ONO", "O", "OSO", "SO", "SSO",
-                     "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
+        let names = [String(localized: "N", comment: "Compass direction"), String(localized: "NNE", comment: "Compass direction"),
+                     String(localized: "NE", comment: "Compass direction"), String(localized: "ENE", comment: "Compass direction"),
+                     String(localized: "E", comment: "Compass direction"), String(localized: "ESE", comment: "Compass direction"),
+                     String(localized: "SE", comment: "Compass direction"), String(localized: "SSE", comment: "Compass direction"),
+                     String(localized: "S", comment: "Compass direction"), String(localized: "SSW", comment: "Compass direction"),
+                     String(localized: "SW", comment: "Compass direction"), String(localized: "WSW", comment: "Compass direction"),
+                     String(localized: "W", comment: "Compass direction"), String(localized: "WNW", comment: "Compass direction"),
+                     String(localized: "NW", comment: "Compass direction"), String(localized: "NNW", comment: "Compass direction")]
         return names[Int((azimuth / 22.5).rounded()) % 16]
     }
 
@@ -62,7 +68,7 @@ enum Fmt {
     }
 
     static func trend(_ state: MoonState) -> String {
-        state.radialVelocityKmS >= 0 ? "entfernt sich" : "nähert sich"
+        state.radialVelocityKmS >= 0 ? String(localized: "receding") : String(localized: "approaching")
     }
 
     static func trendSymbol(_ state: MoonState) -> String {
@@ -230,19 +236,19 @@ struct DistanceChart: View {
     var body: some View {
         Chart {
             ForEach(samples) { s in
-                AreaMark(x: .value("Zeit", s.date),
-                         yStart: .value("Basis", yDomain.lowerBound),
-                         yEnd: .value("Entfernung", s.distanceKm / 1000))
+                AreaMark(x: .value("Time", s.date),
+                         yStart: .value("Base", yDomain.lowerBound),
+                         yEnd: .value("Distance", s.distanceKm / 1000))
                     .interpolationMethod(.catmullRom)
                     .foregroundStyle(LinearGradient(colors: [Palette.line(scheme).opacity(0.25), Palette.line(scheme).opacity(0.0)],
                                                     startPoint: .top, endPoint: .bottom))
-                LineMark(x: .value("Zeit", s.date), y: .value("Entfernung", s.distanceKm / 1000))
+                LineMark(x: .value("Time", s.date), y: .value("Distance", s.distanceKm / 1000))
                     .interpolationMethod(.catmullRom)
                     .foregroundStyle(Palette.line(scheme))
                     .lineStyle(StrokeStyle(lineWidth: compact ? 1.5 : 2))
             }
             ForEach(apsides) { a in
-                PointMark(x: .value("Zeit", a.date), y: .value("Entfernung", a.distanceKm / 1000))
+                PointMark(x: .value("Time", a.date), y: .value("Distance", a.distanceKm / 1000))
                     .symbolSize(compact ? 14 : 24)
                     .foregroundStyle(.secondary)
                     .annotation(position: a.kind == .perigee ? .bottom : .top, spacing: 2,
@@ -252,17 +258,17 @@ struct DistanceChart: View {
                             .foregroundStyle(.secondary)
                     }
             }
-            RuleMark(x: .value("Jetzt", now))
+            RuleMark(x: .value("Now", now))
                 .foregroundStyle(.secondary)
                 .lineStyle(StrokeStyle(lineWidth: 1, dash: [3, 3]))
-            PointMark(x: .value("Jetzt", now), y: .value("Entfernung", currentKm / 1000))
+            PointMark(x: .value("Now", now), y: .value("Distance", currentKm / 1000))
                 .symbolSize(compact ? 36 : 60)
                 .foregroundStyle(Palette.marker(scheme))
             if let highlight, let highlightKm {
-                RuleMark(x: .value("Vorschau", highlight))
+                RuleMark(x: .value("Preview", highlight))
                     .foregroundStyle(Palette.preview(scheme))
                     .lineStyle(StrokeStyle(lineWidth: 1.5))
-                PointMark(x: .value("Vorschau", highlight), y: .value("Entfernung", highlightKm / 1000))
+                PointMark(x: .value("Preview", highlight), y: .value("Distance", highlightKm / 1000))
                     .symbolSize(compact ? 40 : 80)
                     .foregroundStyle(Palette.preview(scheme))
             }
@@ -288,7 +294,7 @@ struct DistanceChart: View {
                 AxisGridLine().foregroundStyle(.primary.opacity(0.12))
                 AxisValueLabel {
                     if let v = value.as(Double.self) {
-                        Text("\(Int(v)) Tsd.").font(.system(size: compact ? 8 : 10)).foregroundStyle(.secondary)
+                        Text("\(Int(v)) k").font(.system(size: compact ? 8 : 10)).foregroundStyle(.secondary)
                     }
                 }
             }

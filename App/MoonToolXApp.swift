@@ -13,7 +13,7 @@ struct MoonToolXApp: App {
             CommandGroup(replacing: .help) { HelpMenuButton() }
         }
 
-        Window("MoonToolX-Kurzanleitung", id: "help") {
+        Window("MoonToolX Quick Guide", id: "help") {
             HelpView()
         }
         .windowResizability(.contentSize)
@@ -29,7 +29,7 @@ struct MoonToolXApp: App {
                                    size: size)
         }
 
-        Window("Widget-Vorschau", id: "widget-preview") {
+        Window("Widget Preview", id: "widget-preview") {
             WidgetPreview()
         }
         .windowResizability(.contentSize)
@@ -82,7 +82,7 @@ struct PreviewSelection: Equatable {
 
     /// Klick links von „jetzt“ ist ein Rückblick, rechts davon eine Vorschau.
     var isPast: Bool { date < until.addingTimeInterval(-3) }
-    var title: String { isPast ? "Rückblick" : "Vorschau" }
+    var title: String { isPast ? String(localized: "Look Back") : String(localized: "Preview") }
     var symbol: String { isPast ? "clock.arrow.circlepath" : "eye" }
 }
 
@@ -104,9 +104,9 @@ struct ContentView: View {
                             }
                         }
                     } else {
-                        ContentUnavailableView("Außerhalb der Ephemeride",
+                        ContentUnavailableView("Outside the ephemeris range",
                                                systemImage: "calendar.badge.exclamationmark",
-                                               description: Text("Die eingebaute JPL-Ephemeride deckt 2020 bis 2099 ab."))
+                                               description: Text("The built-in JPL ephemeris covers 2020 to 2099."))
                     }
                 }
                 .task { location.start() }
@@ -126,8 +126,8 @@ struct ContentView: View {
                     withAnimation(.easeInOut(duration: 0.3)) { preview = nil }
                 }
             } else {
-                ContentUnavailableView("Ephemeride fehlt", systemImage: "exclamationmark.triangle",
-                                       description: Text("moon_de440.bin ist nicht im App-Bundle."))
+                ContentUnavailableView("Ephemeris missing", systemImage: "exclamationmark.triangle",
+                                       description: Text("moon_de440.bin is not in the app bundle."))
             }
         }
     }
@@ -175,16 +175,16 @@ private struct Dashboard: View {
                 .rotationEffect(.degrees(-(sky?.skyRotationDeg ?? 0)))
                 .opacity((sky?.altitudeDeg ?? 1) < 0 ? 0.5 : 1)
                 .animation(reduceMotion ? nil : .easeInOut(duration: 0.6), value: skyView)
-                .accessibilityLabel(sky.map { "Mond wie am Himmel, um \(Int(abs($0.skyRotationDeg).rounded())) Grad gedreht" } ?? "Mond, Norden oben")
+                .accessibilityLabel(sky.map { String(localized: "Moon as in the sky, rotated \(Int(abs($0.skyRotationDeg).rounded())) degrees") } ?? String(localized: "Moon, north up"))
                 if topo != nil {
-                    Picker("Ansicht", selection: $skyView) {
-                        Text("Norden oben").tag(false)
-                        Text("Wie am Himmel").tag(true)
+                    Picker("View", selection: $skyView) {
+                        Text("North Up").tag(false)
+                        Text("As in the Sky").tag(true)
                     }
                     .pickerStyle(.segmented)
                     .labelsHidden()
                     .fixedSize()            // feste Eigengröße: Segmente springen nicht bei Vorschau/Neuzeichnen
-                    .help("„Wie am Himmel“ dreht das Mondbild so, wie Sie den Mond an Ihrem Standort sehen: Zenit oben.")
+                    .help("“As in the Sky” rotates the moon image the way you see the Moon from your location: zenith up.")
                 }
                 Label(shown.phase.name, systemImage: shown.phase.symbolName)
                     .font(.title2.weight(.semibold))
@@ -204,17 +204,17 @@ private struct Dashboard: View {
                 if let observer = location.observer, let pass = calculator.moonPass(at: shown.date, observer: observer) {
                     MoonPassView(pass: pass, now: shown.date)
                 }
-                Text("Scheinbarer Durchmesser: \(Fmt.arcmin(MoonCalculator.apparentDiameterArcmin(distanceKm: topo?.distanceKm ?? shown.distanceKm))) Bogenminuten")
+                Text("Apparent diameter: \(Fmt.arcmin(MoonCalculator.apparentDiameterArcmin(distanceKm: topo?.distanceKm ?? shown.distanceKm))) arcminutes")
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .monospacedDigit()
-                    .help(topo != nil ? "Vom Standort aus gesehen" : "Vom Erdmittelpunkt aus gesehen")
+                    .help(topo != nil ? Text("Seen from your location") : Text("Seen from Earth’s center"))
                 if let magnitude = calculator.apparentMagnitude(at: shown.date, observer: location.observer) {
-                    Text("Helligkeit: \(Fmt.magnitude(magnitude)) mag")
+                    Text("Brightness: \(Fmt.magnitude(magnitude)) mag")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                         .monospacedDigit()
-                        .help("Scheinbare Helligkeit in Magnituden, ohne Abschwächung durch die Atmosphäre. Je kleiner die Zahl, desto heller: Vollmond etwa −12,7 mag, Halbmond etwa −10 mag.")
+                        .help("Apparent brightness in magnitudes, without dimming by the atmosphere. The smaller the number, the brighter: full moon about −12.7 mag, half moon about −10 mag.")
                 }
                 if let label = context?.distanceLabel(for: shown) {
                     DistanceBadge(label: label)
@@ -249,7 +249,7 @@ private struct Dashboard: View {
                         }
                         .padding(4)
                     } label: {
-                        Text("Verlauf ±14 Tage")
+                        Text("Distance, ±14 days")
                             .font(.headline)
                             .foregroundStyle(.secondary)
                     }
@@ -269,7 +269,7 @@ private struct Dashboard: View {
                 }
 
                 Spacer(minLength: 0)
-                Text("Ephemeride: JPL DE440 (2020–2099) · Mondbild: NASA SVS, LRO/LROC · Zeiten in Ortszeit")
+                Text("Ephemeris: JPL DE440 (2020–2099) · Moon image: NASA SVS, LRO/LROC · Times in local time")
                     .font(.caption2)
                     .foregroundStyle(.tertiary)
             }
@@ -280,13 +280,13 @@ private struct Dashboard: View {
     private func skyCaption(_ t: TopocentricMoon) -> String {
         let angle = Int(abs(t.skyRotationDeg).rounded())
         // „unter dem Horizont“ steht bereits in der Sichtbarkeitszeile
-        return "Zenit oben · gegenüber „Norden oben“ um \(angle)° gedreht"
+        return String(localized: "Zenith up · rotated \(angle)° from “North Up”")
     }
 
     private func subtitle(for state: MoonState) -> String {
-        var parts = ["\(Fmt.percent(state.illuminatedFraction)) beleuchtet"]
+        var parts = [String(localized: "\(Fmt.percent(state.illuminatedFraction)) illuminated")]
         if let age = context?.age(at: state.date) {
-            parts.append("Mondalter \(Fmt.days(age)) Tage")
+            parts.append(String(localized: "Moon age \(Fmt.days(age)) days"))
         }
         return parts.joined(separator: " · ")
     }
@@ -314,7 +314,7 @@ private struct MoonPassView: View {
             if !(pass.noRiseOrSet && !pass.isUp) {
                 Grid(horizontalSpacing: 18, verticalSpacing: 1) {
                     GridRow {
-                        Text("Aufgang"); Text("Höchster Stand"); Text("Untergang")
+                        Text("Moonrise"); Text("Highest"); Text("Moonset")
                     }
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -337,16 +337,16 @@ private struct MoonPassView: View {
 
     private var visibility: String {
         if pass.isUp {
-            if let set = pass.set { return "Sichtbar, noch \(duration(set.timeIntervalSince(now)))" }
-            return "Sichtbar, geht vorerst nicht unter"
+            if let set = pass.set { return String(localized: "Visible, \(duration(set.timeIntervalSince(now))) left") }
+            return String(localized: "Visible, won’t set for now")
         }
-        if let rise = pass.rise { return "Unter dem Horizont, Aufgang in \(duration(rise.timeIntervalSince(now)))" }
-        return "Bleibt vorerst unter dem Horizont"
+        if let rise = pass.rise { return String(localized: "Below the horizon, rises in \(duration(rise.timeIntervalSince(now)))") }
+        return String(localized: "Stays below the horizon for now")
     }
 
     private func duration(_ seconds: TimeInterval) -> String {
         let minutes = max(0, Int((seconds / 60).rounded()))
-        return minutes >= 60 ? "\(minutes / 60) Std. \(minutes % 60) Min." : "\(minutes) Min."
+        return minutes >= 60 ? String(localized: "\(minutes / 60) hr \(minutes % 60) min") : String(localized: "\(minutes) min")
     }
 
     private func time(_ date: Date?) -> String {
@@ -366,19 +366,34 @@ private struct ChartLegend: View {
     @Environment(\.colorScheme) private var scheme
 
     var body: some View {
-        HStack(spacing: 14) {
-            item("Entfernung") { Capsule().fill(Palette.line(scheme)).frame(width: 14, height: 2.5) }
-            item("Jetzt") { Circle().fill(Palette.marker(scheme)).frame(width: 7, height: 7) }
-            item("Perigäum / Apogäum") { Circle().fill(.secondary).frame(width: 5, height: 5) }
-            Spacer(minLength: 8)
-            Text("Klick zeigt den Tag für 3 Sekunden")
+        // Passt der Klick-Hinweis nicht neben die Legende (längere Sprachen), steht er darunter
+        ViewThatFits(in: .horizontal) {
+            HStack(spacing: 14) {
+                items
+                Spacer(minLength: 8)
+                hint
+            }
+            VStack(alignment: .leading, spacing: 3) {
+                HStack(spacing: 14) { items }
+                hint
+            }
         }
         .font(.caption)
         .foregroundStyle(.secondary)
         .lineLimit(1)
     }
 
-    private func item<Swatch: View>(_ title: String, @ViewBuilder swatch: () -> Swatch) -> some View {
+    @ViewBuilder private var items: some View {
+        item("Distance") { Capsule().fill(Palette.line(scheme)).frame(width: 14, height: 2.5) }
+        item("Now") { Circle().fill(Palette.marker(scheme)).frame(width: 7, height: 7) }
+        item("Perigee / apogee") { Circle().fill(.secondary).frame(width: 5, height: 5) }
+    }
+
+    private var hint: some View {
+        Text("Click to show that moment for 3 seconds").fixedSize()
+    }
+
+    private func item<Swatch: View>(_ title: LocalizedStringKey, @ViewBuilder swatch: () -> Swatch) -> some View {
         HStack(spacing: 5) {
             swatch().frame(width: 14)
             Text(title)
@@ -408,7 +423,7 @@ private struct DistanceBadge: View {
         .padding(.vertical, 5)
         .background(shape.fill(tint.opacity(0.14)))
         .overlay(shape.strokeBorder(tint.opacity(0.35)))
-            .help("\(label.explanation), \(Fmt.eventDate(label.syzygy.date)). Definition nach Richard Nolle.")
+            .help("\(label.explanation), \(Fmt.eventDate(label.syzygy.date)). Definition by Richard Nolle.")
     }
 }
 
@@ -424,7 +439,7 @@ private struct LiveDistancePanel: View {
             if let state = calculator.state(at: preview?.date ?? timeline.date) {
                 VStack(alignment: .leading, spacing: 16) {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Entfernung Erde–Mond (Mittelpunkte)")
+                        Text("Earth–Moon distance (centers)")
                             .font(.headline)
                             .foregroundStyle(.secondary)
                         HStack(alignment: .bottom, spacing: 10) {
@@ -437,12 +452,12 @@ private struct LiveDistancePanel: View {
                         .padding(.vertical, 4)
                         if let preview {
                             let left = max(1, Int(ceil(preview.until.timeIntervalSince(timeline.date))))
-                            Text("\(preview.title) \(Fmt.eventDate(preview.date)) · zurück zu jetzt in \(left) s")
+                            Text("\(preview.title) \(Fmt.eventDate(preview.date)) · back to now in \(left) s")
                                 .font(.callout.weight(.medium))
                                 .foregroundStyle(Palette.preview(scheme))
                                 .monospacedDigit()
                         } else {
-                            Text("Stand \(state.date.formatted(.dateTime.hour().minute().second())) · gerundet \(Fmt.km(state.distanceKm)) km")
+                            Text("As of \(state.date.formatted(.dateTime.hour().minute().second())) · rounded \(Fmt.km(state.distanceKm)) km")
                                 .font(.callout)
                                 .foregroundStyle(.secondary)
                                 .monospacedDigit()
@@ -450,9 +465,9 @@ private struct LiveDistancePanel: View {
                     }
 
                     Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 6) {
-                        row("Änderung", "\(Fmt.trend(state)) mit \(Fmt.speed(state.radialVelocityKmS))", symbol: Fmt.trendSymbol(state))
-                        row("Lichtlaufzeit", Fmt.seconds(state.lightTimeSeconds), symbol: "light.beacon.max")
-                        row("Oberfläche – Oberfläche", "\(Fmt.km(state.surfaceDistanceKm)) km (mittlere Radien)", symbol: "ruler")
+                        row("Change", String(localized: "\(Fmt.trend(state)) at \(Fmt.speed(state.radialVelocityKmS))"), symbol: Fmt.trendSymbol(state))
+                        row("Light travel time", Fmt.seconds(state.lightTimeSeconds), symbol: "light.beacon.max")
+                        row("Surface to surface", String(localized: "\(Fmt.km(state.surfaceDistanceKm)) km (mean radii)"), symbol: "ruler")
                         observerRows(at: state.date)
                     }
                     .font(.callout)
@@ -464,25 +479,25 @@ private struct LiveDistancePanel: View {
     /// Entfernung vom Standort und Mondhöhe, sobald der Mac-Standort bekannt ist.
     @ViewBuilder
     private func observerRows(at date: Date) -> some View {
-        let title = "Entfernung von Ihrem Standort"
+        let title: LocalizedStringKey = "Distance from your location"
         if let observer = location.observer, let topo = calculator.topocentric(at: date, observer: observer) {
             row(title, "\(Fmt.km(topo.distanceKm)) km", symbol: "location")
-                .help("Abstand vom Mac-Standort zum Mondmittelpunkt. Je höher der Mond steht, desto kleiner ist er im Vergleich zum Abstand der Mittelpunkte, um bis zu einen Erdradius (etwa 6.400 km).")
-            row("Mondhöhe · Richtung",
+                .help("Distance from your Mac’s location to the center of the Moon. The higher the Moon, the smaller it is compared with the distance between the centers, by up to one Earth radius (about 6,400 km).")
+            row("Altitude · direction",
                 "\(Fmt.altitude(topo.altitudeDeg)) · \(Fmt.compass(topo.azimuthDeg)) (\(Int(topo.azimuthDeg.rounded()) % 360)°)") {
                 HorizonArrow(up: topo.altitudeDeg >= 0)
             }
-                .help("Höhe des Mondmittelpunkts über (+) oder unter (−) dem Horizont am Mac-Standort, ohne Lichtbrechung der Atmosphäre, und Himmelsrichtung mit Azimut (von Nord über Ost).")
+                .help("Altitude of the Moon’s center above (+) or below (−) the horizon at your Mac’s location, without atmospheric refraction, and compass direction with azimuth (from north through east).")
         } else if location.status == .denied {
-            row(title, "kein Zugriff auf die Ortungsdienste", symbol: "location.slash")
-                .help("Erlauben Sie MoonToolX den Zugriff in den Systemeinstellungen unter Datenschutz & Sicherheit › Ortungsdienste.")
+            row(title, String(localized: "No access to Location Services"), symbol: "location.slash")
+                .help("Allow MoonToolX access in System Settings under Privacy & Security › Location Services.")
         } else {
-            row(title, "Standort wird ermittelt …", symbol: "location")
+            row(title, String(localized: "Determining location…"), symbol: "location")
         }
     }
 
     /// Icon in fester Breite, damit alle Beschriftungen bündig dahinter beginnen
-    private func row<Icon: View>(_ title: String, _ value: String, @ViewBuilder icon: () -> Icon) -> some View {
+    private func row<Icon: View>(_ title: LocalizedStringKey, _ value: String, @ViewBuilder icon: () -> Icon) -> some View {
         GridRow {
             HStack(spacing: 6) {
                 icon().frame(width: 18, alignment: .center)
@@ -494,7 +509,7 @@ private struct LiveDistancePanel: View {
         }
     }
 
-    private func row(_ title: String, _ value: String, symbol: String) -> some View {
+    private func row(_ title: LocalizedStringKey, _ value: String, symbol: String) -> some View {
         row(title, value) { Image(systemName: symbol) }
     }
 }
@@ -509,7 +524,7 @@ private struct HorizonArrow: View {
             .stroke(style: StrokeStyle(lineWidth: 1.4, lineCap: .round, lineJoin: .round))
             .scaleEffect(x: 1, y: up ? 1 : -1)
             .frame(width: 12, height: 13)
-            .accessibilityLabel(up ? "über dem Horizont" : "unter dem Horizont")
+            .accessibilityLabel(up ? Text("above the horizon") : Text("below the horizon"))
     }
 
     /// ↥: Strich unten, Pfeil nach oben

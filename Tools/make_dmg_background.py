@@ -24,17 +24,15 @@ def render(s):
     img = Image.alpha_composite(img, glow.filter(ImageFilter.GaussianBlur(60 * s)))
     d = ImageDraw.Draw(img)
     random.seed(7)
-    keep_clear = [(150, 25, 490, 95), (40, 255, 600, 295), (40, 330, 600, 380)]   # Titel, Beschriftungen, Hinweis
+    keep_clear = [(40, 265, 600, 305)]   # Finder-Beschriftungen
     for _ in range(170):
         x, y = random.uniform(0, W), random.uniform(0, H)
         if any(math.hypot(x - cx, y - cy) < 80 for cx, cy in (APP, DEST)): continue
         if any(x0 <= x <= x1 and y0 <= y <= y1 for x0, y0, x1, y1 in keep_clear): continue
         r = random.choice([0.5, 0.7, 0.9, 1.2]) * s
         d.ellipse((x * s - r, y * s - r, x * s + r, y * s + r), fill=(255, 255, 255, random.randint(70, 200)))
-    # Titel
-    cream = (245, 243, 235, 255)
-    d.text((W / 2 * s, 50 * s), "MoonToolX", font=font(30 * s, 700), fill=cream, anchor='mm')
-    d.text((W / 2 * s, 80 * s), "Entfernung Erde–Mond, sekundengenau", font=font(13 * s, 450), fill=(196, 202, 232, 255), anchor='mm')
+    # Kein Text im Bild: Ein DMG kann die Sprache nicht wechseln. Pfeil und Finder-Beschriftungen
+    # („MoonToolX“, „Applications“ in Systemsprache) erklären die Installation sprachneutral.
     # Pfeil (Bogen, Cyan → Violett) mit Leuchten
     def bez(t):
         p0, p1, p2 = (262, ICON_Y + 6), (320, ICON_Y - 34), (378, ICON_Y + 6)
@@ -59,12 +57,8 @@ def render(s):
     d = ImageDraw.Draw(img)
     # halbhelle Unterlagen für die Finder-Beschriftungen (lesbar mit schwarzer und weißer Schrift)
     for cx, _ in (APP, DEST):
-        # Finder setzt die Beschriftung bei 128-pt-Symbolen mit Mitte bei ≈ 271,5 pt (Symbolmitte 200 pt)
-        d.rounded_rectangle(((cx - 76) * s, 261.5 * s, (cx + 76) * s, 281.5 * s), radius=10 * s, fill=(120, 126, 150, 255))
-    # Hinweis
-    d.text((W / 2 * s, 345 * s), "Zum Installieren MoonToolX auf „Programme“ ziehen", font=font(14 * s, 550), fill=(226, 228, 240, 255), anchor='mm')
-    d.text((W / 2 * s, 368 * s), "Danach Widget über Rechtsklick auf den Schreibtisch › Widgets bearbeiten … hinzufügen",
-           font=font(11 * s, 420), fill=(170, 176, 205, 255), anchor='mm')
+        # Finder (macOS 27) setzt die Beschriftung bei 128-pt-Symbolen mit Mitte bei ≈ 283,5 pt (Symbolmitte 200 pt)
+        d.rounded_rectangle(((cx - 76) * s, 273.5 * s, (cx + 76) * s, 293.5 * s), radius=10 * s, fill=(120, 126, 150, 255))
     return img.convert('RGB')
 
 os.makedirs(out, exist_ok=True)

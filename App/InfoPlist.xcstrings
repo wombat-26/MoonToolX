@@ -1,0 +1,172 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "CFBundleDisplayName": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX"
+          }
+        }
+      }
+    },
+    "NSHumanReadableCopyright": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 Matthias Eckardt"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 Matthias Eckardt"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 Matthias Eckardt"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 Matthias Eckardt"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 Matthias Eckardt"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 Matthias Eckardt"
+          }
+        }
+      }
+    },
+    "NSLocationUsageDescription": {
+      "comment": "Privacy - Location Usage Description",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX berechnet damit die Entfernung zum Mond von Ihrem Standort aus. Der Standort bleibt auf Ihrem Mac."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX usa tu ubicación para calcular la distancia a la Luna desde donde estás. Tu ubicación permanece en tu Mac."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX utilise votre position pour calculer la distance à la Lune depuis l’endroit où vous vous trouvez. Votre position reste sur votre Mac."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX usa la tua posizione per calcolare la distanza dalla Luna dal punto in cui ti trovi. La tua posizione resta sul tuo Mac."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX は、現在地から月までの距離を計算するために位置情報を使用します。位置情報は Mac の外に送信されません。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX gebruikt je locatie om de afstand tot de maan te berekenen vanaf waar je bent. Je locatie blijft op je Mac."
+          }
+        }
+      }
+    },
+    "NSLocationWhenInUseUsageDescription": {
+      "comment": "Privacy - Location When In Use Usage Description",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX berechnet damit die Entfernung zum Mond von Ihrem Standort aus. Der Standort bleibt auf Ihrem Mac."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX usa tu ubicación para calcular la distancia a la Luna desde donde estás. Tu ubicación permanece en tu Mac."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX utilise votre position pour calculer la distance à la Lune depuis l’endroit où vous vous trouvez. Votre position reste sur votre Mac."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX usa la tua posizione per calcolare la distanza dalla Luna dal punto in cui ti trovi. La tua posizione resta sul tuo Mac."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX は、現在地から月までの距離を計算するために位置情報を使用します。位置情報は Mac の外に送信されません。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MoonToolX gebruikt je locatie om de afstand tot de maan te berekenen vanaf waar je bent. Je locatie blijft op je Mac."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

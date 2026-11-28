@@ -3,7 +3,7 @@
 app = defines['app']
 format = 'UDZO'
 files = [app]
-symlinks = {'Programme': '/Applications'}
+symlinks = {'Applications': '/Applications'}
 icon = defines.get('volicon')
 background = defines['background']
 
@@ -24,5 +24,5 @@ icon_size = 128
 text_size = 13
 icon_locations = {
     'MoonToolX.app': (170, 200),
-    'Programme': (470, 200),
+    'Applications': (470, 200),
 }
